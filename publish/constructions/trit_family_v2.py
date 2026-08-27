@@ -26,8 +26,9 @@ All arithmetic still via proto/ternary.py (verified port). std-only.
 import ternary as T
 
 TRYTE_STATES = T.TRYTE_STATES          # 729
-TICK_MAX = TRYTE_STATES * TRYTE_STATES - 1   # 531,440
 OUT_TRYTES = 81                        # 486 trits
+# v4: the tick is UNBOUNDED (minimal balanced-ternary digits in the
+# padding) - no TICK_MAX; message domain stays <= 531,440 trytes
 
 # provenance: TSH prototype round constants, wrapped into trytes
 _TSH_ROUNDS = [
@@ -60,18 +61,40 @@ def bytes_to_trytes(data):
     return [T.wrap(b) for b in data]
 
 
+def _tick_digits(tick):
+    """Minimal balanced-ternary digits of a non-negative tick, LSB
+    first, as values in {-1, 0, 1}. Unique (no leading high zeros)."""
+    if tick == 0:
+        return [0]
+    digits = []
+    while tick:
+        r = tick % 3
+        if r == 2:
+            r = -1
+        digits.append(r)
+        tick = (tick - r) // 3
+    return digits
+
+
 def pad_trytes(msg_trytes, tick, rate):
-    """v2 injective padding: M || [+13] || 0* || [len_hi, len_lo,
-    tick_hi, tick_lo, -13]. Length AND tick at fixed end offsets, tick
-    in TWO trytes (replay bound moved from 729 to 729^2)."""
+    """v4 injective padding: M || [+13] || tick_digits || [+2] || 0* ||
+    [len_hi, len_lo, -13].
+
+    v3 bound the tick in two trytes (replay reappeared at 729^2, seq
+    53). v4 encodes the tick in MINIMAL-WIDTH balanced ternary with a
+    [+2] terminator that cannot be a digit (digits are -1/0/1): the
+    tick is an unbounded integer with no modular field - the
+    moved-not-removed pattern ends. Injectivity: equal padded strings
+    have equal length; [+13] marks the message end; the first [+2]
+    after it is unambiguous (no digit equals 2); the final three trytes
+    are len_hi/len_lo/-13 at fixed offsets from the end -> equal pads
+    force equal tick digits, equal length, then equal message."""
     n = len(msg_trytes)
-    pad = list(msg_trytes) + [13]
-    while (len(pad) + 5) % rate != 0:
+    pad = list(msg_trytes) + [13] + _tick_digits(tick) + [2]
+    while (len(pad) + 3) % rate != 0:
         pad.append(0)
     pad += [T.wrap((n // TRYTE_STATES) % TRYTE_STATES),
-            T.wrap(n % TRYTE_STATES),
-            T.wrap((tick // TRYTE_STATES) % TRYTE_STATES),
-            T.wrap(tick % TRYTE_STATES), -13]
+            T.wrap(n % TRYTE_STATES), -13]
     return pad
 
 

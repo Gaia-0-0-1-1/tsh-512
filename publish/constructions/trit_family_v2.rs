@@ -99,19 +99,40 @@ pub fn bytes_to_trytes(data: &[u8]) -> Vec<i64> {
     data.iter().map(|b| wrap(*b as i64)).collect()
 }
 
-/// v2 injective padding: M || [+13] || 0* || [len_hi, len_lo, tick_hi,
-/// tick_lo, -13]. len and tick are non-negative (documented domain).
+/// Minimal balanced-ternary digits of a non-negative tick, LSB first,
+/// values in {-1, 0, 1} (unique representation).
+fn tick_digits(tick: i64) -> Vec<i64> {
+    if tick == 0 {
+        return vec![0];
+    }
+    let mut t = tick;
+    let mut digits = Vec::new();
+    while t > 0 {
+        let mut r = t % 3;
+        if r == 2 {
+            r = -1;
+        }
+        digits.push(r);
+        t = (t - r) / 3;
+    }
+    digits
+}
+
+/// v4 injective padding: M || [+13] || tick_digits || [+2] || 0* ||
+/// [len_hi, len_lo, -13]. The tick is an UNBOUNDED integer (v3's
+/// two-tryte tick replayed at 729^2); [+2] cannot be a digit, so the
+/// first [+2] after [+13] is an unambiguous terminator.
 pub fn pad_trytes(msg: &[i64], tick: i64, rate: usize) -> Vec<i64> {
     let n = msg.len() as i64;
     let mut pad: Vec<i64> = msg.to_vec();
     pad.push(13);
-    while (pad.len() + 5) % rate != 0 {
+    pad.extend(tick_digits(tick));
+    pad.push(2);
+    while (pad.len() + 3) % rate != 0 {
         pad.push(0);
     }
     pad.push(wrap((n / TRYTE_STATES) % TRYTE_STATES));
     pad.push(wrap(n % TRYTE_STATES));
-    pad.push(wrap((tick / TRYTE_STATES) % TRYTE_STATES));
-    pad.push(wrap(tick % TRYTE_STATES));
     pad.push(-13);
     pad
 }

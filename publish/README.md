@@ -26,9 +26,11 @@ drop-in replacement for blake2b/sha3.
 
 **Published bounds and known weaknesses (stated before you find them):**
 
-1. **Tick replay at distance 729² = 531,441** (all constructions):
-   `H(msg, t) == H(msg, t + 531441)` exactly. Tick domain separation
-   holds only for ticks < 531,441.
+1. **Tick domain: UNBOUNDED as of family v4** (timeline seq 100). The
+   tick is encoded in minimal balanced-ternary digits — no modular
+   field. Historical: v3 replayed exactly at distance 729² = 531,441
+   (measured, seq 53); v4 closed it structurally (measured to 10⁹+,
+   seq 100). Message domain stays <= 531,440 trytes.
 2. **T4's output expander** chains `c = wrap(c*7 + w[j%16] + seed)` —
    we expect state-word leakage from digests to be the first fruitful
    outside attack (pre-registered at timeline seq 84).

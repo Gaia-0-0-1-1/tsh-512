@@ -125,15 +125,23 @@ dropped from the merge by its pre-registered rule (seq 75).
 constructions — the tick (domain tag) was folded through tryte wrap,
 so domain separation was only mod-729 deep.
 
-**Fix (v2):** two-tryte tick binding in the padding. Measured: replay
-closed at 729 — and **reappears exactly at 729² = 531,441** (tick_hi
-wraps), as pre-registered before the fix was measured (seq 50). The
-hole was moved and its new position published, not hidden:
-`H(msg, t) == H(msg, t + 531441)` is printed in the bundle's claims
-header.
+**Fix (v2):** two-tryte tick binding — replay closed at 729, and
+**reappeared exactly at 729² = 531,441** (tick_hi wraps), as
+pre-registered before the fix was measured (seq 50). The hole was
+moved and its new position published, not hidden.
 
-**Rule:** domain tags must be full-width or hash-bound. A modularly
-encoded tag is replay-shallow at its modulus.
+**Final fix (v4, seq 100):** the tick is now encoded in **minimal-width
+balanced-ternary digits with a [+2] terminator that cannot be a digit**
+— an unbounded integer, no modular field anywhere. Measured: replay
+closed at every distance tested (729 through 10⁹+), padding injective
+over 30,040 distinct pairs including digit-length boundaries, and all
+gates re-passed for T1/T2/T4 (T3 unchanged-failing). The
+moved-not-removed pattern ends structurally.
+
+**Rule:** domain tags must be non-modularly encoded (variable-width
+digits + unambiguous terminator, or hash-bound). A fixed-width modular
+tag is replay-shallow at its modulus — twice measured, then designed
+out.
 
 ---
 
@@ -289,10 +297,12 @@ seq 82). **Unknown beyond every stated budget.**
   replacement.
 - No PQ advance — ternary is orthogonal to post-quantum, as IGNITION
   states.
-- Open docket: native (Rust) economy re-bench (the Python-scale
-  ranking is instrument-labeled, seq 85); outside attack results;
-  a T3 successor would need field arithmetic **plus** dense position
-  mixing.
+- Closed since first publication: native Rust economy re-bench (seq
+  93 — ordering persists, 87x not <30x, uniform interpreter tax) and
+  the tick bound (seq 100 — unbounded). Still open: outside attack
+  results; a T3 successor would need field arithmetic **plus** dense
+  position mixing; the E3 input-access learnability probe (E1's
+  falsification sharpened its design, seq 98).
 
 The value claim of this timeline rests where IGNITION put it: value
 forms only where attackers fail. The surface is `publish/`. Attack it.
