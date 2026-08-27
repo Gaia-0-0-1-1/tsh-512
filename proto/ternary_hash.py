@@ -226,8 +226,18 @@ def pdh_hash(data, depth=512):
 
 # ── tests ──────────────────────────────────────────────────────────────────
 
+# Avalanche ruler for TSH/PDH (IGNITION §3): binary words, neutral point
+# 0.5 per bit, lawful band 0.5 ± 0.01. (The T1–T4 ternary family is
+# graded on a different ruler — [0.6, 0.73] per trit — never this one.)
+AVALANCHE_TOLERANCE = 0.01
+
+
 def avalanche_test(hash_fn, trials=200, name='?'):
-    """Flip one input bit; measure output bit flip rate. Want ~50%."""
+    """Flip one input bit; measure output bit flip rate. Want ~50%.
+
+    Graded at the lawful binary ruler 0.5 ± AVALANCHE_TOLERANCE
+    (IGNITION fixes ±0.01; the old 0.05 band was 5x looser than law).
+    """
     rng = random.Random(42)
     flip_rates = []
     for _ in range(trials):
@@ -246,26 +256,60 @@ def avalanche_test(hash_fn, trials=200, name='?'):
     avg = sum(flip_rates) / len(flip_rates)
     ideal = 0.5
     deviation = abs(avg - ideal)
-    print('[%s] avalanche: %.1f%% (ideal 50%%, deviation %.1f%%) %s' % (
-        name, avg * 100, deviation * 100,
-        'PASS' if deviation < 0.05 else 'FAIL'))
+    print('[%s] avalanche: %.2f%% (ideal 50%%, deviation %.2f%%, '
+          'lawful band ±%.2f%%) %s' % (
+              name, avg * 100, deviation * 100,
+              AVALANCHE_TOLERANCE * 100,
+              'PASS' if deviation < AVALANCHE_TOLERANCE else 'FAIL'))
     return avg
 
 
-def collision_test(hash_fn, trials=5000, name='?'):
-    """Generate random inputs; check for hash collisions."""
+def collision_test(hash_fn, trials=5000, name='?', control=False):
+    """Generate random inputs; check for hash collisions.
+
+    Repaired per the seq-8 ignition finding: the old instrument counted
+    duplicate INPUTS as collisions (length-1 inputs draw from only 256
+    values, so ~50 such draws repeat ~5 times by birthday math — its own
+    blake2b control failed 4/5000). A hash collision is two DISTINCT
+    inputs with equal digests. This instrument:
+
+      - skips repeated inputs (counted separately, never a collision)
+      - counts only distinct-input digest matches
+      - is graded against a sound blake2b control (must be 0) and a
+        16-bit-truncated control (must be > 0 — the instrument proves
+        it can DETECT real collisions)
+    """
     rng = random.Random(123)
-    seen = set()
+    first_input = {}   # digest hex -> first distinct input that produced it
+    inputs = set()
+    dup_inputs = 0
     collisions = 0
     for _ in range(trials):
         data = bytes(rng.randrange(256) for _ in range(rng.randrange(1, 100)))
+        if data in inputs:
+            dup_inputs += 1
+            continue
+        inputs.add(data)
         h = hash_fn(data).hex()
-        if h in seen:
-            collisions += 1
-        seen.add(h)
-    print('[%s] collisions: %d / %d %s' % (
-        name, collisions, trials,
-        'PASS' if collisions == 0 else 'FAIL'))
+        if h in first_input:
+            collisions += 1   # two DISTINCT inputs, same digest
+        else:
+            first_input[h] = data
+    print('[%s] collisions: %d / %d distinct inputs (%d duplicate inputs '
+          'skipped) %s' % (
+              name, collisions, len(inputs), dup_inputs,
+              'PASS' if collisions == 0 else 'FAIL'))
+    if control:
+        # instrument self-check: a 16-bit digest MUST collide at n≈5000
+        # (birthday ≈ C(5000,2)/2^16 ≈ 190). If it doesn't, the
+        # instrument cannot detect collisions and its zeros are void.
+        def truncated(d):
+            return hashlib.blake2b(d, digest_size=64).digest()[:2]
+        c16 = collision_test(truncated, trials=trials,
+                             name=name + '/16-bit-sensitivity')
+        if c16 == 0:
+            raise SystemExit('collision instrument failed sensitivity '
+                             'control: 16-bit digest showed 0 collisions')
     return collisions
 
 
@@ -323,10 +367,12 @@ def run_tests():
     avalanche_test(lambda d: hashlib.blake2b(d, digest_size=64).digest(), name='blake2b')
     print()
 
-    print('-- Collision (want 0) --')
+    print('-- Collision (want 0; blake2b is the control, with 16-bit '
+          'sensitivity check) --')
     collision_test(lambda d: tsh_hash(d), name='TSH')
     collision_test(lambda d: pdh_hash(d), name='PDH')
-    collision_test(lambda d: hashlib.blake2b(d, digest_size=64).digest(), name='blake2b')
+    collision_test(lambda d: hashlib.blake2b(d, digest_size=64).digest(),
+                   name='blake2b', control=True)
     print()
 
     print('-- Speed --')

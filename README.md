@@ -33,17 +33,45 @@ diamond engine (word → node ID, 52k sentences/s) — a role that needs
 distribution quality and speed, not nation-state resistance. Cryptographic
 claims wait for the attack court and then for outsiders.
 
+## Where it stands (after the first expedition)
+
+The full build order of IGNITION §4 is executed and recorded (89
+hash-chained records). **Read [`LEARNINGS.md`](LEARNINGS.md) for
+everything measured** — the five complete breaks, the structural
+findings, the design rules, and the methodology lessons. Short
+version:
+
+- **TSH-512 is broken** — free padding collisions
+  (`TSH(X) == TSH(X||0x80)` for `len(X) ≡ 30 mod 32`), sealed into
+  the frozen fixture.
+- The **Trit Hash Family contest ran to completion**: T1 (sponge) and
+  T2 (ARX) were each broken structurally, redesigned, and re-gated;
+  T3 (Feistel) was dropped by its pre-registered rule; **T4-v2
+  (TRIT-MD) is the family standard**, with T1-v2 / T2-v3 as
+  published alternates.
+- The survivors hold five pre-registered gates, 40/40 cross-language
+  truth (Python ↔ Rust), and budget-labeled attack records —
+  published for outside attack in **[`publish/`](publish/)**.
+
 ## Layout
 
 | Path | What it is |
 |---|---|
+| `LEARNINGS.md` | **Everything the first expedition measured and learned** |
+| `publish/` | Phase-5 publication bundle for OUTSIDE attack (manifest-sealed) |
 | `SPEC.md` | The Trit Hash Family spec (T1–T4, gates, contest, succession) |
-| `proto/ternary_hash.py` | Python prototype — TSH + PDH, tests + benchmarks |
-| `rust/tsh.rs` | Bit-exact Rust port of TSH-512 (std-only) |
-| `rust/pdh.rs` | Bit-exact Rust port of PDH-512 (std-only) |
-| `ref/ternary.js` | tryte-vm's audited balanced-ternary arithmetic reference |
 | `IGNITION.md` | The law of this timeline: build order, fitness function, agent protocol |
 | `timeline.jsonl` | Hash-chained append-only history of this timeline |
+| `proto/ternary_hash.py` | Python prototype — TSH + PDH, repaired instruments |
+| `proto/ternary.py` | Port of the tryte-vm's balanced-ternary core (VM tests 44/44, 32/32 vs JS) |
+| `proto/trit_family_v2.py` | The family reference: T1-v2 / T2-v3 / T3-v3(field) / T4-v2 |
+| `proto/trit_family.py` | v1 family (kept as the artifact the court records describe) |
+| `rust/tsh.rs`, `rust/pdh.rs` | Bit-exact std-only Rust ports of TSH-512 / PDH-512 |
+| `rust/trit_family_v2.rs` | Rust core of the family (40/40 vs Python on frozen vectors) |
+| `rust/verify_vectors.rs`, `rust/verify_family.rs` | Cross-language truth harnesses (line protocol) |
+| `vectors/` | Frozen fixtures: TSH/PDH (incl. the known-collision pair) + family v2 |
+| `tools/` | Timeline, gates (incl. the state-level gate), freeze/tamper/verify, attack instruments |
+| `ref/ternary.js` | tryte-vm's audited balanced-ternary arithmetic reference |
 
 ## The timeline
 
@@ -53,5 +81,10 @@ its predecessor). `python tools/timeline.py verify` recomputes the
 chain. The first record welds this timeline to its parent chain in the
 Aethor chronicle.
 
-**Quick start:** `python proto/ternary_hash.py test` runs avalanche +
-collision tests on both constructions.
+**Quick start:**
+
+    python tools/timeline.py verify                 # the chain (89 records)
+    python tools/family_gates.py gates --mod proto/trit_family_v2.py \
+        --vec vectors/trit_family_vectors_v2.json   # the five family gates
+    python tools/verify_family_rust.py              # 40/40 cross-language truth
+    python proto/ternary_hash.py test               # TSH/PDH instruments
