@@ -216,6 +216,78 @@ From the grokking-adjacent experiments:
 
 ---
 
+## General patterns (meta-level, from 123 records)
+
+These cut across every experiment, bug, and finding. They are the
+reasons the specific results look the way they do.
+
+### Verifiability is the frontier
+Routes that can be cheaply verified advance; routes that cannot stall.
+This is not a limitation — it is the selection mechanism. The frontier
+is defined by what the current arsenal can verify. Building tools that
+make new things verifiable IS pushing the frontier. Each generation of
+tools moves a class of claims from "hard to verify" to "easy to verify."
+
+### The instrument is always the first suspect
+Instruments fail more often than constructions do. When a result is
+surprising, suspect the instrument before the construction. When a
+result matches your prediction, suspect that the instrument confirmed
+your bias. The only escape is controls that can fail independently.
+
+### Confounds hide behind similarity
+When two things produce the same observable, the FIRST question is:
+what different experiment would separate them? The answer usually
+involves measuring at a different level (state vs output, input-access
+vs distribution-only, single-token vs multi-token). The biggest
+mechanism discoveries came from disentangling things that looked
+identical under the first instrument used.
+
+### The medium outlasts the means
+The specific computational operations change across every experiment.
+The structural medium (pre-registration, append-only verification,
+independent cross-checks, the gate hierarchy) persists and compounds.
+Three systems built independently converged on the same constitution.
+
+### Nulls are evidence — if budget-labeled
+A null result (no attack found) is genuine resistance evidence, but
+only because it says "survived N samples of class X." Without the
+budget, a null is vacuum. With it, nulls from different instruments
+map the coverage of the attack surface.
+
+### Falsifications are directions
+A confirmed prediction says "your model was adequate." A falsified one
+says "your model was wrong in a specific, localizable way." The
+falsifications drove every major revision in this program.
+
+### Structure converges
+Systems built independently converge on the same constitutional
+structure (append-only chains, pre-registration, independent
+verification). The convergence is evidence that this is the minimal
+viable structure for honest automated research.
+
+---
+
+## Known gaps (registered, not assumed)
+
+These are things the methodology does NOT yet cover:
+
+- **No formal proofs completed.** Lean proofs are queued but not done.
+  The program measures but does not yet prove.
+- **No external attack.** Everything is self-attacked. The publish/
+  bundle exists but no outsider has tried. This is the largest gap.
+- **No cross-instrument calibration.** The relationship between neural,
+  differential, and state-level instruments is mapped qualitatively
+  (which sees what) but not quantitatively (what does a neural score
+  of X mean in differential terms).
+- **No known-broken external reference.** All instruments have been
+  tested only against custom constructions. A reduced-round cipher
+  with published attacks would calibrate sensitivity against a
+  known ground truth.
+- **No side-channel coverage.** All gates are mathematical. Timing,
+  power, and cache channels are untested.
+
+---
+
 ## The workflow protocol
 
 Roles: **sovereign** (route selection, axioms, fitness), **observer**
