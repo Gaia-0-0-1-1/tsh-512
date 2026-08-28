@@ -137,7 +137,7 @@ def make_task_e6(task, train_frac, seed, device):
     a = torch.arange(729).repeat_interleave(729)
     b = torch.arange(729).repeat(729)
     y = tab[a, b]
-    x = torch.stack([a + 364, b + 364], dim=1)
+    x = torch.stack([a, b], dim=1)  # tokens ARE table indices 0..728 (no offset)
     g = torch.Generator().manual_seed(seed)
     perm = torch.randperm(x.shape[0], generator=g)
     n_train = int(round(train_frac * x.shape[0]))
