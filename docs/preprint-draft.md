@@ -1,7 +1,7 @@
 # Grokking Composes: The Wall, the Free Monoid, and the Semantic Join
 
-**Draft v0.1 — the results sections written from ledger records
-(tsh-512 seq 197–217). Every quantitative claim cites its seq.**
+**Draft v0.2 — the results sections written from ledger records
+(tsh-512 seq 197–220). Every quantitative claim cites its seq.**
 
 ## Abstract
 
@@ -9,27 +9,31 @@ Small transformers grok algebraic structure: trained on a group's
 Cayley table, they transition from memorization to exact
 generalization. We ask what happens when the target is a
 COMPOSITION of grokkable functions, and measure a sharp asymmetry:
-composites are mostly NOT learnable from scratch — 0/32 hard-label
-runs, and 0/8 even when distilling from a correct teacher's soft
-targets [seq 197, 207] — yet composition is FREE at the function
-level: the circuit vocabulary is closed under composition, a free
-monoid where 16 distinct composites derive from 4 banked phonemes
-with zero training [seq 178]. We map four routes across this fusion
-wall — sequential wiring (exact, 2.8x cost) [seq 200], truth-table
-folds (exact, 131,090x) [seq 202], the depth-unlimited table tree
-[seq 204], and the semantic join: a ZERO-PARAMETER weight fusion,
-`softmax(inner logits) @ outer.embed`, exact on the full composite
-domain when the inner is sharp [seq 207]. The join is RECURSIVE —
-join-of-joins is exact at depth 2 in all six tested orderings [seq
-214] — and it composes into a deployed learning loop that acquires
-composite functions exactly while paying only for missing phonemes,
-compounding across every future target [seq 210]. A control
-experiment extends the wall to quantum gate groups: the Pauli group
-mod phase groks at its isomorphism class's rate (200 steps, the
-fastest measured), but the full Pauli group WITH phases walls at
-the same config where Z16 groks — the phase is a commutation carry,
-the same order-dependent interaction term that blocks composite
-learning [seq 217].
+composites of GROUPS are mostly NOT learnable from scratch — 0/32
+hard-label runs, and 0/8 even when distilling from a correct
+teacher's soft targets [seq 197, 207] — yet composition is FREE at
+the function level: the circuit vocabulary is closed under
+composition, a free monoid where 16 distinct composites derive from
+4 banked phonemes with zero training [seq 178]. We map four routes
+across this fusion wall — sequential wiring (exact, 2.8x cost) [seq
+200], truth-table folds (exact, 131,090x) [seq 202], the
+depth-unlimited table tree [seq 204], and the semantic join: a
+ZERO-PARAMETER weight fusion, `softmax(inner logits) @ outer.embed`,
+exact on the full composite domain when the inner is sharp [seq
+207]. The join is RECURSIVE — join-of-joins is exact at depth 2 in
+all six tested orderings [seq 214] — and it composes into a
+deployed learning loop that acquires composite functions exactly
+while paying only for missing phonemes, compounding across every
+future target [seq 210]. A control experiment extends the wall to
+quantum gate groups: the Pauli group mod phase groks at its
+isomorphism class's rate (200 steps, the fastest measured), but the
+full Pauli group WITH phases walls at the same config where Z16
+groks — the phase is a commutation carry, the same
+order-dependent interaction term that blocks composite learning
+[seq 217]. Finally, we measure the wall's BOUNDARY: composites of
+monoids grok DIRECTLY in 200 steps where group composites wall —
+the wall is the price of REVERSIBLE (information-preserving)
+composition, not of composition itself [seq 220].
 
 ## 1. Introduction
 
@@ -87,6 +91,42 @@ distilled from the CORRECT wired teacher (the H1 chain, verified
 hard labels. Result: 0/8 grok (best single run 0.88). A correct
 teacher's soft targets do not cross the wall. The obstruction is at
 the function level, not the signal level.
+
+## 3b. The wall's boundary: group composites wall, monoid
+composites are free [seq 220]
+
+The scope of §3 is not "composition" but REVERSIBLE composition.
+E40 measured non-group phonemes at the identical config:
+
+- **The ladder:** bitwise monoids AND8/OR8 grok fast — 200 steps,
+  exact both seeds — while QUASI8, an affine LATIN-square
+  quasigroup (T(a,b) = (3a+5b) mod 8, bijective in both arguments,
+  no associativity), WALLS (0/2, test 0.54/0.15). Latin-ness does
+  not buy grokkability; the monoids' monotone idempotent structure
+  does. The null control RANDOM8 never groks (chance) — grokking
+  is structure extraction.
+- **The wall arm:** AND8(AND8) and OR8(OR8) composites grok
+  DIRECTLY FROM SCRATCH in 200 steps (test ≈1.0, both seeds) — the
+  composite of a monoid with itself is easier to learn than QUASI8
+  alone. Mixed composites carry: AND8(QUASI8) groks (1600–2000),
+  QUASI8(AND8) groks (2400–4400) — the monoid component's
+  information collapse frees the composite past the quasigroup's
+  own wall. Only QUASI8(QUASI8) fails (0/2).
+- **The join arm:** AND8(AND8) join is exact; OR8(OR8) join
+  MISMATCHES at 0.9968 — one point off in 4096 — because OR's
+  absorbing element (x|7=7) creates soft-margin inputs where the
+  softmax mixture lands a hair off the embedding row. The join's
+  sharpness precondition is violated at absorbing structures: the
+  join is not representation-agnostic.
+
+**The corrected law:** the fusion wall is the price of
+information-preserving (reversible, Latin) composition. Group
+outputs are uniform bijections — every token carries the full
+computation's trace, and nothing collapses, so the flat learner has
+no shortcut. Monoid outputs collapse (AND(x,0)=0 absorbs variance)
+and the collapse IS the shortcut. The E41 hypothesis this licenses:
+the wall's predictor is the inner function's output entropy on the
+composite domain.
 
 ## 4. Four routes across the wall
 
@@ -227,7 +267,7 @@ result.
 ## 10. Methodological note
 
 Every results sentence above maps to a hash-chained, append-only
-ledger record (tsh-512 timeline.jsonl, seq 197–217, chain verified
+ledger record (tsh-512 timeline.jsonl, seq 197–220, chain verified
 at each step). Predictions were registered BEFORE each experiment
 (seq 196, 199, 202, 204, 206, 209, 213, 216); two pre-registered
 predictions were WRONG (the H3 crossover, the PAULI4 cyclic guess)
@@ -235,6 +275,6 @@ and are reported as corrections in place. The paper is an extract
 of the ledger, not a post-hoc narrative.
 
 ---
-*Draft v0.1 assembled overnight (seq 212 outline → this draft).
+*Draft v0.2 assembled overnight (seq 212 outline → v0.1 → the E40 scope correction).
 Next: related work, figures (the T sweep, the sigma sweep, the
 ladder table), the E16 scale paragraph when the GPU frees.*

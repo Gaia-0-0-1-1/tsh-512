@@ -1,0 +1,76 @@
+E40: VOCABULARY SCALE-UP BEYOND ALGEBRA
+pre-registered seq 219
+
+  quasi8_latin: True
+  quasi8_not_associative: True
+  and8_monoid: True
+  or8_monoid: True
+  and8_not_latin: True
+  [logged] structure_checks: quasi8_latin=True quasi8_not_associative=True and8_monoid=True or8_monoid=True and8_not_latin=True
+
+=== arm (a): the ladder — non-group structures ===
+  QUASI8 s0: grok=never test=0.538 full=no
+  [logged] ladder: task=QUASI8 seed=0 grok_step=None test_acc=0.5385 exact=False
+  QUASI8 s1: grok=never test=0.154 full=no
+  [logged] ladder: task=QUASI8 seed=1 grok_step=None test_acc=0.1538 exact=False
+  AND8 s0: grok=200 test=1.000 full=exact
+  [logged] ladder: task=AND8 seed=0 grok_step=200 test_acc=1.0 exact=True
+  AND8 s1: grok=6800 test=1.000 full=exact
+  [logged] ladder: task=AND8 seed=1 grok_step=6800 test_acc=1.0 exact=True
+  OR8 s0: grok=200 test=1.000 full=exact
+  [logged] ladder: task=OR8 seed=0 grok_step=200 test_acc=1.0 exact=True
+  OR8 s1: grok=10400 test=1.000 full=exact
+  [logged] ladder: task=OR8 seed=1 grok_step=10400 test_acc=1.0 exact=True
+  RANDOM8 s0: grok=never test=0.154 full=no
+  [logged] ladder: task=RANDOM8 seed=0 grok_step=None test_acc=0.1538 exact=False
+  RANDOM8 s1: grok=never test=0.308 full=no
+  [logged] ladder: task=RANDOM8 seed=1 grok_step=None test_acc=0.3077 exact=False
+
+=== arm (b): the wall — direct composite training ===
+  QUASI8(QUASI8) s0: grok=never test=0.2524
+  [logged] wall: outer=QUASI8 inner=QUASI8 seed=0 grok_step=None final_test=0.2524 steps=20000
+  QUASI8(QUASI8) s1: grok=never test=0.2439
+  [logged] wall: outer=QUASI8 inner=QUASI8 seed=1 grok_step=None final_test=0.2439 steps=20000
+  AND8(AND8) s0: grok=200 test=0.9988
+  [logged] wall: outer=AND8 inner=AND8 seed=0 grok_step=200 final_test=0.9988 steps=200
+  AND8(AND8) s1: grok=200 test=1.0
+  [logged] wall: outer=AND8 inner=AND8 seed=1 grok_step=200 final_test=1.0 steps=200
+  OR8(OR8) s0: grok=200 test=0.9988
+  [logged] wall: outer=OR8 inner=OR8 seed=0 grok_step=200 final_test=0.9988 steps=200
+  OR8(OR8) s1: grok=200 test=0.9988
+  [logged] wall: outer=OR8 inner=OR8 seed=1 grok_step=200 final_test=0.9988 steps=200
+  AND8(QUASI8) s0: grok=1600 test=0.9793
+  [logged] wall: outer=AND8 inner=QUASI8 seed=0 grok_step=1600 final_test=0.9793 steps=1600
+  AND8(QUASI8) s1: grok=2000 test=1.0
+  [logged] wall: outer=AND8 inner=QUASI8 seed=1 grok_step=2000 final_test=1.0 steps=2000
+  QUASI8(AND8) s0: grok=2400 test=0.9549
+  [logged] wall: outer=QUASI8 inner=AND8 seed=0 grok_step=2400 final_test=0.9549 steps=2400
+  QUASI8(AND8) s1: grok=4400 test=0.9524
+  [logged] wall: outer=QUASI8 inner=AND8 seed=1 grok_step=4400 final_test=0.9524 steps=4400
+
+=== arm (c): the semantic join, zero parameters ===
+  QUASI8(QUASI8): SKIPPED (part not exactly grokked)
+  [logged] join: outer=QUASI8 inner=QUASI8 skipped=True
+  AND8(AND8): join acc=1.0000 fingerprint MATCH
+  [logged] join: outer=AND8 inner=AND8 acc=1.0 fingerprint_match=True
+  OR8(OR8): join acc=0.9968 fingerprint MISMATCH
+  [logged] join: outer=OR8 inner=OR8 acc=0.9968 fingerprint_match=False
+  AND8(QUASI8): SKIPPED (part not exactly grokked)
+  [logged] join: outer=AND8 inner=QUASI8 skipped=True
+  QUASI8(AND8): SKIPPED (part not exactly grokked)
+  [logged] join: outer=QUASI8 inner=AND8 skipped=True
+
+=== minting non-group phonemes into the vocabulary ===
+  AND8: minted -> {'seq': 73, 'hash': '6c59c822848176c4', 'id': 'circuit:e47255127355d5b0@AND8'}
+  [logged] mint: task=AND8 fingerprint=e47255127355d5b0
+  OR8: minted -> {'seq': 74, 'hash': '5b292e22cb25a955', 'id': 'circuit:637b842bc419a08f@OR8'}
+  [logged] mint: task=OR8 fingerprint=637b842bc419a08f
+  ledger: ok: 74 entries, chain intact
+
+=== VERDICTS (pre-registered seq 219) ===
+  P1 structure-vs-null: CONFIRMED (structured grokked: {'QUASI8': False, 'AND8': True, 'OR8': True}, RANDOM8 grokked: False)
+  P2 wall extends: FALSIFIED (1/5 families fail direct)
+  P3 join representation-agnostic: FALSIFIED (1/2 exact)
+  [logged] verdicts: P1=True P2=False P3=False failed_families=1 joins_exact=1 joins_total=2
+
+DONE in 31.3 min — 27 records
