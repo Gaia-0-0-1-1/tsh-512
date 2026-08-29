@@ -1,0 +1,40 @@
+E33/H1: SEQUENTIAL WIRING — the first hypernetwork builder
+
+chain: A(argmax) -> mod B-vocab -> B's input
+verify: the wired composite's fingerprint == E25's derivation
+
+
+grokking the 4 phonemes...
+  Z8: grokked at step 14600
+  Z4xZ2: grokked at step 5400
+  Z2x2x2: grokked at step 3600
+  Z7: grokked at step 17600
+
+--- the 16 chained composites ---
+  Z8(Z8      ): MATCH
+  Z8(Z4xZ2   ): MATCH
+  Z8(Z2x2x2  ): MATCH
+  Z8(Z7      ): MATCH
+  Z4xZ2(Z8      ): MATCH
+  Z4xZ2(Z4xZ2   ): MATCH
+  Z4xZ2(Z2x2x2  ): MATCH
+  Z4xZ2(Z7      ): MATCH
+  Z2x2x2(Z8      ): MATCH
+  Z2x2x2(Z4xZ2   ): MATCH
+  Z2x2x2(Z2x2x2  ): MATCH
+  Z2x2x2(Z7      ): MATCH
+  Z7(Z8      ): MATCH
+  Z7(Z4xZ2   ): MATCH
+  Z7(Z2x2x2  ): MATCH
+  Z7(Z7      ): MATCH
+
+--- inference cost ---
+  single circuit:  3.31 ms
+  chained (2x):    9.21 ms  (ratio: 2.8x)
+
+=== VERDICTS ===
+  P1 (wiring produces correct composites): CONFIRMED (16/16 exact, 100.0% avg accuracy)
+  P2 (cost ~2x): 2.8x measured
+  P3 (identity through the chain): CONFIRMED
+
+results -> C:\Users\Owen\tsh-512\tools\e33\results.jsonl

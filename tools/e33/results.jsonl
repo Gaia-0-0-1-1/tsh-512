@@ -1,0 +1,16 @@
+{"outer": "Z8", "inner": "Z8", "match": true, "accuracy": 1.0}
+{"outer": "Z8", "inner": "Z4xZ2", "match": true, "accuracy": 1.0}
+{"outer": "Z8", "inner": "Z2x2x2", "match": true, "accuracy": 1.0}
+{"outer": "Z8", "inner": "Z7", "match": true, "accuracy": 1.0}
+{"outer": "Z4xZ2", "inner": "Z8", "match": true, "accuracy": 1.0}
+{"outer": "Z4xZ2", "inner": "Z4xZ2", "match": true, "accuracy": 1.0}
+{"outer": "Z4xZ2", "inner": "Z2x2x2", "match": true, "accuracy": 1.0}
+{"outer": "Z4xZ2", "inner": "Z7", "match": true, "accuracy": 1.0}
+{"outer": "Z2x2x2", "inner": "Z8", "match": true, "accuracy": 1.0}
+{"outer": "Z2x2x2", "inner": "Z4xZ2", "match": true, "accuracy": 1.0}
+{"outer": "Z2x2x2", "inner": "Z2x2x2", "match": true, "accuracy": 1.0}
+{"outer": "Z2x2x2", "inner": "Z7", "match": true, "accuracy": 1.0}
+{"outer": "Z7", "inner": "Z8", "match": true, "accuracy": 1.0}
+{"outer": "Z7", "inner": "Z4xZ2", "match": true, "accuracy": 1.0}
+{"outer": "Z7", "inner": "Z2x2x2", "match": true, "accuracy": 1.0}
+{"outer": "Z7", "inner": "Z7", "match": true, "accuracy": 1.0}
