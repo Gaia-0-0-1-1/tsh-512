@@ -1,0 +1,101 @@
+E41: THE ENTROPY HYPOTHESIS — is the wall's predictor the inner's output entropy?
+pre-registered seq 222
+
+=== part 1: retrospective — entropy vs grok, 21 families ===
+
+  AND8(AND8): grok=2/2  inner_H=2.434  label_H=1.012  n=8
+  [logged] retro: outer=AND8 inner=AND8 grokked_seeds=2 inner_entropy=2.4338 label_entropy=1.0119 domain_n=8 vocab=8
+  AND8(QUASI8): grok=2/2  inner_H=3.000  label_H=2.434  n=8
+  [logged] retro: outer=AND8 inner=QUASI8 grokked_seeds=2 inner_entropy=3.0 label_entropy=2.4338 domain_n=8 vocab=8
+  OR8(OR8): grok=2/2  inner_H=2.434  label_H=1.012  n=8
+  [logged] retro: outer=OR8 inner=OR8 grokked_seeds=2 inner_entropy=2.4338 label_entropy=1.0119 domain_n=8 vocab=8
+  QUASI8(AND8): grok=2/2  inner_H=2.434  label_H=2.901  n=8
+  [logged] retro: outer=QUASI8 inner=AND8 grokked_seeds=2 inner_entropy=2.4338 label_entropy=2.9015 domain_n=8 vocab=8
+  QUASI8(QUASI8): grok=0/2  inner_H=3.000  label_H=3.000  n=8
+  [logged] retro: outer=QUASI8 inner=QUASI8 grokked_seeds=0 inner_entropy=3.0 label_entropy=3.0 domain_n=8 vocab=8
+  Z2x2x2(Z2x2x2): grok=0/2  inner_H=3.000  label_H=3.000  n=8
+  [logged] retro: outer=Z2x2x2 inner=Z2x2x2 grokked_seeds=0 inner_entropy=3.0 label_entropy=3.0 domain_n=8 vocab=8
+  Z2x2x2(Z4xZ2): grok=0/2  inner_H=3.000  label_H=3.000  n=8
+  [logged] retro: outer=Z2x2x2 inner=Z4xZ2 grokked_seeds=0 inner_entropy=3.0 label_entropy=3.0 domain_n=8 vocab=8
+  Z2x2x2(Z7): grok=0/2  inner_H=2.807  label_H=2.998  n=7
+  [logged] retro: outer=Z2x2x2 inner=Z7 grokked_seeds=0 inner_entropy=2.8074 label_entropy=2.998 domain_n=7 vocab=8
+  Z2x2x2(Z8): grok=0/2  inner_H=3.000  label_H=3.000  n=8
+  [logged] retro: outer=Z2x2x2 inner=Z8 grokked_seeds=0 inner_entropy=3.0 label_entropy=3.0 domain_n=8 vocab=8
+  Z4xZ2(Z2x2x2): grok=0/2  inner_H=3.000  label_H=3.000  n=8
+  [logged] retro: outer=Z4xZ2 inner=Z2x2x2 grokked_seeds=0 inner_entropy=3.0 label_entropy=3.0 domain_n=8 vocab=8
+  Z4xZ2(Z4xZ2): grok=0/2  inner_H=3.000  label_H=3.000  n=8
+  [logged] retro: outer=Z4xZ2 inner=Z4xZ2 grokked_seeds=0 inner_entropy=3.0 label_entropy=3.0 domain_n=8 vocab=8
+  Z4xZ2(Z7): grok=0/2  inner_H=2.807  label_H=2.998  n=7
+  [logged] retro: outer=Z4xZ2 inner=Z7 grokked_seeds=0 inner_entropy=2.8074 label_entropy=2.998 domain_n=7 vocab=8
+  Z4xZ2(Z8): grok=0/2  inner_H=3.000  label_H=3.000  n=8
+  [logged] retro: outer=Z4xZ2 inner=Z8 grokked_seeds=0 inner_entropy=3.0 label_entropy=3.0 domain_n=8 vocab=8
+  Z7(Z2x2x2): grok=2/2  inner_H=2.734  label_H=2.806  n=7
+  [logged] retro: outer=Z7 inner=Z2x2x2 grokked_seeds=2 inner_entropy=2.7338 label_entropy=2.8056 domain_n=7 vocab=7
+  Z7(Z4xZ2): grok=1/2  inner_H=2.753  label_H=2.806  n=7
+  [logged] retro: outer=Z7 inner=Z4xZ2 grokked_seeds=1 inner_entropy=2.7531 label_entropy=2.8064 domain_n=7 vocab=7
+  Z7(Z7): grok=2/2  inner_H=2.807  label_H=2.807  n=7
+  [logged] retro: outer=Z7 inner=Z7 grokked_seeds=2 inner_entropy=2.8074 label_entropy=2.8074 domain_n=7 vocab=7
+  Z7(Z8): grok=1/2  inner_H=2.753  label_H=2.806  n=7
+  [logged] retro: outer=Z7 inner=Z8 grokked_seeds=1 inner_entropy=2.7531 label_entropy=2.8064 domain_n=7 vocab=7
+  Z8(Z2x2x2): grok=0/2  inner_H=3.000  label_H=3.000  n=8
+  [logged] retro: outer=Z8 inner=Z2x2x2 grokked_seeds=0 inner_entropy=3.0 label_entropy=3.0 domain_n=8 vocab=8
+  Z8(Z4xZ2): grok=0/2  inner_H=3.000  label_H=3.000  n=8
+  [logged] retro: outer=Z8 inner=Z4xZ2 grokked_seeds=0 inner_entropy=3.0 label_entropy=3.0 domain_n=8 vocab=8
+  Z8(Z7): grok=0/2  inner_H=2.807  label_H=2.998  n=7
+  [logged] retro: outer=Z8 inner=Z7 grokked_seeds=0 inner_entropy=2.8074 label_entropy=2.998 domain_n=7 vocab=8
+  Z8(Z8): grok=1/2  inner_H=3.000  label_H=3.000  n=8
+  [logged] retro: outer=Z8 inner=Z8 grokked_seeds=1 inner_entropy=3.0 label_entropy=3.0 domain_n=8 vocab=8
+
+  families with >=1 grok: 9, never: 12
+  mean inner entropy: grokked=2.7054 never=2.9519
+  mean label entropy: grokked=2.3983 never=2.9995
+  P1 separation (inner entropy): CONFIRMED
+  [logged] retro_verdict: P1_separation=True mean_inner_grokked=2.7054 mean_inner_never=2.9519 mean_label_grokked=2.3983 mean_label_never=2.9995
+
+=== part 2: the decisive cells — entropy vs monoid-ness ===
+  [logged] structure: MUL8_monoid=True
+  [logged] structure: MIN8_semilattice=True
+  [logged] structure: MOD6_monoid=False MOD6_not_latin=True
+  MUL8 monoid: True, output H=2.7272
+  MIN8 semilattice: True, output H=2.7296
+  MOD6 monoid: False, not-Latin: True, output H=2.5815
+
+  --- the phoneme ladder ---
+  MUL8 s0: grok=200 test=1.000
+  [logged] ladder: task=MUL8 seed=0 grok_step=200 test_acc=1.0 exact=True
+  MUL8 s1: grok=3000 test=1.000
+  [logged] ladder: task=MUL8 seed=1 grok_step=3000 test_acc=1.0 exact=True
+  MIN8 s0: grok=200 test=1.000
+  [logged] ladder: task=MIN8 seed=0 grok_step=200 test_acc=1.0 exact=True
+  MIN8 s1: grok=200 test=1.000
+  [logged] ladder: task=MIN8 seed=1 grok_step=200 test_acc=1.0 exact=True
+  MOD6 s0: grok=7400 test=1.000
+  [logged] ladder: task=MOD6 seed=0 grok_step=7400 test_acc=1.0 exact=True
+  MOD6 s1: grok=18800 test=1.000
+  [logged] ladder: task=MOD6 seed=1 grok_step=18800 test_acc=1.0 exact=True
+
+  --- the self-composites (direct training) ---
+  MUL8(MUL8) s0: grok=1400 test=0.9561
+  [logged] self_composite: task=MUL8 seed=0 grok_step=1400 final_test=0.9561 steps=1400
+  MUL8(MUL8) s1: grok=never test=0.8939
+  [logged] self_composite: task=MUL8 seed=1 grok_step=None final_test=0.8939 steps=20000
+  [logged] composite_features: task=MUL8 inner_entropy=2.7272 label_entropy=1.6922 domain_n=8 vocab=8
+  MUL8(MUL8) features: {'inner_entropy': 2.7272, 'label_entropy': 1.6922, 'domain_n': 8, 'vocab': 8}
+  MIN8(MIN8) s0: grok=200 test=1.0
+  [logged] self_composite: task=MIN8 seed=0 grok_step=200 final_test=1.0 steps=200
+  MIN8(MIN8) s1: grok=200 test=1.0
+  [logged] self_composite: task=MIN8 seed=1 grok_step=200 final_test=1.0 steps=200
+  [logged] composite_features: task=MIN8 inner_entropy=2.7296 label_entropy=2.0988 domain_n=8 vocab=8
+  MIN8(MIN8) features: {'inner_entropy': 2.7296, 'label_entropy': 2.0988, 'domain_n': 8, 'vocab': 8}
+  MOD6(MOD6) s0: grok=1200 test=0.9732
+  [logged] self_composite: task=MOD6 seed=0 grok_step=1200 final_test=0.9732 steps=1200
+  MOD6(MOD6) s1: grok=1800 test=0.9866
+  [logged] self_composite: task=MOD6 seed=1 grok_step=1800 final_test=0.9866 steps=1800
+  [logged] composite_features: task=MOD6 inner_entropy=2.5815 label_entropy=2.585 domain_n=8 vocab=8
+  MOD6(MOD6) features: {'inner_entropy': 2.5815, 'label_entropy': 2.585, 'domain_n': 8, 'vocab': 8}
+
+  P2 (MOD6 walls — entropy is the predictor): FALSIFIED (MOD6(MOD6) grokked 2/2)
+  P3 (MIN8 free — the collapse shortcut): CONFIRMED
+  [logged] prospective_verdict: P2_mod6_walls=False P3_min8_free=True fam={'MUL8': 1, 'MIN8': 2, 'MOD6': 2}
+
+DONE in 7.1 min — 41 records

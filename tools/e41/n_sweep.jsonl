@@ -1,0 +1,6 @@
+{"final_test": 1.0, "grok_step": 600, "n": 4, "seed": 0}
+{"final_test": 1.0, "grok_step": 400, "n": 4, "seed": 1}
+{"final_test": 0.968, "grok_step": 800, "n": 5, "seed": 0}
+{"final_test": 0.952, "grok_step": 1200, "n": 5, "seed": 1}
+{"final_test": 0.9692, "grok_step": 4800, "n": 6, "seed": 0}
+{"final_test": 0.4885, "grok_step": null, "n": 6, "seed": 1}

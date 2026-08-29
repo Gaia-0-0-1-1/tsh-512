@@ -124,9 +124,37 @@ information-preserving (reversible, Latin) composition. Group
 outputs are uniform bijections — every token carries the full
 computation's trace, and nothing collapses, so the flat learner has
 no shortcut. Monoid outputs collapse (AND(x,0)=0 absorbs variance)
-and the collapse IS the shortcut. The E41 hypothesis this licenses:
-the wall's predictor is the inner function's output entropy on the
-composite domain.
+and the collapse IS the shortcut.
+
+## 3c. The quantitative predictor: label entropy [seq 223, 224]
+
+E41 measured the hypothesis that the predictor is the inner's
+output entropy. The retrospective over all 21 families CONFIRMS the
+separation (mean inner entropy 2.705 bits for ever-grokked vs
+2.952 for never-grokked; label entropy separates harder: 2.398 vs
+2.9995) — and resolves E32's Z7 anomaly: the n=7 vocabulary caps
+entropy at 2.807, below the 8-vocab wall's 3.0, which is why Z7
+composites grok at all. But the DECISIVE prospective cell
+falsified the entropy-causes-wall story: MOD6 — a high-entropy
+(H=2.58 over 6 symbols), non-Latin, no-absorbing-element table —
+has MOD6(MOD6) grok in 1200–1800 steps both seeds. High entropy
+without bijection is learnable.
+
+The E42 vocabulary sweep completes the law: Zn(Zn) self-composites
+at n = 4, 5, 6 grok with monotonically rising cost (400–600 →
+800–1200 → 4800-or-never steps; Z6 seed 1 fails — the boundary
+flickers at label_H = 2.58), while n = 8 Latin composites never
+grok (label_H = 3.0).
+
+**The entropy law (three measured bands):** composite learnability
+is governed by the composite's LABEL entropy — the information the
+composed function must emit. Below ~2.6 bits, composites grok
+deterministically and fast; in [2.58, 2.81] they are coin-flips
+(Z6 s1, MUL8 s1); above ~2.99 (full-vocab uniformity — exactly the
+Latin/Latin information-preserving case) they never grok at this
+config. The cost curve is monotone in bits. Any collapse anywhere
+in the stack — absorbing elements, range reduction, smaller
+vocabulary — buys learnability back.
 
 ## 4. Four routes across the wall
 
