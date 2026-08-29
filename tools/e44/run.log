@@ -1,0 +1,157 @@
+E44: CROSS-STRUCTURAL MISMATCH — the third factor?
+pre-registered seq 229
+
+=== arm 1: the cyclic-cross grid T_k(T_j), k != j ===
+  --- T5(T6) ---
+  T5(T6) s0: grok=6200 test=0.9622
+  [logged] composite: family=T5(T6) seed=0 grok_step=6200 final_test=0.9622
+  T5(T6) s1: grok=4600 test=0.9707
+  [logged] composite: family=T5(T6) seed=1 grok_step=4600 final_test=0.9707
+  T5(T6) s2: grok=5000 test=0.9671
+  [logged] composite: family=T5(T6) seed=2 grok_step=5000 final_test=0.9671
+  T5(T6) s3: grok=5400 test=0.9768
+  [logged] composite: family=T5(T6) seed=3 grok_step=5400 final_test=0.9768
+  --- T5(T7) ---
+  T5(T7) s0: grok=never test=0.8122
+  [logged] composite: family=T5(T7) seed=0 grok_step=None final_test=0.8122
+  T5(T7) s1: grok=never test=0.7524
+  [logged] composite: family=T5(T7) seed=1 grok_step=None final_test=0.7524
+  T5(T7) s2: grok=never test=0.7829
+  [logged] composite: family=T5(T7) seed=2 grok_step=None final_test=0.7829
+  T5(T7) s3: grok=never test=0.8073
+  [logged] composite: family=T5(T7) seed=3 grok_step=None final_test=0.8073
+  --- T5(T8) ---
+  T5(T8) s0: grok=never test=0.7488
+  [logged] composite: family=T5(T8) seed=0 grok_step=None final_test=0.7488
+  T5(T8) s1: grok=never test=0.7683
+  [logged] composite: family=T5(T8) seed=1 grok_step=None final_test=0.7683
+  T5(T8) s2: grok=never test=0.7622
+  [logged] composite: family=T5(T8) seed=2 grok_step=None final_test=0.7622
+  T5(T8) s3: grok=never test=0.7585
+  [logged] composite: family=T5(T8) seed=3 grok_step=None final_test=0.7585
+  --- T6(T5) ---
+  T6(T5) s0: grok=never test=0.8183
+  [logged] composite: family=T6(T5) seed=0 grok_step=None final_test=0.8183
+  T6(T5) s1: grok=3400 test=0.9524
+  [logged] composite: family=T6(T5) seed=1 grok_step=3400 final_test=0.9524
+  T6(T5) s2: grok=never test=0.8317
+  [logged] composite: family=T6(T5) seed=2 grok_step=None final_test=0.8317
+  T6(T5) s3: grok=never test=0.8159
+  [logged] composite: family=T6(T5) seed=3 grok_step=None final_test=0.8159
+  --- T6(T7) ---
+  T6(T7) s0: grok=never test=0.789
+  [logged] composite: family=T6(T7) seed=0 grok_step=None final_test=0.789
+  T6(T7) s1: grok=never test=0.7744
+  [logged] composite: family=T6(T7) seed=1 grok_step=None final_test=0.7744
+  T6(T7) s2: grok=4800 test=0.9671
+  [logged] composite: family=T6(T7) seed=2 grok_step=4800 final_test=0.9671
+  T6(T7) s3: grok=14600 test=0.961
+  [logged] composite: family=T6(T7) seed=3 grok_step=14600 final_test=0.961
+  --- T6(T8) ---
+  T6(T8) s0: grok=never test=0.7707
+  [logged] composite: family=T6(T8) seed=0 grok_step=None final_test=0.7707
+  T6(T8) s1: grok=never test=0.9171
+  [logged] composite: family=T6(T8) seed=1 grok_step=None final_test=0.9171
+  T6(T8) s2: grok=never test=0.8122
+  [logged] composite: family=T6(T8) seed=2 grok_step=None final_test=0.8122
+  T6(T8) s3: grok=never test=0.7207
+  [logged] composite: family=T6(T8) seed=3 grok_step=None final_test=0.7207
+  --- T7(T5) ---
+  T7(T5) s0: grok=never test=0.8488
+  [logged] composite: family=T7(T5) seed=0 grok_step=None final_test=0.8488
+  T7(T5) s1: grok=never test=0.8598
+  [logged] composite: family=T7(T5) seed=1 grok_step=None final_test=0.8598
+  T7(T5) s2: grok=6000 test=0.9549
+  [logged] composite: family=T7(T5) seed=2 grok_step=6000 final_test=0.9549
+  T7(T5) s3: grok=never test=0.8195
+  [logged] composite: family=T7(T5) seed=3 grok_step=None final_test=0.8195
+  --- T7(T6) ---
+  T7(T6) s0: grok=never test=0.7744
+  [logged] composite: family=T7(T6) seed=0 grok_step=None final_test=0.7744
+  T7(T6) s1: grok=never test=0.8268
+  [logged] composite: family=T7(T6) seed=1 grok_step=None final_test=0.8268
+  T7(T6) s2: grok=never test=0.8305
+  [logged] composite: family=T7(T6) seed=2 grok_step=None final_test=0.8305
+  T7(T6) s3: grok=never test=0.8317
+  [logged] composite: family=T7(T6) seed=3 grok_step=None final_test=0.8317
+  --- T7(T8) ---
+  T7(T8) s0: grok=never test=0.7732
+  [logged] composite: family=T7(T8) seed=0 grok_step=None final_test=0.7732
+  T7(T8) s1: grok=never test=0.7537
+  [logged] composite: family=T7(T8) seed=1 grok_step=None final_test=0.7537
+  T7(T8) s2: grok=never test=0.7707
+  [logged] composite: family=T7(T8) seed=2 grok_step=None final_test=0.7707
+  T7(T8) s3: grok=never test=0.7305
+  [logged] composite: family=T7(T8) seed=3 grok_step=None final_test=0.7305
+  --- T8(T5) ---
+  T8(T5) s0: grok=never test=0.8451
+  [logged] composite: family=T8(T5) seed=0 grok_step=None final_test=0.8451
+  T8(T5) s1: grok=never test=0.8524
+  [logged] composite: family=T8(T5) seed=1 grok_step=None final_test=0.8524
+  T8(T5) s2: grok=5400 test=0.9573
+  [logged] composite: family=T8(T5) seed=2 grok_step=5400 final_test=0.9573
+  T8(T5) s3: grok=never test=0.822
+  [logged] composite: family=T8(T5) seed=3 grok_step=None final_test=0.822
+  --- T8(T6) ---
+  T8(T6) s0: grok=never test=0.8012
+  [logged] composite: family=T8(T6) seed=0 grok_step=None final_test=0.8012
+  T8(T6) s1: grok=never test=0.8244
+  [logged] composite: family=T8(T6) seed=1 grok_step=None final_test=0.8244
+  T8(T6) s2: grok=never test=0.8488
+  [logged] composite: family=T8(T6) seed=2 grok_step=None final_test=0.8488
+  T8(T6) s3: grok=never test=0.8098
+  [logged] composite: family=T8(T6) seed=3 grok_step=None final_test=0.8098
+  --- T8(T7) ---
+  T8(T7) s0: grok=never test=0.7951
+  [logged] composite: family=T8(T7) seed=0 grok_step=None final_test=0.7951
+  T8(T7) s1: grok=never test=0.7915
+  [logged] composite: family=T8(T7) seed=1 grok_step=None final_test=0.7915
+  T8(T7) s2: grok=never test=0.7939
+  [logged] composite: family=T8(T7) seed=2 grok_step=None final_test=0.7939
+  T8(T7) s3: grok=never test=0.8037
+  [logged] composite: family=T8(T7) seed=3 grok_step=None final_test=0.8037
+
+=== arm 2: scrambled-cross — PD(T8) vs T8(PD) ===
+  PD(T8) s0: grok=2400 test=0.9549
+  [logged] composite: family=PD(T8) seed=0 grok_step=2400 final_test=0.9549
+  PD(T8) s1: grok=2200 test=0.9707
+  [logged] composite: family=PD(T8) seed=1 grok_step=2200 final_test=0.9707
+  PD(T8) s2: grok=2000 test=0.9561
+  [logged] composite: family=PD(T8) seed=2 grok_step=2000 final_test=0.9561
+  PD(T8) s3: grok=never test=0.4927
+  [logged] composite: family=PD(T8) seed=3 grok_step=None final_test=0.4927
+  T8(PD) s0: grok=never test=0.2598
+  [logged] composite: family=T8(PD) seed=0 grok_step=None final_test=0.2598
+  T8(PD) s1: grok=never test=0.222
+  [logged] composite: family=T8(PD) seed=1 grok_step=None final_test=0.222
+  T8(PD) s2: grok=never test=0.2256
+  [logged] composite: family=T8(PD) seed=2 grok_step=None final_test=0.2256
+  T8(PD) s3: grok=never test=0.2573
+  [logged] composite: family=T8(PD) seed=3 grok_step=None final_test=0.2573
+
+=== arm 3: the E32 replication cells ===
+  Z4xZ2(Z2x2x2) s0: grok=never test=0.3963
+  [logged] composite: family=Z4xZ2(Z2x2x2) seed=0 grok_step=None final_test=0.3963
+  Z4xZ2(Z2x2x2) s1: grok=never test=0.4561
+  [logged] composite: family=Z4xZ2(Z2x2x2) seed=1 grok_step=None final_test=0.4561
+  Z4xZ2(Z2x2x2) s2: grok=never test=0.4902
+  [logged] composite: family=Z4xZ2(Z2x2x2) seed=2 grok_step=None final_test=0.4902
+  Z4xZ2(Z2x2x2) s3: grok=never test=0.4695
+  [logged] composite: family=Z4xZ2(Z2x2x2) seed=3 grok_step=None final_test=0.4695
+  Z2x2x2(Z4xZ2) s0: grok=never test=0.439
+  [logged] composite: family=Z2x2x2(Z4xZ2) seed=0 grok_step=None final_test=0.439
+  Z2x2x2(Z4xZ2) s1: grok=never test=0.411
+  [logged] composite: family=Z2x2x2(Z4xZ2) seed=1 grok_step=None final_test=0.411
+  Z2x2x2(Z4xZ2) s2: grok=never test=0.2329
+  [logged] composite: family=Z2x2x2(Z4xZ2) seed=2 grok_step=None final_test=0.2329
+  Z2x2x2(Z4xZ2) s3: grok=never test=0.2232
+  [logged] composite: family=Z2x2x2(Z4xZ2) seed=3 grok_step=None final_test=0.2232
+
+=== VERDICTS (pre-registered seq 229) ===
+  cyclic-cross grid: {'T5(T6)': 4, 'T5(T7)': 0, 'T5(T8)': 0, 'T6(T5)': 1, 'T6(T7)': 2, 'T6(T8)': 0, 'T7(T5)': 1, 'T7(T6)': 0, 'T7(T8)': 0, 'T8(T5)': 1, 'T8(T6)': 0, 'T8(T7)': 0}
+  P1 (mismatch is real, >=4 cross cells <=2/4): CONFIRMED (11 low cells of 12)
+  P2 (outer alignment matters more: PD(T8)=3 < T8(PD)=0): FALSIFIED
+  P3 (E32 replication: both cross cells 0/4): CONFIRMED (Z4xZ2(Z2x2x2)=0/4, Z2x2x2(Z4xZ2)=0/4)
+  [logged] verdicts: P1_mismatch=True P2_outer_alignment=False P3_replication=True grid={'T5(T6)': 4, 'T5(T7)': 0, 'T5(T8)': 0, 'T6(T5)': 1, 'T6(T7)': 2, 'T6(T8)': 0, 'T7(T5)': 1, 'T7(T6)': 0, 'T7(T8)': 0, 'T8(T5)': 1, 'T8(T6)': 0, 'T8(T7)': 0} PD_T8=3 T8_PD=0 Z4Z2_cross=0 Z2x_cross=0 low_cells=11
+
+DONE in 30.6 min — 65 records

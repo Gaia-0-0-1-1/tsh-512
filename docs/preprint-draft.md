@@ -169,6 +169,34 @@ composite groks 4/4 in 1400–1600 steps — a composite can be easier
 than its own parts (more averaging structure over 4 tokens than 2),
 inverting the E32 framing at the phoneme level.
 
+## 3d. The third factor: structural mismatch [seq 230]
+
+E44 measured the cross grid T_k(T_j) at 4 seeds per family. The
+grid is nearly empty: of 12 cross cells, only the ADJACENT-modulus
+pairs grok at all — T5(T6) 4/4, T6(T7) 2/4 — and every
+non-adjacent pair walls (0/4 or 1/4), even though both families in
+every cell are CYCLIC (structurally identical up to modulus). The
+inner's output range vs the outer's expected classes is the
+mismatch variable: adjacent moduli nearly match, distant moduli
+misalign badly. The E32 replication cells hold at 4 seeds
+(Z4xZ2(Z2x2x2) 0/4, Z2x2x2(Z4xZ2) 0/4).
+
+The scrambled-cross control inverted the E43 prediction: PD(T8) —
+scrambled OUTER, aligned inner — groks 3/4 (2000–2400 steps), while
+T8(PD) — aligned outer, scrambled inner — walls 0/4. The INNER's
+alignment is what matters: the inner's outputs form the composite's
+input-side interface, and scrambling them destroys the
+representation the network needs, while a scrambled outer merely
+renames the target classes. This echoes the E5 input-access
+finding at the composite level.
+
+**The three-factor law (final form):** composite learnability =
+output alignment x inner-interface coherence x structural match,
+with entropy as the water level beneath all three. Direct
+composite learning fails on three independent measured factors;
+the semantic join bypasses all three — it never trains the
+composite.
+
 ## 4. Four routes across the wall
 
 **H1 — sequential wiring [seq 200].** Chain the phonemes: A's
