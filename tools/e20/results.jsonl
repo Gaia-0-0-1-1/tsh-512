@@ -1,0 +1,10 @@
+{"arm": "fp", "task": "Z8", "seed": 0, "memorize_step": 200, "grok_step": null, "steps_run": 20000, "final_test": 0.9230769276618958, "secs": 56.1}
+{"arm": "fp", "task": "Z8", "seed": 1, "memorize_step": 200, "grok_step": null, "steps_run": 20000, "final_test": 0.4615384638309479, "secs": 66.6}
+{"arm": "fp", "task": "Z4xZ2", "seed": 0, "memorize_step": 200, "grok_step": 7400, "steps_run": 7400, "final_test": 1.0, "secs": 26.9}
+{"arm": "fp", "task": "Z4xZ2", "seed": 1, "memorize_step": 200, "grok_step": 9600, "steps_run": 9600, "final_test": 1.0, "secs": 29.2}
+{"arm": "fp", "task": "Z2x2x2", "seed": 0, "memorize_step": 200, "grok_step": 5400, "steps_run": 5400, "final_test": 1.0, "secs": 15.4}
+{"arm": "fp", "task": "Z2x2x2", "seed": 1, "memorize_step": 200, "grok_step": 7800, "steps_run": 7800, "final_test": 1.0, "secs": 21.8}
+{"arm": "fp", "task": "Q8", "seed": 0, "memorize_step": 200, "grok_step": null, "steps_run": 20000, "final_test": 0.38461539149284363, "secs": 46.8}
+{"arm": "fp", "task": "Q8", "seed": 1, "memorize_step": 200, "grok_step": null, "steps_run": 20000, "final_test": 0.07692307978868484, "secs": 61.5}
+{"arm": "fp", "task": "D4", "seed": 0, "memorize_step": 200, "grok_step": null, "steps_run": 20000, "final_test": 0.23076923191547394, "secs": 45.8}
+{"arm": "fp", "task": "D4", "seed": 1, "memorize_step": 200, "grok_step": null, "steps_run": 20000, "final_test": 0.3076923191547394, "secs": 99.7}
