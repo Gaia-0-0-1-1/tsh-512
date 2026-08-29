@@ -1,0 +1,9 @@
+{"kind":"stimulus","pd_labels":[3,0,7,4],"ref":[4,6,7,6,4,1,0,1],"shifted_pi_2":[7,6,4,1,0,1,3,6]}
+{"best_acc":null,"exact":true,"grok_step":200,"kind":"ladder","seed":0,"task":"REF-PHASE-4"}
+{"best_acc":null,"exact":true,"grok_step":200,"kind":"ladder","seed":1,"task":"REF-PHASE-4"}
+{"best_acc":null,"exact":true,"grok_step":200,"kind":"ladder","seed":0,"task":"REF-PHASE-8"}
+{"best_acc":null,"exact":true,"grok_step":200,"kind":"ladder","seed":1,"task":"REF-PHASE-8"}
+{"exact": true, "grok_step": 200, "kind": "ladder", "seed": 0, "task": "PD-FREQ-4"}
+{"exact": true, "grok_step": 200, "kind": "ladder", "seed": 1, "task": "PD-FREQ-4"}
+{"best_acc": 0.75, "exact": false, "grok_step": null, "kind": "ladder", "seed": 0, "task": "PHASE-4"}
+{"best_acc": 0.75, "exact": false, "grok_step": null, "kind": "ladder", "seed": 1, "task": "PHASE-4"}

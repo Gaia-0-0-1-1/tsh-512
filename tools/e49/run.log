@@ -1,0 +1,31 @@
+E49: THE REFERENCE-TOKEN PHASE ENCODING + the sited PD control
+pre-registered seq 243
+
+--- stimulus sanity ---
+  ref (phi=0):      [4, 6, 7, 6, 4, 1, 0, 1]
+  shifted (phi=pi/2): [7, 6, 4, 1, 0, 1, 3, 6]
+  PD-FREQ-4 labels: [3, 0, 7, 4]
+  [logged] stimulus: ref=[4, 6, 7, 6, 4, 1, 0, 1] shifted_pi_2=[7, 6, 4, 1, 0, 1, 3, 6] pd_labels=[3, 0, 7, 4]
+
+--- the ladder (2 seeds each, exact gate) ---
+  REF-PHASE-4 s0: grok=200
+  [logged] ladder: task=REF-PHASE-4 seed=0 grok_step=200 exact=True best_acc=None
+  REF-PHASE-4 s1: grok=200
+  [logged] ladder: task=REF-PHASE-4 seed=1 grok_step=200 exact=True best_acc=None
+  REF-PHASE-8 s0: grok=200
+  [logged] ladder: task=REF-PHASE-8 seed=0 grok_step=200 exact=True best_acc=None
+  REF-PHASE-8 s1: grok=200
+  [logged] ladder: task=REF-PHASE-8 seed=1 grok_step=200 exact=True best_acc=None
+Traceback (most recent call last):
+  File "C:\Users\Owen\tsh-512\tools\e49\phase_ref.py", line 214, in <module>
+    main()
+  File "C:\Users\Owen\tsh-512\tools\e49\phase_ref.py", line 173, in main
+    r = grok(xs, ys, name, seed=seed)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Owen\tsh-512\tools\e49\phase_ref.py", line 128, in grok
+    loss = F.cross_entropy(out, y)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Owen\Python311\Lib\site-packages\torch\nn\functional.py", line 3504, in cross_entropy
+    return torch._C._nn.cross_entropy_loss(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+IndexError: Target 7 is out of bounds.
