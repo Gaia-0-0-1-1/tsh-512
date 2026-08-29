@@ -1,0 +1,77 @@
+E36/H4: WEIGHT FUSION — the research frontier
+pre-registered seq 206; composites: E32's failures only
+
+--- phoneme circuits (phi1, full-domain verified) ---
+  Z4xZ2: grokked step 5400 (seed 0), 64/64 exact
+  [logged] phoneme: task=Z4xZ2 steps=5400 seed=0
+  Z2x2x2: grokked step 3600 (seed 0), 64/64 exact
+  [logged] phoneme: task=Z2x2x2 steps=3600 seed=0
+
+  b_stack faithfulness: max|diff| = 0.00e+00 (asserted < 1e-5)
+  [logged] selfcheck: b_stack_max_diff=0.0
+
+=== A1: the wrapped discrete join (H1 wiring, one Module) ===
+  Z4xZ2(Z2x2x2): full-domain 1.0000  fingerprint MATCH
+  [logged] A1: outer=Z4xZ2 inner=Z2x2x2 acc=1.0 fingerprint_match=True
+  Z2x2x2(Z4xZ2): full-domain 1.0000  fingerprint MATCH
+  [logged] A1: outer=Z2x2x2 inner=Z4xZ2 acc=1.0 fingerprint_match=True
+
+=== A2: the literal continuous join (zero-shot, T sweep) ===
+  join: softmax(A_logits/T) @ B.embed  (no argmax, no training)
+  T->0 recovers the discrete join; T=1 is A's natural sharpness
+  Z4xZ2(Z2x2x2): T=64:0.138  T=16:0.260  T=4:0.977  T=1:1.000  T=0.5:1.000  T=0.25:1.000  T=0.1:1.000  T=0.05:1.000  T=0.01:1.000
+  [logged] A2_sweep: outer=Z4xZ2 inner=Z2x2x2 curve={'64.0': 0.1384, '16.0': 0.2595, '4.0': 0.9768, '1.0': 1.0, '0.5': 1.0, '0.25': 1.0, '0.1': 1.0, '0.05': 1.0, '0.01': 1.0}
+  Z2x2x2(Z4xZ2): T=64:0.125  T=16:0.246  T=4:0.988  T=1:1.000  T=0.5:1.000  T=0.25:1.000  T=0.1:1.000  T=0.05:1.000  T=0.01:1.000
+  [logged] A2_sweep: outer=Z2x2x2 inner=Z4xZ2 curve={'64.0': 0.125, '16.0': 0.2463, '4.0': 0.988, '1.0': 1.0, '0.5': 1.0, '0.25': 1.0, '0.1': 1.0, '0.05': 1.0, '0.01': 1.0}
+  Z4xZ2 logit margins (top1-top2): min=1.657 mean=15.597
+  [logged] margins: task=Z4xZ2 min=1.657 mean=15.597
+  Z2x2x2 logit margins (top1-top2): min=1.541 mean=17.957
+  [logged] margins: task=Z2x2x2 min=1.541 mean=17.957
+
+=== A3: minimal fusion — parts frozen, ONLY the join trained ===
+  Z4xZ2(Z2x2x2): grok=never test=0.139 train=0.1398 full=0.1396
+  [logged] A3: outer=Z4xZ2 inner=Z2x2x2 grok_step=None final_test=0.139 final_train=0.1398 full_domain=0.1396
+  Z2x2x2(Z4xZ2): grok=400 test=0.9598 train=0.9536 full=0.9548
+  [logged] A3: outer=Z2x2x2 inner=Z4xZ2 grok_step=400 final_test=0.9598 final_train=0.9536 full_domain=0.9548
+
+=== B: distillation from the wired teacher vs E32 hard labels ===
+  teacher Z4xZ2(Z2x2x2) logit margins: min=1.66 mean=15.58
+  [logged] teacher_margins: outer=Z4xZ2 inner=Z2x2x2 min=1.657 mean=15.581
+  teacher Z2x2x2(Z4xZ2) logit margins: min=1.54 mean=17.93
+  [logged] teacher_margins: outer=Z2x2x2 inner=Z4xZ2 min=1.541 mean=17.929
+
+  arms: hard (E32 replication) / distill T=2 / distill T=10
+  2 composites x 2 seeds x 3 arms = 12 runs
+
+  Z4xZ2(Z2x2x2) s0 HARD: grok=None test=0.3963 train=0.4258
+  [logged] B_hard: outer=Z4xZ2 inner=Z2x2x2 seed=0 grok_step=None final_test=0.3963 final_train=0.4258 steps=20000
+  Z4xZ2(Z2x2x2) s0 DISTILL T=2: grok=None test=0.2683 train=0.2451
+  [logged] B_distill: outer=Z4xZ2 inner=Z2x2x2 seed=0 T=2.0 grok_step=None final_test=0.2683 final_train=0.2451 steps=20000
+  Z4xZ2(Z2x2x2) s0 DISTILL T=10: grok=None test=0.4329 train=0.4472
+  [logged] B_distill: outer=Z4xZ2 inner=Z2x2x2 seed=0 T=10.0 grok_step=None final_test=0.4329 final_train=0.4472 steps=20000
+  Z4xZ2(Z2x2x2) s1 HARD: grok=None test=0.4561 train=0.5098
+  [logged] B_hard: outer=Z4xZ2 inner=Z2x2x2 seed=1 grok_step=None final_test=0.4561 final_train=0.5098 steps=20000
+  Z4xZ2(Z2x2x2) s1 DISTILL T=2: grok=None test=0.8805 train=0.8642
+  [logged] B_distill: outer=Z4xZ2 inner=Z2x2x2 seed=1 T=2.0 grok_step=None final_test=0.8805 final_train=0.8642 steps=20000
+  Z4xZ2(Z2x2x2) s1 DISTILL T=10: grok=None test=0.4622 train=0.5082
+  [logged] B_distill: outer=Z4xZ2 inner=Z2x2x2 seed=1 T=10.0 grok_step=None final_test=0.4622 final_train=0.5082 steps=20000
+  Z2x2x2(Z4xZ2) s0 HARD: grok=None test=0.439 train=0.4371
+  [logged] B_hard: outer=Z2x2x2 inner=Z4xZ2 seed=0 grok_step=None final_test=0.439 final_train=0.4371 steps=20000
+  Z2x2x2(Z4xZ2) s0 DISTILL T=2: grok=None test=0.539 train=0.4884
+  [logged] B_distill: outer=Z2x2x2 inner=Z4xZ2 seed=0 T=2.0 grok_step=None final_test=0.539 final_train=0.4884 steps=20000
+  Z2x2x2(Z4xZ2) s0 DISTILL T=10: grok=None test=0.539 train=0.4902
+  [logged] B_distill: outer=Z2x2x2 inner=Z4xZ2 seed=0 T=10.0 grok_step=None final_test=0.539 final_train=0.4902 steps=20000
+  Z2x2x2(Z4xZ2) s1 HARD: grok=None test=0.411 train=0.4447
+  [logged] B_hard: outer=Z2x2x2 inner=Z4xZ2 seed=1 grok_step=None final_test=0.411 final_train=0.4447 steps=20000
+  Z2x2x2(Z4xZ2) s1 DISTILL T=2: grok=None test=0.4622 train=0.5089
+  [logged] B_distill: outer=Z2x2x2 inner=Z4xZ2 seed=1 T=2.0 grok_step=None final_test=0.4622 final_train=0.5089 steps=20000
+  Z2x2x2(Z4xZ2) s1 DISTILL T=10: grok=None test=0.4329 train=0.4386
+  [logged] B_distill: outer=Z2x2x2 inner=Z4xZ2 seed=1 T=10.0 grok_step=None final_test=0.4329 final_train=0.4386 steps=20000
+
+=== C: the obstruction — B's input tolerance (sigma sweep) ===
+  Z4xZ2 (mean embedding norm 0.397): s=0:1.000  s=0.05:0.582  s=0.1:0.234  s=0.2:0.133  s=0.5:0.148  s=1.0:0.164
+  [logged] tolerance: task=Z4xZ2 mean_emb_norm=0.397 curve={'0': 1.0, '0.05': 0.582, '0.1': 0.2344, '0.2': 0.1328, '0.5': 0.1484, '1.0': 0.1641}
+  Z2x2x2 (mean embedding norm 1.054): s=0:1.000  s=0.05:0.992  s=0.1:0.949  s=0.2:0.352  s=0.5:0.133  s=1.0:0.129
+  [logged] tolerance: task=Z2x2x2 mean_emb_norm=1.054 curve={'0': 1.0, '0.05': 0.9922, '0.1': 0.9492, '0.2': 0.3516, '0.5': 0.1328, '1.0': 0.1289}
+
+DONE in 15.9 min — 27 records -> results.jsonl
