@@ -126,7 +126,7 @@ computation's trace, and nothing collapses, so the flat learner has
 no shortcut. Monoid outputs collapse (AND(x,0)=0 absorbs variance)
 and the collapse IS the shortcut.
 
-## 3c. The quantitative predictor: label entropy [seq 223, 224]
+## 3c. The quantitative predictor: alignment, then entropy [seq 223, 224, 227]
 
 E41 measured the hypothesis that the predictor is the inner's
 output entropy. The retrospective over all 21 families CONFIRMS the
@@ -140,21 +140,34 @@ falsified the entropy-causes-wall story: MOD6 — a high-entropy
 has MOD6(MOD6) grok in 1200–1800 steps both seeds. High entropy
 without bijection is learnable.
 
-The E42 vocabulary sweep completes the law: Zn(Zn) self-composites
-at n = 4, 5, 6 grok with monotonically rising cost (400–600 →
-800–1200 → 4800-or-never steps; Z6 seed 1 fails — the boundary
-flickers at label_H = 2.58), while n = 8 Latin composites never
-grok (label_H = 3.0).
+E43 then dissolved the intermediate band entirely. At 4 seeds per
+family, the tunable cyclic tables T_k(a,b) = (a+b) mod k grok
+their self-composites at EVERY entropy up to 3.0: T5 4/4, T6 4/4,
+T7 4/4, and T8 (= Z8, full 3.0 bits) 3/4 — pooled with E32's
+Z8(Z8) cells, 4/6. Yesterday's "coin-flip band" [2.58, 2.81] was
+2-seed sampling noise. Self-composition of cyclic tables is
+learnable at every measured entropy.
 
-**The entropy law (three measured bands):** composite learnability
-is governed by the composite's LABEL entropy — the information the
-composed function must emit. Below ~2.6 bits, composites grok
-deterministically and fast; in [2.58, 2.81] they are coin-flips
-(Z6 s1, MUL8 s1); above ~2.99 (full-vocab uniformity — exactly the
-Latin/Latin information-preserving case) they never grok at this
-config. The cost curve is monotone in bits. Any collapse anywhere
-in the stack — absorbing elements, range reduction, smaller
-vocabulary — buys learnability back.
+**The two-factor law [seq 227]:** the wall is governed by OUTPUT
+ALIGNMENT first and entropy second. The decisive cell is PD — Z8
+with outputs scrambled by a fixed permutation: same function, same
+3.0-bit entropy, but 0/4 composites grok (test 0.22–0.63) where
+T8 groks 3/4. The learner exploits the aligned successor structure
+of cyclic outputs (the composite of a cyclic table is cyclic;
+Fourier/periodic features line up), and scrambling the labels
+destroys exactly that alignment. Entropy remains necessary — every
+grokking composite in the corpus sits below 2.81 bits except the
+aligned T8 — but the sufficient condition for the wall is full
+entropy PLUS broken alignment. This is the E5 representation
+taxonomy resurfacing at the composite level: the fusion wall is,
+in its sharpest form, a REPRESENTATION wall. A third factor —
+structural mismatch between outer and inner (E32's cross-structural
+0/16 families) — is not touched by this sweep and remains open
+(the E44 candidate). One more inversion the sweep surfaced: the T7
+PHONEME fails to grok exactly (0/2, 12 attempts) while its
+composite groks 4/4 in 1400–1600 steps — a composite can be easier
+than its own parts (more averaging structure over 4 tokens than 2),
+inverting the E32 framing at the phoneme level.
 
 ## 4. Four routes across the wall
 

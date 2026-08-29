@@ -1,0 +1,87 @@
+E43: THE BAND PRECISION SWEEP — the entropy law's edges
+pre-registered seq 226
+
+--- table entropies (phoneme / composite labels) ---
+  T5: table H=2.3195  composite label H=2.3219
+  [logged] table: task=T5 table_entropy=2.3195 composite_label_entropy=2.3219
+  T6: table H=2.5815  composite label H=2.5850
+  [logged] table: task=T6 table_entropy=2.5815 composite_label_entropy=2.585
+  T7: table H=2.8063  composite label H=2.8074
+  [logged] table: task=T7 table_entropy=2.8063 composite_label_entropy=2.8074
+  T8: table H=3.0000  composite label H=3.0000
+  [logged] table: task=T8 table_entropy=3.0 composite_label_entropy=3.0
+  PD: table H=3.0000  composite label H=3.0000
+  [logged] table: task=PD table_entropy=3.0 composite_label_entropy=3.0
+
+=== P3: the phoneme floor (2 seeds each) ===
+  T5 s0: grok=3400 exact=True
+  [logged] phoneme: task=T5 seed=0 grok_step=3400 exact=True
+  T5 s1: grok=3400 exact=True
+  [logged] phoneme: task=T5 seed=1 grok_step=3400 exact=True
+  T6 s0: grok=7400 exact=True
+  [logged] phoneme: task=T6 seed=0 grok_step=7400 exact=True
+  T6 s1: grok=18800 exact=True
+  [logged] phoneme: task=T6 seed=1 grok_step=18800 exact=True
+  T7 s0: grok=never exact=False
+  [logged] phoneme: task=T7 seed=0 grok_step=None exact=False
+  T7 s1: grok=never exact=False
+  [logged] phoneme: task=T7 seed=1 grok_step=None exact=False
+  T8 s0: grok=14600 exact=True
+  [logged] phoneme: task=T8 seed=0 grok_step=14600 exact=True
+  T8 s1: grok=7200 exact=True
+  [logged] phoneme: task=T8 seed=1 grok_step=7200 exact=True
+  PD s0: grok=11800 exact=True
+  [logged] phoneme: task=PD seed=0 grok_step=11800 exact=True
+  PD s1: grok=13400 exact=True
+  [logged] phoneme: task=PD seed=1 grok_step=13400 exact=True
+
+=== P1/P2: self-composites (4 seeds each) ===
+  T5(T5) s0: grok=1000 test=0.9512
+  [logged] composite: task=T5 seed=0 grok_step=1000 final_test=0.9512
+  T5(T5) s1: grok=800 test=0.9695
+  [logged] composite: task=T5 seed=1 grok_step=800 final_test=0.9695
+  T5(T5) s2: grok=1200 test=0.9707
+  [logged] composite: task=T5 seed=2 grok_step=1200 final_test=0.9707
+  T5(T5) s3: grok=800 test=0.9585
+  [logged] composite: task=T5 seed=3 grok_step=800 final_test=0.9585
+  T6(T6) s0: grok=1200 test=0.9732
+  [logged] composite: task=T6 seed=0 grok_step=1200 final_test=0.9732
+  T6(T6) s1: grok=1800 test=0.9866
+  [logged] composite: task=T6 seed=1 grok_step=1800 final_test=0.9866
+  T6(T6) s2: grok=5800 test=0.9634
+  [logged] composite: task=T6 seed=2 grok_step=5800 final_test=0.9634
+  T6(T6) s3: grok=1000 test=0.9793
+  [logged] composite: task=T6 seed=3 grok_step=1000 final_test=0.9793
+  T7(T7) s0: grok=1600 test=0.9671
+  [logged] composite: task=T7 seed=0 grok_step=1600 final_test=0.9671
+  T7(T7) s1: grok=1400 test=0.9598
+  [logged] composite: task=T7 seed=1 grok_step=1400 final_test=0.9598
+  T7(T7) s2: grok=1400 test=0.9646
+  [logged] composite: task=T7 seed=2 grok_step=1400 final_test=0.9646
+  T7(T7) s3: grok=1600 test=0.9512
+  [logged] composite: task=T7 seed=3 grok_step=1600 final_test=0.9512
+  T8(T8) s0: grok=2400 test=0.9561
+  [logged] composite: task=T8 seed=0 grok_step=2400 final_test=0.9561
+  T8(T8) s1: grok=1800 test=0.9549
+  [logged] composite: task=T8 seed=1 grok_step=1800 final_test=0.9549
+  T8(T8) s2: grok=2000 test=0.9573
+  [logged] composite: task=T8 seed=2 grok_step=2000 final_test=0.9573
+  T8(T8) s3: grok=never test=0.2512
+  [logged] composite: task=T8 seed=3 grok_step=None final_test=0.2512
+  PD(PD) s0: grok=never test=0.6256
+  [logged] composite: task=PD seed=0 grok_step=None final_test=0.6256
+  PD(PD) s1: grok=never test=0.222
+  [logged] composite: task=PD seed=1 grok_step=None final_test=0.222
+  PD(PD) s2: grok=never test=0.2256
+  [logged] composite: task=PD seed=2 grok_step=None final_test=0.2256
+  PD(PD) s3: grok=never test=0.6146
+  [logged] composite: task=PD seed=3 grok_step=None final_test=0.6146
+
+=== VERDICTS (pre-registered seq 226) ===
+  family grok counts: {'T5': 4, 'T6': 4, 'T7': 4, 'T8': 3, 'PD': 0}
+  P1 monotone onset (4/2-3/1-2/0): FALSIFIED (monotone: True)
+  P2 permutation invariance (PD walls 0/4): CONFIRMED
+  P3 phoneme floor (all exact): FALSIFIED
+  [logged] verdicts: P1_onset=False monotone=True P2_invariance=True P3_floor=False fam={'T5': 4, 'T6': 4, 'T7': 4, 'T8': 3, 'PD': 0}
+
+DONE in 30.3 min — 36 records
