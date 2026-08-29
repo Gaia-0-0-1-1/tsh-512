@@ -1,0 +1,10 @@
+{"kind":"tables","pauli16_verified":true,"pauli4_verified":true}
+{"kind":"structure","pauli16_abelian":false,"pauli4_is_klein":true}
+{"final_test":1.0,"grok_step":200,"kind":"grok","seed":0,"steps":200,"task":"PAULI4"}
+{"final_test":1.0,"grok_step":200,"kind":"grok","seed":1,"steps":200,"task":"PAULI4"}
+{"final_test":0.7647,"grok_step":null,"kind":"grok","seed":0,"steps":20000,"task":"PAULI16"}
+{"final_test":0.4902,"grok_step":null,"kind":"grok","seed":1,"steps":20000,"task":"PAULI16"}
+{"final_test":0.9804,"grok_step":4800,"kind":"grok","seed":0,"steps":4800,"task":"Z16"}
+{"final_test":0.9608,"grok_step":4200,"kind":"grok","seed":1,"steps":4200,"task":"Z16"}
+{"kind":"grok_factored","task":"PAULI16-FACTORED","seed":0,"grok_step":null,"final_test":0.5882,"steps":20000}
+{"kind":"grok_factored","task":"PAULI16-FACTORED","seed":1,"grok_step":null,"final_test":0.5882,"steps":20000}

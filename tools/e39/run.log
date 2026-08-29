@@ -1,0 +1,38 @@
+E39/Q2: QUANTUM GATE GROKKING — the Pauli ladder
+pre-registered seq 216
+
+  PAULI4 table verified mod phase vs qiskit: True
+  PAULI16 table verified vs qiskit: True
+  [logged] tables: pauli4_verified=True pauli16_verified=True
+  PAULI4 is Klein V4 (all self-inverse): True (the pre-registration guessed cyclic — WRONG, corrected)
+  PAULI16 abelian: False (expect False — phases anticommute)
+  [logged] structure: pauli4_is_klein=True pauli16_abelian=False
+
+=== the ladder (2 seeds each, phi1, d64, 20k cap) ===
+  PAULI4 s0: grok=200 test=1.0
+  [logged] grok: task=PAULI4 seed=0 grok_step=200 final_test=1.0 steps=200
+  PAULI4 s1: grok=200 test=1.0
+  [logged] grok: task=PAULI4 seed=1 grok_step=200 final_test=1.0 steps=200
+  PAULI16 s0: grok=never test=0.7647
+  [logged] grok: task=PAULI16 seed=0 grok_step=None final_test=0.7647 steps=20000
+  PAULI16 s1: grok=never test=0.4902
+  [logged] grok: task=PAULI16 seed=1 grok_step=None final_test=0.4902 steps=20000
+  Z16 s0: grok=4800 test=0.9804
+  [logged] grok: task=Z16 seed=0 grok_step=4800 final_test=0.9804 steps=4800
+  Z16 s1: grok=4200 test=0.9608
+  [logged] grok: task=Z16 seed=1 grok_step=4200 final_test=0.9608 steps=4200
+
+=== PAULI16-FACTORED (phase/pauli decomposition) ===
+Traceback (most recent call last):
+  File "C:\Users\Owen\tsh-512\tools\e39\pauli_grok.py", line 320, in <module>
+    main()
+  File "C:\Users\Owen\tsh-512\tools\e39\pauli_grok.py", line 308, in main
+    r = run_grok_factored(p16, 16, seed=seed)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Owen\tsh-512\tools\e39\pauli_grok.py", line 245, in run_grok_factored
+    loss = F.cross_entropy(l2[:, :, 0].mean(-1), y_ph[tr][idx]) \
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Owen\Python311\Lib\site-packages\torch\nn\functional.py", line 3504, in cross_entropy
+    return torch._C._nn.cross_entropy_loss(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Expected floating point type for target with class probabilities, got Long
