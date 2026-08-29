@@ -1,0 +1,51 @@
+E48: THE WAVE LADDER — frequency, amplitude, phase
+pre-registered seq 241
+
+--- stimulus sanity (first cells) ---
+  f=1: [4, 6, 7, 6, 4, 1, 0, 1]
+  f=2: [4, 7, 4, 0, 3, 7, 4, 0]
+  rel phi=0:   [4, 6, 7, 6, 4, 1, 0, 1]
+  rel phi=pi:  [4, 4, 4, 4, 3, 4, 4, 4]
+  [logged] stimulus: f1=[4, 6, 7, 6, 4, 1, 0, 1] rel_pi=[4, 4, 4, 4, 3, 4, 4, 4]
+
+--- the ladder (2 seeds each, exact gate) ---
+  FREQ-4 s0: grok=200
+  [logged] ladder: task=FREQ-4 seed=0 grok_step=200 exact=True best_acc=None
+  FREQ-4 s1: grok=200
+  [logged] ladder: task=FREQ-4 seed=1 grok_step=200 exact=True best_acc=None
+  FREQ-8 s0: grok=never (best 0.75)
+  [logged] ladder: task=FREQ-8 seed=0 grok_step=None exact=False best_acc=0.75
+  FREQ-8 s1: grok=never (best 0.75)
+  [logged] ladder: task=FREQ-8 seed=1 grok_step=None exact=False best_acc=0.75
+  AMP-4 s0: grok=200
+  [logged] ladder: task=AMP-4 seed=0 grok_step=200 exact=True best_acc=None
+  AMP-4 s1: grok=200
+  [logged] ladder: task=AMP-4 seed=1 grok_step=200 exact=True best_acc=None
+  AMP-8 s0: grok=never (best 0.625)
+  [logged] ladder: task=AMP-8 seed=0 grok_step=None exact=False best_acc=0.625
+  AMP-8 s1: grok=never (best 0.625)
+  [logged] ladder: task=AMP-8 seed=1 grok_step=None exact=False best_acc=0.625
+  PHASE-4 s0: grok=never (best 0.75)
+  [logged] ladder: task=PHASE-4 seed=0 grok_step=None exact=False best_acc=0.75
+  PHASE-4 s1: grok=never (best 0.75)
+  [logged] ladder: task=PHASE-4 seed=1 grok_step=None exact=False best_acc=0.75
+  PHASE-8 s0: grok=never (best 0.625)
+  [logged] ladder: task=PHASE-8 seed=0 grok_step=None exact=False best_acc=0.625
+  PHASE-8 s1: grok=never (best 0.625)
+  [logged] ladder: task=PHASE-8 seed=1 grok_step=None exact=False best_acc=0.625
+  REL-PHASE-8 s0: grok=200
+  [logged] ladder: task=REL-PHASE-8 seed=0 grok_step=200 exact=True best_acc=None
+  REL-PHASE-8 s1: grok=200
+  [logged] ladder: task=REL-PHASE-8 seed=1 grok_step=200 exact=True best_acc=None
+  PD-FREQ-8 s0: grok=never (best 0.75)
+  [logged] ladder: task=PD-FREQ-8 seed=0 grok_step=None exact=False best_acc=0.75
+  PD-FREQ-8 s1: grok=never (best 0.75)
+  [logged] ladder: task=PD-FREQ-8 seed=1 grok_step=None exact=False best_acc=0.75
+
+=== VERDICTS (pre-registered seq 241) ===
+  P1 (axis split: FREQ+AMP grok, PHASE-ref groks at k=4): FALSIFIED (FREQ (2, 2)/(0, 2), AMP (2, 2)/(0, 2), PHASE (0, 2)/(0, 2))
+  P2 (REL-PHASE walls — the interference carry): FALSIFIED (2/2)
+  P3 (PD control walls where FREQ groks): FALSIFIED (PD 0/2, FREQ-8 0/2)
+  [logged] verdicts: P1_axis_split=False P2_relphase_walls=False P3_pd_control=False cells={'FREQ-4': (2, 2), 'FREQ-8': (0, 2), 'AMP-4': (2, 2), 'AMP-8': (0, 2), 'PHASE-4': (0, 2), 'PHASE-8': (0, 2), 'REL-PHASE-8': (2, 2), 'PD-FREQ-8': (0, 2)}
+
+DONE in 142.2 min — 18 records
