@@ -1,0 +1,29 @@
+E50: TONES — the first wave COMPOSITE (frequency x referenced phase)
+pre-registered seq 246
+
+--- the direct product tasks ---
+  TONE-4 s0: grok=200
+  [logged] tone: task=TONE-4 seed=0 grok_step=200 exact=True best_acc=None
+  TONE-4 s1: grok=200
+  [logged] tone: task=TONE-4 seed=1 grok_step=200 exact=True best_acc=None
+  TONE-8 s0: grok=200
+  [logged] tone: task=TONE-8 seed=0 grok_step=200 exact=True best_acc=None
+  TONE-8 s1: grok=200
+  [logged] tone: task=TONE-8 seed=1 grok_step=200 exact=True best_acc=None
+  TONE-16 s0: grok=200
+  [logged] tone: task=TONE-16 seed=0 grok_step=200 exact=True best_acc=None
+  TONE-16 s1: grok=200
+  [logged] tone: task=TONE-16 seed=1 grok_step=200 exact=True best_acc=None
+
+--- the semantic join of axis circuits ---
+  both axis circuits minted exactly
+  JOIN-16 accuracy on the joint domain: 0.5625
+  [logged] join: acc=0.5625 fingerprint=71d35c174d775600
+
+=== VERDICTS (pre-registered seq 246) ===
+  P1 (TONE-4 groks directly): CONFIRMED (2/2)
+  P2 (TONE-16 walls/coin-flips): FALSIFIED (2/2)
+  P3 (the join computes the tone exactly): FALSIFIED (join acc=0.5625)
+  [logged] verdicts: P1_tone4=True P2_tone16_walls=False P3_join=False cells={'TONE-4': (2, 2), 'TONE-8': (2, 2), 'TONE-16': (2, 2)} join_acc=0.5625
+
+DONE in 0.2 min — 8 records

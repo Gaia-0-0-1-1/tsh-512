@@ -1,0 +1,8 @@
+{"best_acc":null,"exact":true,"grok_step":200,"kind":"tone","seed":0,"task":"TONE-4"}
+{"best_acc":null,"exact":true,"grok_step":200,"kind":"tone","seed":1,"task":"TONE-4"}
+{"best_acc":null,"exact":true,"grok_step":200,"kind":"tone","seed":0,"task":"TONE-8"}
+{"best_acc":null,"exact":true,"grok_step":200,"kind":"tone","seed":1,"task":"TONE-8"}
+{"best_acc":null,"exact":true,"grok_step":200,"kind":"tone","seed":0,"task":"TONE-16"}
+{"best_acc":null,"exact":true,"grok_step":200,"kind":"tone","seed":1,"task":"TONE-16"}
+{"acc":0.5625,"fingerprint":"71d35c174d775600","kind":"join"}
+{"P1_tone4":true,"P2_tone16_walls":false,"P3_join":false,"cells":{"TONE-16":[2,2],"TONE-4":[2,2],"TONE-8":[2,2]},"join_acc":0.5625,"kind":"verdicts"}
