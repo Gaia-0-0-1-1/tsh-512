@@ -3,3 +3,4 @@ __pycache__/
 *.lock
 target/
 *.tmp
+tools/e39/sample.csv
