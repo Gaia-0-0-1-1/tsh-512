@@ -1,0 +1,92 @@
+E47: THE WD-RELIEF SWEEP — coin-flips vs the config-robust wall
+pre-registered seq 237
+
+config: wd=1.0, 50k cap, 4 seeds per family
+
+  Z6(Z6) s0: grok=never test=0.3692
+  [logged] composite: family=Z6(Z6) seed=0 grok_step=None final_test=0.3692
+  Z6(Z6) s1: grok=never test=0.4538
+  [logged] composite: family=Z6(Z6) seed=1 grok_step=None final_test=0.4538
+  Z6(Z6) s2: grok=1800 test=0.9538
+  [logged] composite: family=Z6(Z6) seed=2 grok_step=1800 final_test=0.9538
+  Z6(Z6) s3: grok=1400 test=0.9577
+  [logged] composite: family=Z6(Z6) seed=3 grok_step=1400 final_test=0.9577
+  -> Z6(Z6): 2/4 at wd=1.0
+
+  MUL8(MUL8) s0: grok=never test=0.8866
+  [logged] composite: family=MUL8(MUL8) seed=0 grok_step=None final_test=0.8866
+  MUL8(MUL8) s1: grok=never test=0.8793
+  [logged] composite: family=MUL8(MUL8) seed=1 grok_step=None final_test=0.8793
+  MUL8(MUL8) s2: grok=31600 test=0.9537
+  [logged] composite: family=MUL8(MUL8) seed=2 grok_step=31600 final_test=0.9537
+  MUL8(MUL8) s3: grok=never test=0.8878
+  [logged] composite: family=MUL8(MUL8) seed=3 grok_step=None final_test=0.8878
+  -> MUL8(MUL8): 1/4 at wd=1.0
+
+  T8(T8) s0: grok=3200 test=0.961
+  [logged] composite: family=T8(T8) seed=0 grok_step=3200 final_test=0.961
+  T8(T8) s1: grok=3400 test=0.9549
+  [logged] composite: family=T8(T8) seed=1 grok_step=3400 final_test=0.9549
+  T8(T8) s2: grok=3200 test=0.9512
+  [logged] composite: family=T8(T8) seed=2 grok_step=3200 final_test=0.9512
+  T8(T8) s3: grok=never test=0.25
+  [logged] composite: family=T8(T8) seed=3 grok_step=None final_test=0.25
+  -> T8(T8): 3/4 at wd=1.0
+
+  PD(PD) s0: grok=never test=0.361
+  [logged] composite: family=PD(PD) seed=0 grok_step=None final_test=0.361
+  PD(PD) s1: grok=never test=0.2671
+  [logged] composite: family=PD(PD) seed=1 grok_step=None final_test=0.2671
+  PD(PD) s2: grok=never test=0.228
+  [logged] composite: family=PD(PD) seed=2 grok_step=None final_test=0.228
+  PD(PD) s3: grok=never test=0.4671
+  [logged] composite: family=PD(PD) seed=3 grok_step=None final_test=0.4671
+  -> PD(PD): 0/4 at wd=1.0
+
+  Z4xZ2(Z4xZ2) s0: grok=never test=0.4902
+  [logged] composite: family=Z4xZ2(Z4xZ2) seed=0 grok_step=None final_test=0.4902
+  Z4xZ2(Z4xZ2) s1: grok=never test=0.4866
+  [logged] composite: family=Z4xZ2(Z4xZ2) seed=1 grok_step=None final_test=0.4866
+  Z4xZ2(Z4xZ2) s2: grok=never test=0.4744
+  [logged] composite: family=Z4xZ2(Z4xZ2) seed=2 grok_step=None final_test=0.4744
+  Z4xZ2(Z4xZ2) s3: grok=never test=0.4951
+  [logged] composite: family=Z4xZ2(Z4xZ2) seed=3 grok_step=None final_test=0.4951
+  -> Z4xZ2(Z4xZ2): 0/4 at wd=1.0
+
+  Z2x2x2(Z2x2x2) s0: grok=never test=0.2707
+  [logged] composite: family=Z2x2x2(Z2x2x2) seed=0 grok_step=None final_test=0.2707
+  Z2x2x2(Z2x2x2) s1: grok=never test=0.4976
+  [logged] composite: family=Z2x2x2(Z2x2x2) seed=1 grok_step=None final_test=0.4976
+  Z2x2x2(Z2x2x2) s2: grok=never test=0.4732
+  [logged] composite: family=Z2x2x2(Z2x2x2) seed=2 grok_step=None final_test=0.4732
+  Z2x2x2(Z2x2x2) s3: grok=never test=0.2293
+  [logged] composite: family=Z2x2x2(Z2x2x2) seed=3 grok_step=None final_test=0.2293
+  -> Z2x2x2(Z2x2x2): 0/4 at wd=1.0
+
+  Z4xZ2(Z2x2x2) s0: grok=never test=0.3951
+  [logged] composite: family=Z4xZ2(Z2x2x2) seed=0 grok_step=None final_test=0.3951
+  Z4xZ2(Z2x2x2) s1: grok=never test=0.5305
+  [logged] composite: family=Z4xZ2(Z2x2x2) seed=1 grok_step=None final_test=0.5305
+  Z4xZ2(Z2x2x2) s2: grok=never test=0.239
+  [logged] composite: family=Z4xZ2(Z2x2x2) seed=2 grok_step=None final_test=0.239
+  Z4xZ2(Z2x2x2) s3: grok=never test=0.4963
+  [logged] composite: family=Z4xZ2(Z2x2x2) seed=3 grok_step=None final_test=0.4963
+  -> Z4xZ2(Z2x2x2): 0/4 at wd=1.0
+
+  Z2x2x2(Z4xZ2) s0: grok=never test=0.4305
+  [logged] composite: family=Z2x2x2(Z4xZ2) seed=0 grok_step=None final_test=0.4305
+  Z2x2x2(Z4xZ2) s1: grok=never test=0.239
+  [logged] composite: family=Z2x2x2(Z4xZ2) seed=1 grok_step=None final_test=0.239
+  Z2x2x2(Z4xZ2) s2: grok=never test=0.2329
+  [logged] composite: family=Z2x2x2(Z4xZ2) seed=2 grok_step=None final_test=0.2329
+  Z2x2x2(Z4xZ2) s3: grok=never test=0.278
+  [logged] composite: family=Z2x2x2(Z4xZ2) seed=3 grok_step=None final_test=0.278
+  -> Z2x2x2(Z4xZ2): 0/4 at wd=1.0
+
+=== VERDICTS (pre-registered seq 237) ===
+  P1 (near-misses rescue at wd=1.0): FALSIFIED {'Z6(Z6)': 2, 'MUL8(MUL8)': 1, 'T8(T8)': 3}
+  P2 (PD(PD) opens — representation wall is config-relative): FALSIFIED (0/4)
+  P3 (hard cells stay walled at wd=1.0): CONFIRMED {'Z4xZ2(Z4xZ2)': 0, 'Z2x2x2(Z2x2x2)': 0, 'Z4xZ2(Z2x2x2)': 0, 'Z2x2x2(Z4xZ2)': 0}
+  [logged] verdicts: P1_near_rescue=False P2_pd_opens=False P3_hard_walled=True fam={'Z6(Z6)': 2, 'MUL8(MUL8)': 1, 'T8(T8)': 3, 'PD(PD)': 0, 'Z4xZ2(Z4xZ2)': 0, 'Z2x2x2(Z2x2x2)': 0, 'Z4xZ2(Z2x2x2)': 0, 'Z2x2x2(Z4xZ2)': 0}
+
+DONE in 37.6 min — 33 records

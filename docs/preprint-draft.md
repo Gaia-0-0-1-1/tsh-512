@@ -331,19 +331,86 @@ across every future target that reuses it.
 
 ## 8. Related work
 
-To write: Power et al. (grokking), Nanda et al. (modular addition
-circuits), Gromov (grokking beyond), Hinton et al. (distillation —
-our §3 is a boundary condition: distillation cannot cross the
-composition wall), truth-table composition (classical), quantum
-circuit compilation (the genQC line — diffusion, not grokking).
+**Grokking.** Power et al. (2022) named the delayed-generalization
+phenomenon on algorithmic tasks; Gromov (2023) established the
+modular-arithmetic canonical case and the memorize-then-generalize
+dynamics; Nanda et al. (2023) reverse-engineered the modular
+addition circuit (Fourier features and trig identities), which is
+the direct ancestor of our alignment factor — the network's
+exploitation of periodic output structure. Our contribution sits
+one level up: not "does a task grok" but "does a COMPOSITE of
+grokkable tasks grok," with the answer split into measured factors.
 
-## 9. Limitations
+**The scaling/regularization axis.** Liu et al. (2022, "Omnigrok")
+located grokking on a loss-landscape axis driven by weight norm —
+our E46 is a fine-grained instance: the T7 gate opens at weight
+decay 1.0 after failing at 0.5 and 0.1, and the near-miss
+coin-flips across E41–E43 are the same margin phenomenon. Varma et
+al. (2023) framed grokking as detangling feature learning; our
+three factors sharpen that framing compositionally: WHAT must
+detangle is the interface between learned subfunctions.
+
+**Distillation.** Hinton et al. (2015) established soft-target
+transfer; Gromov's "grokking modular arithmetic" line and the
+emergence-of-clusters work (e.g., Variengien & Goes, though on
+different tasks) study when soft structure helps. Our §3
+contribution is a boundary condition: distillation from a CORRECT
+teacher cannot cross the composition wall (0/8) — the obstruction
+is at the function level, not the signal level. We know of no
+prior measurement of distillation's failure on compositional
+targets.
+
+**Compositionality and modularity in networks.** The
+compositional-generalization literature (Lake & Baroni 2018;
+Keysers et al. 2020's CFQ; Dziri et al. 2023's "Faith and Fate")
+documents systematic failures of neural compositional
+generalization, with Dziri et al. nearest in spirit: composition
+errors localize to interactions between subtasks. Our wall is a
+clean-function instantiation — exact tables, no linguistic
+confounds — with the failure FACTORED (alignment, interface
+coherence, structural match) rather than observed.
+
+**Neural module networks and function composition.** Earlier work
+composed learned modules (Andreas et al. 2016; Kirsch et al. 2018's
+modular networks); the free-monoid result (E25: composition is
+free at the function level) and the semantic join (zero-parameter
+fusion) give that program a measured foundation: the modules can
+be composed without training WHEN the interface is semantic
+(logits-to-embeddings), not architectural.
+
+**Truth tables and circuit composition.** Composing functions via
+their truth tables is classical (BDDs, Bryant 1986); our fold and
+tree (H2/H3) instantiate it for learned circuits with identity
+preservation measured (131,090x at the table level).
+
+**Quantum.** Quantum-circuit compilation via ML exists (genQC line,
+Fürrutter et al. 2024 — diffusion models); our E39 is orthogonal:
+not compiling circuits but measuring where gate STRUCTURE sits on
+the grokking ladder (mod phase: learnable; with phase: walled by
+the commutation carry — the same interaction-term obstruction as
+the fusion wall).
+
+## 9. Limitations and robustness
 
 Scale: d64, order-4/7/8/16 structures, CPU-measured; the wall's
 shape at depth and scale is unmeasured (E16 queued on GPU). The
 phoneme set is small (4 grokkable, 16 composites). The semantic
 join is verified at depth 2 [seq 214]; arbitrary depth is implied
 by the sharpness-carry measurement but not measured beyond depth 2.
+
+**Config robustness [seq 236–238].** The obvious objection — the
+wall is a regularization artifact — is measured directly: at weight
+decay 1.0 (vs the 0.5 of every prior run) with a 50k cap and 4
+seeds per family, the near-miss coin-flips move (Z6 2/4, MUL8 1/4,
+T8 3/4 — and the T7 phoneme gate itself opens 3/6) but the wall
+does not: PD(PD) — the scrambled-output representation wall — and
+ALL FOUR hard E32 families stay 0/4 at wd=1.0, same plateau. Three
+regimes: FREE (aligned/low-entropy: groks at every tested config),
+COIN-FLIP (boundary: seed-luck at every config; wd shifts but does
+not close), WALL (three-factor and scrambled cells: 0/4 at both
+configs — config-robust). The paper's wall claims are the third
+regime only.
+
 Unattacked = UNKNOWN: no security claims; this is a learnability
 result.
 
