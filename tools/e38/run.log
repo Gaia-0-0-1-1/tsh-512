@@ -1,0 +1,41 @@
+E38: THE JOIN-OF-JOINS — does the semantic join compose?
+pre-registered seq 213
+
+  Z4xZ2: grokked step 5400 (seed 0), exact
+  [logged] phoneme: task=Z4xZ2 steps=5400
+  Z2x2x2: grokked step 3600 (seed 0), exact
+  [logged] phoneme: task=Z2x2x2 steps=3600
+  Z7: grokked step 17600 (seed 0), exact
+  [logged] phoneme: task=Z7 steps=17600
+
+=== P2: the fused pair's output sharpness ===
+  fused pair (A->B) logit margins: min=2.515 mean=17.384
+  [logged] fused_pair_margins: pair=Z4xZ2->Z2x2x2 min=2.515 mean=17.384
+  P2 (sharpness carries, min>=1.0): CONFIRMED
+
+=== replication: pairwise joins ===
+  join Z2x2x2(Z4xZ2): 1.0000
+  [logged] pairwise_join: inner=Z4xZ2 outer=Z2x2x2 acc=1.0
+  join Z7(Z2x2x2): 1.0000
+  [logged] pairwise_join: inner=Z2x2x2 outer=Z7 acc=1.0
+
+=== P1: the nested semantic join, triple domain ===
+  target: Z7(Z2x2x2(Z4xZ2(x))) — 2401 points
+  nested join accuracy: 1.0000  fingerprint MATCH
+  [logged] nested_join: target=Z7(Z2x2x2(Z4xZ2)) acc=1.0 fingerprint_match=True
+
+=== control: the depth-2 table tree (fold-of-folds) ===
+  table tree accuracy: 1.0000  fingerprint MATCH
+  [logged] table_tree: acc=1.0 fingerprint_match=True
+
+=== P3: ordering sensitivity ===
+  Z7(Z2x2x2(Z4xZ2)): 1.0000
+  [logged] ordering: inner=Z4xZ2 middle=Z2x2x2 outer=Z7 acc=1.0
+  Z4xZ2(Z2x2x2(Z7)): 1.0000
+  [logged] ordering: inner=Z7 middle=Z2x2x2 outer=Z4xZ2 acc=1.0
+  Z7(Z4xZ2(Z2x2x2)): 1.0000
+  [logged] ordering: inner=Z2x2x2 middle=Z4xZ2 outer=Z7 acc=1.0
+
+DONE in 1.8 min — 11 records
+
+VERDICTS: P1 (join composes): CONFIRMED  P2 (sharpness carries): CONFIRMED

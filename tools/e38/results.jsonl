@@ -1,0 +1,11 @@
+{"kind":"phoneme","steps":5400,"task":"Z4xZ2"}
+{"kind":"phoneme","steps":3600,"task":"Z2x2x2"}
+{"kind":"phoneme","steps":17600,"task":"Z7"}
+{"kind":"fused_pair_margins","mean":17.384,"min":2.515,"pair":"Z4xZ2->Z2x2x2"}
+{"acc":1.0,"inner":"Z4xZ2","kind":"pairwise_join","outer":"Z2x2x2"}
+{"acc":1.0,"inner":"Z2x2x2","kind":"pairwise_join","outer":"Z7"}
+{"acc":1.0,"fingerprint_match":true,"kind":"nested_join","target":"Z7(Z2x2x2(Z4xZ2))"}
+{"acc":1.0,"fingerprint_match":true,"kind":"table_tree"}
+{"acc":1.0,"inner":"Z4xZ2","kind":"ordering","middle":"Z2x2x2","outer":"Z7"}
+{"acc":1.0,"inner":"Z7","kind":"ordering","middle":"Z2x2x2","outer":"Z4xZ2"}
+{"acc":1.0,"inner":"Z2x2x2","kind":"ordering","middle":"Z4xZ2","outer":"Z7"}
