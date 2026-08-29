@@ -1,0 +1,80 @@
+E46: THE T7 PHONEME-GATE MYSTERY — the dead class?
+pre-registered seq 235
+
+  T7 label support: [0, 1, 2, 3, 4, 5, 6] (class 7 never appears: True)
+
+=== the dead-class test (6 seeds each) ===
+  vocab8_unmasked s0: grok=never test=0.9231 full=0.9844
+  [logged] arm: arm=vocab8_unmasked seed=0 grok_step=None test_acc=0.9231 full_acc=0.9844
+  vocab8_unmasked s1: grok=never test=0.4615 full=0.8906
+  [logged] arm: arm=vocab8_unmasked seed=1 grok_step=None test_acc=0.4615 full_acc=0.8906
+  vocab8_unmasked s2: grok=never test=0.8462 full=0.9688
+  [logged] arm: arm=vocab8_unmasked seed=2 grok_step=None test_acc=0.8462 full_acc=0.9688
+  vocab8_unmasked s3: grok=never test=0.7692 full=0.9531
+  [logged] arm: arm=vocab8_unmasked seed=3 grok_step=None test_acc=0.7692 full_acc=0.9531
+  vocab8_unmasked s4: grok=never test=0.8462 full=0.9688
+  [logged] arm: arm=vocab8_unmasked seed=4 grok_step=None test_acc=0.8462 full_acc=0.9688
+  vocab8_unmasked s5: grok=never test=0.8462 full=0.9688
+  [logged] arm: arm=vocab8_unmasked seed=5 grok_step=None test_acc=0.8462 full_acc=0.9688
+  -> vocab8_unmasked: grokked 0/6, exact 0/6
+  vocab8_masked s0: grok=never test=0.9231 full=0.9844
+  [logged] arm: arm=vocab8_masked seed=0 grok_step=None test_acc=0.9231 full_acc=0.9844
+  vocab8_masked s1: grok=never test=0.4615 full=0.8906
+  [logged] arm: arm=vocab8_masked seed=1 grok_step=None test_acc=0.4615 full_acc=0.8906
+  vocab8_masked s2: grok=never test=0.8462 full=0.9688
+  [logged] arm: arm=vocab8_masked seed=2 grok_step=None test_acc=0.8462 full_acc=0.9688
+  vocab8_masked s3: grok=never test=0.7692 full=0.9531
+  [logged] arm: arm=vocab8_masked seed=3 grok_step=None test_acc=0.7692 full_acc=0.9531
+  vocab8_masked s4: grok=never test=0.8462 full=0.9688
+  [logged] arm: arm=vocab8_masked seed=4 grok_step=None test_acc=0.8462 full_acc=0.9688
+  vocab8_masked s5: grok=never test=0.8462 full=0.9688
+  [logged] arm: arm=vocab8_masked seed=5 grok_step=None test_acc=0.8462 full_acc=0.9688
+  -> vocab8_masked: grokked 0/6, exact 0/6
+  vocab7 s0: grok=never test=0.9231 full=0.9844
+  [logged] arm: arm=vocab7 seed=0 grok_step=None test_acc=0.9231 full_acc=0.9844
+  vocab7 s1: grok=never test=0.4615 full=0.8906
+  [logged] arm: arm=vocab7 seed=1 grok_step=None test_acc=0.4615 full_acc=0.8906
+  vocab7 s2: grok=never test=0.8462 full=0.9688
+  [logged] arm: arm=vocab7 seed=2 grok_step=None test_acc=0.8462 full_acc=0.9688
+  vocab7 s3: grok=never test=0.7692 full=0.9531
+  [logged] arm: arm=vocab7 seed=3 grok_step=None test_acc=0.7692 full_acc=0.9531
+  vocab7 s4: grok=never test=0.8462 full=0.9688
+  [logged] arm: arm=vocab7 seed=4 grok_step=None test_acc=0.8462 full_acc=0.9688
+  vocab7 s5: grok=never test=0.8462 full=0.9688
+  [logged] arm: arm=vocab7 seed=5 grok_step=None test_acc=0.8462 full_acc=0.9688
+  -> vocab7: grokked 0/6, exact 0/6
+
+=== the config relief (unmasked vocab-8, 6 seeds) ===
+  wd=0.1 s0: grok=never test=0.9231 full=0.9844
+  [logged] relief: wd=0.1 seed=0 grok_step=None test_acc=0.9231 full_acc=0.9844
+  wd=0.1 s1: grok=never test=0.4615 full=0.8906
+  [logged] relief: wd=0.1 seed=1 grok_step=None test_acc=0.4615 full_acc=0.8906
+  wd=0.1 s2: grok=never test=0.8462 full=0.9688
+  [logged] relief: wd=0.1 seed=2 grok_step=None test_acc=0.8462 full_acc=0.9688
+  wd=0.1 s3: grok=never test=0.7692 full=0.9531
+  [logged] relief: wd=0.1 seed=3 grok_step=None test_acc=0.7692 full_acc=0.9531
+  wd=0.1 s4: grok=never test=0.8462 full=0.9688
+  [logged] relief: wd=0.1 seed=4 grok_step=None test_acc=0.8462 full_acc=0.9688
+  wd=0.1 s5: grok=never test=0.8462 full=0.9688
+  [logged] relief: wd=0.1 seed=5 grok_step=None test_acc=0.8462 full_acc=0.9688
+  -> wd=0.1: grokked 0/6, exact 0/6
+  wd=1.0 s0: grok=47800 test=1.0 full=1.0
+  [logged] relief: wd=1.0 seed=0 grok_step=47800 test_acc=1.0 full_acc=1.0
+  wd=1.0 s1: grok=never test=0.4615 full=0.8906
+  [logged] relief: wd=1.0 seed=1 grok_step=None test_acc=0.4615 full_acc=0.8906
+  wd=1.0 s2: grok=never test=0.8462 full=0.9688
+  [logged] relief: wd=1.0 seed=2 grok_step=None test_acc=0.8462 full_acc=0.9688
+  wd=1.0 s3: grok=never test=0.7692 full=0.9531
+  [logged] relief: wd=1.0 seed=3 grok_step=None test_acc=0.7692 full_acc=0.9531
+  wd=1.0 s4: grok=6600 test=1.0 full=1.0
+  [logged] relief: wd=1.0 seed=4 grok_step=6600 test_acc=1.0 full_acc=1.0
+  wd=1.0 s5: grok=6800 test=1.0 full=1.0
+  [logged] relief: wd=1.0 seed=5 grok_step=6800 test_acc=1.0 full_acc=1.0
+  -> wd=1.0: grokked 3/6, exact 3/6
+
+=== VERDICTS (pre-registered seq 235) ===
+  P1 (dead class is the cause: masked 0/6 vs unmasked 0/6, vocab7 0/6): FALSIFIED
+  P2 (config relief exists): CONFIRMED {'wd0.1': (0, 0), 'wd1.0': (3, 3)}
+  [logged] verdicts: P1_dead_class=False P2_config_relief=True arms={'vocab8_unmasked': (0, 0), 'vocab8_masked': (0, 0), 'vocab7': (0, 0)} relief={'wd0.1': (0, 0), 'wd1.0': (3, 3)}
+
+DONE in 50.8 min — 31 records
