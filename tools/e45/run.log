@@ -1,0 +1,49 @@
+E45: DOES THE SEMANTIC JOIN BYPASS THE MISMATCH FACTOR?
+pre-registered seq 232
+
+--- the phoneme gate (exact required) ---
+  T5: exact (held)
+  [logged] phoneme: task=T5 exact=True
+  T6: exact (held)
+  [logged] phoneme: task=T6 exact=True
+  T7: NOT EXACT — cells using it skipped
+  [logged] phoneme: task=T7 exact=False
+  T8: exact (held)
+  [logged] phoneme: task=T8 exact=True
+  PD: exact (held)
+  [logged] phoneme: task=PD exact=True
+  Z4xZ2: exact (held)
+  [logged] phoneme: task=Z4xZ2 exact=True
+  Z2x2x2: exact (held)
+  [logged] phoneme: task=Z2x2x2 exact=True
+
+--- the join arm: E44's walled pairs ---
+  Z4xZ2(Z2x2x2): join acc=1.0000 fingerprint MATCH
+  [logged] join: outer=Z4xZ2 inner=Z2x2x2 acc=1.0 fingerprint_match=True
+  Z2x2x2(Z4xZ2): join acc=1.0000 fingerprint MATCH
+  [logged] join: outer=Z2x2x2 inner=Z4xZ2 acc=1.0 fingerprint_match=True
+  T5(T7): SKIPPED (part not exact)
+  [logged] join: outer=T5 inner=T7 skipped=True
+  T5(T8): join acc=0.9958 fingerprint MISMATCH
+  [logged] join: outer=T5 inner=T8 acc=0.9958 fingerprint_match=False
+  T6(T8): join acc=1.0000 fingerprint MATCH
+  [logged] join: outer=T6 inner=T8 acc=1.0 fingerprint_match=True
+  T7(T8): SKIPPED (part not exact)
+  [logged] join: outer=T7 inner=T8 skipped=True
+  T8(T7): SKIPPED (part not exact)
+  [logged] join: outer=T8 inner=T7 skipped=True
+  T8(T6): join acc=1.0000 fingerprint MATCH
+  [logged] join: outer=T8 inner=T6 acc=1.0 fingerprint_match=True
+  T7(T6): SKIPPED (part not exact)
+  [logged] join: outer=T7 inner=T6 skipped=True
+  T8(PD): join acc=1.0000 fingerprint MATCH
+  [logged] join: outer=T8 inner=PD acc=1.0 fingerprint_match=True
+  PD(T8): join acc=0.9939 fingerprint MISMATCH
+  [logged] join: outer=PD inner=T8 acc=0.9939 fingerprint_match=False
+
+=== VERDICTS (pre-registered seq 232) ===
+  P1 (join bypasses mismatch, all exact): FALSIFIED (5/7 exact)
+  P2 (scrambled parts join exactly): FALSIFIED
+  [logged] verdicts: P1_bypass=False P2_scrambled=False exact_joins=5 tested=7
+
+DONE in 21.8 min — 19 records

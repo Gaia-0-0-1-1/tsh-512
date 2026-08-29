@@ -197,6 +197,20 @@ composite learning fails on three independent measured factors;
 the semantic join bypasses all three — it never trains the
 composite.
 
+E45 tested that bypass claim on E44's walled pairs and found its
+boundary [seq 233]: of 7 pairs with exactly-grokked parts, 5 join
+exactly (including the E32 replication cells in both directions
+and T8(PD), the scrambled-inner pair) but T5(T8) and PD(T8)
+mismatch at 0.996 and 0.994 — roughly 20 of 4096 points off. The
+mechanism: the vocabulary interface's information-losing folds
+(many-to-one mod-maps) plus a handful of low-margin inner points
+produce rare one-class flips. The refined dichotomy: the three
+factors bind direct learning ABSOLUTELY (0/4, plateau ~0.25–0.49);
+the join degrades GRACEFULLY (~0.5% of the domain) — and the
+loop's fold step repairs even that, since the banked table's
+ground truth replaces the join's output. Construction is the
+route; the fold is the guarantee.
+
 ## 4. Four routes across the wall
 
 **H1 — sequential wiring [seq 200].** Chain the phonemes: A's
