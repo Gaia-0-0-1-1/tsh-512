@@ -1,0 +1,58 @@
+E32: THE FUSION WALL — can composites be learned directly?
+
+--- P3: parts (the replication control) ---
+  Z8         s0: grok=never test=0.462
+  Z8         s1: grok=7400 test=1.000
+  Z4xZ2      s0: grok=never test=0.538
+  Z4xZ2      s1: grok=never test=0.846
+  Z2x2x2     s0: grok=3800 test=1.000
+  Z2x2x2     s1: grok=2200 test=1.000
+  Z7         s0: grok=never test=0.500
+  Z7         s1: grok=never test=0.600
+
+--- the 16 composites ---
+  Z8(Z8) s0: grok=2200 test=0.952
+  Z8(Z8) s1: grok=never test=0.256
+  Z8(Z4xZ2) s0: grok=never test=0.254
+  Z8(Z4xZ2) s1: grok=never test=0.237
+  Z8(Z2x2x2) s0: grok=never test=0.459
+  Z8(Z2x2x2) s1: grok=never test=0.237
+  Z8(Z7) s0: grok=never test=0.788
+  Z8(Z7) s1: grok=never test=0.769
+  Z4xZ2(Z8) s0: grok=never test=0.801
+  Z4xZ2(Z8) s1: grok=never test=0.367
+  Z4xZ2(Z4xZ2) s0: grok=never test=0.465
+  Z4xZ2(Z4xZ2) s1: grok=never test=0.390
+  Z4xZ2(Z2x2x2) s0: grok=never test=0.478
+  Z4xZ2(Z2x2x2) s1: grok=never test=0.276
+  Z4xZ2(Z7) s0: grok=never test=0.636
+  Z4xZ2(Z7) s1: grok=never test=0.603
+  Z2x2x2(Z8) s0: grok=never test=0.704
+  Z2x2x2(Z8) s1: grok=never test=0.228
+  Z2x2x2(Z4xZ2) s0: grok=never test=0.883
+  Z2x2x2(Z4xZ2) s1: grok=never test=0.216
+  Z2x2x2(Z2x2x2) s0: grok=never test=0.500
+  Z2x2x2(Z2x2x2) s1: grok=never test=0.254
+  Z2x2x2(Z7) s0: grok=never test=0.545
+  Z2x2x2(Z7) s1: grok=never test=0.561
+  Z7(Z8) s0: grok=10200 test=0.960
+  Z7(Z8) s1: grok=never test=0.790
+  Z7(Z4xZ2) s0: grok=never test=0.659
+  Z7(Z4xZ2) s1: grok=18600 test=0.963
+  Z7(Z2x2x2) s0: grok=5400 test=0.954
+  Z7(Z2x2x2) s1: grok=9600 test=0.967
+  Z7(Z7) s0: grok=1400 test=0.956
+  Z7(Z7) s1: grok=2200 test=0.958
+
+=== ANALYSIS ===
+
+  parts grok rate: 3/8
+  composite grok rate: 7/32
+
+  Z2x2x2 as INNER: 2/8 grok
+  Z2x2x2 as OUTER: 0/8 grok
+
+=== VERDICTS ===
+  P1 (fusion wall exists): CONFIRMED — only 7/32 composites grok
+  P2 (asymmetry): INNER placement matters (2 vs 0)
+  P3 (parts replicate): CHECK (3/8)
