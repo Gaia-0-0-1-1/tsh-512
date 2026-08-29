@@ -1,0 +1,74 @@
+E37: THE DEPLOYED LEARNING LOOP
+pre-registered seq 209
+
+route: MISS -> grok missing phonemes -> FUSE (free) -> FOLD (bank)
+the composite is NEVER trained directly
+
+
+--- COLD Z4xZ2(Z2x2x2): target Z4xZ2(Z2x2x2) ---
+  target acquired: 4096-point domain, fp=ef94ac2cf870
+  query: COMPOSED
+  [logged] query: tag=COLD Z4xZ2(Z2x2x2) result=COMPOSED missing=[]
+  Z4xZ2: COLD grok paid — 5400 steps, 31.4s
+  Z2x2x2: COLD grok paid — 3600 steps, 17.9s
+  [logged] grok_costs: tag=COLD Z4xZ2(Z2x2x2) costs={'Z4xZ2': {'steps': 5400, 'secs': 31.4, 'warm': False}, 'Z2x2x2': {'steps': 3600, 'secs': 17.9, 'warm': False}} total_steps=9000 total_secs=49.3
+  FUSE: semantic join accuracy 1.0000, fingerprint MATCH (0 composite-training steps)
+  [logged] fuse: tag=COLD Z4xZ2(Z2x2x2) acc=1.0 fingerprint_match=True
+
+--- WARM Z4xZ2(Z2x2x2): target Z4xZ2(Z2x2x2) ---
+  target acquired: 4096-point domain, fp=ef94ac2cf870
+  query: COMPOSED
+  [logged] query: tag=WARM Z4xZ2(Z2x2x2) result=COMPOSED missing=[]
+  Z4xZ2: WARM (banked by a prior episode)
+  Z2x2x2: WARM (banked by a prior episode)
+  [logged] grok_costs: tag=WARM Z4xZ2(Z2x2x2) costs={'Z4xZ2': {'steps': 0, 'secs': 0.0, 'warm': True}, 'Z2x2x2': {'steps': 0, 'secs': 0.0, 'warm': True}} total_steps=0 total_secs=0.0
+  FUSE: semantic join accuracy 1.0000, fingerprint MATCH (0 composite-training steps)
+  [logged] fuse: tag=WARM Z4xZ2(Z2x2x2) acc=1.0 fingerprint_match=True
+
+--- COLD Z2x2x2(Z4xZ2): target Z2x2x2(Z4xZ2) ---
+  target acquired: 4096-point domain, fp=e9858afbc03b
+  query: COMPOSED
+  [logged] query: tag=COLD Z2x2x2(Z4xZ2) result=COMPOSED missing=[]
+  Z2x2x2: WARM (banked by a prior episode)
+  Z4xZ2: WARM (banked by a prior episode)
+  [logged] grok_costs: tag=COLD Z2x2x2(Z4xZ2) costs={'Z2x2x2': {'steps': 0, 'secs': 0.0, 'warm': True}, 'Z4xZ2': {'steps': 0, 'secs': 0.0, 'warm': True}} total_steps=0 total_secs=0.0
+  FUSE: semantic join accuracy 1.0000, fingerprint MATCH (0 composite-training steps)
+  [logged] fuse: tag=COLD Z2x2x2(Z4xZ2) acc=1.0 fingerprint_match=True
+
+--- WARM Z2x2x2(Z4xZ2): target Z2x2x2(Z4xZ2) ---
+  target acquired: 4096-point domain, fp=e9858afbc03b
+  query: COMPOSED
+  [logged] query: tag=WARM Z2x2x2(Z4xZ2) result=COMPOSED missing=[]
+  Z2x2x2: WARM (banked by a prior episode)
+  Z4xZ2: WARM (banked by a prior episode)
+  [logged] grok_costs: tag=WARM Z2x2x2(Z4xZ2) costs={'Z2x2x2': {'steps': 0, 'secs': 0.0, 'warm': True}, 'Z4xZ2': {'steps': 0, 'secs': 0.0, 'warm': True}} total_steps=0 total_secs=0.0
+  FUSE: semantic join accuracy 1.0000, fingerprint MATCH (0 composite-training steps)
+  [logged] fuse: tag=WARM Z2x2x2(Z4xZ2) acc=1.0 fingerprint_match=True
+
+=== P2: the economy (warm vs cold) ===
+  Z4xZ2(Z2x2x2): cold=9000 steps, warm=0 steps
+  [logged] economy: tag=Z4xZ2(Z2x2x2) cold_steps=9000 warm_steps=0
+  Z2x2x2(Z4xZ2): cold=0 steps, warm=0 steps
+  [logged] economy: tag=Z2x2x2(Z4xZ2) cold_steps=0 warm_steps=0
+
+=== P3: the control — direct composite training ===
+  Z4xZ2(Z2x2x2): grok=never test=0.3963
+  [logged] control: target=Z4xZ2(Z2x2x2) grok_step=None final_test=0.3963
+  Z2x2x2(Z4xZ2): grok=never test=0.439
+  [logged] control: target=Z2x2x2(Z4xZ2) grok_step=None final_test=0.439
+
+=== FOLD: bank the loop's composites ===
+  Z4xZ2(Z2x2x2): table circuit banked (4096 entries) — {'dedup': 'circuit:ef94ac2cf870d2a9@Z4xZ2(Z2x2x2)'}
+  [logged] fold: target=Z4xZ2(Z2x2x2) entries=4096 rld={'dedup': 'circuit:ef94ac2cf870d2a9@Z4xZ2(Z2x2x2)'}
+  Z2x2x2(Z4xZ2): table circuit banked (4096 entries) — {'dedup': 'circuit:e9858afbc03bc015@Z2x2x2(Z4xZ2)'}
+  [logged] fold: target=Z2x2x2(Z4xZ2) entries=4096 rld={'dedup': 'circuit:e9858afbc03bc015@Z2x2x2(Z4xZ2)'}
+  ledger: ok: 70 entries, chain intact
+  [logged] ledger: entries=70 delta=2
+
+=== VERDICTS (pre-registered seq 209) ===
+  P1 loop delivers exact composites: CONFIRMED (cold 2/2, warm 2/2)
+  P2 warm cheaper than cold:        FALSIFIED
+  P3 control fails where loop wins: CONFIRMED (control grokked 0/2)
+  [logged] verdicts: P1=True P2=False P3=True
+
+DONE in 2.5 min — 20 records -> results.jsonl

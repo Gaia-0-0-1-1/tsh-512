@@ -1,0 +1,20 @@
+{"kind":"query","missing":[],"result":"COMPOSED","tag":"COLD Z4xZ2(Z2x2x2)"}
+{"costs":{"Z2x2x2":{"secs":17.9,"steps":3600,"warm":false},"Z4xZ2":{"secs":31.4,"steps":5400,"warm":false}},"kind":"grok_costs","tag":"COLD Z4xZ2(Z2x2x2)","total_secs":49.3,"total_steps":9000}
+{"acc":1.0,"fingerprint_match":true,"kind":"fuse","tag":"COLD Z4xZ2(Z2x2x2)"}
+{"kind":"query","missing":[],"result":"COMPOSED","tag":"WARM Z4xZ2(Z2x2x2)"}
+{"costs":{"Z2x2x2":{"secs":0.0,"steps":0,"warm":true},"Z4xZ2":{"secs":0.0,"steps":0,"warm":true}},"kind":"grok_costs","tag":"WARM Z4xZ2(Z2x2x2)","total_secs":0.0,"total_steps":0}
+{"acc":1.0,"fingerprint_match":true,"kind":"fuse","tag":"WARM Z4xZ2(Z2x2x2)"}
+{"kind":"query","missing":[],"result":"COMPOSED","tag":"COLD Z2x2x2(Z4xZ2)"}
+{"costs":{"Z2x2x2":{"secs":0.0,"steps":0,"warm":true},"Z4xZ2":{"secs":0.0,"steps":0,"warm":true}},"kind":"grok_costs","tag":"COLD Z2x2x2(Z4xZ2)","total_secs":0.0,"total_steps":0}
+{"acc":1.0,"fingerprint_match":true,"kind":"fuse","tag":"COLD Z2x2x2(Z4xZ2)"}
+{"kind":"query","missing":[],"result":"COMPOSED","tag":"WARM Z2x2x2(Z4xZ2)"}
+{"costs":{"Z2x2x2":{"secs":0.0,"steps":0,"warm":true},"Z4xZ2":{"secs":0.0,"steps":0,"warm":true}},"kind":"grok_costs","tag":"WARM Z2x2x2(Z4xZ2)","total_secs":0.0,"total_steps":0}
+{"acc":1.0,"fingerprint_match":true,"kind":"fuse","tag":"WARM Z2x2x2(Z4xZ2)"}
+{"cold_steps":9000,"kind":"economy","tag":"Z4xZ2(Z2x2x2)","warm_steps":0}
+{"cold_steps":0,"kind":"economy","tag":"Z2x2x2(Z4xZ2)","warm_steps":0}
+{"final_test":0.3963,"grok_step":null,"kind":"control","target":"Z4xZ2(Z2x2x2)"}
+{"final_test":0.439,"grok_step":null,"kind":"control","target":"Z2x2x2(Z4xZ2)"}
+{"entries":4096,"kind":"fold","rld":{"dedup":"circuit:ef94ac2cf870d2a9@Z4xZ2(Z2x2x2)"},"target":"Z4xZ2(Z2x2x2)"}
+{"entries":4096,"kind":"fold","rld":{"dedup":"circuit:e9858afbc03bc015@Z2x2x2(Z4xZ2)"},"target":"Z2x2x2(Z4xZ2)"}
+{"delta":2,"entries":70,"kind":"ledger"}
+{"P1":true,"P2":false,"P3":true,"kind":"verdicts"}
