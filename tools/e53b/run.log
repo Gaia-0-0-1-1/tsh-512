@@ -1,0 +1,31 @@
+E53b: COARTICULATION WITH HELD-OUT CONTEXTS — the real test
+pre-registered seq 257
+
+  targets: [1, 2, 3, 4]
+  train contexts: [(5, 6), (6, 7), (5, 7), (4, 6), (4, 7), (3, 5)]
+  HELD-OUT test contexts: [(3, 6), (3, 7)]
+
+  COART-HELD-NOREF s0: held-out 0.375 FAIL
+  [logged] heldout: task=COART-HELD-NOREF seed=0 held_out=0.375 pass=False step=None
+  COART-HELD-NOREF s1: held-out 0.5 FAIL
+  [logged] heldout: task=COART-HELD-NOREF seed=1 held_out=0.5 pass=False step=None
+  COART-HELD-REF s0: held-out 1.0 PASS (step 200)
+  [logged] heldout: task=COART-HELD-REF seed=0 held_out=1.0 pass=True step=200
+  COART-HELD-REF s1: held-out 1.0 PASS (step 200)
+  [logged] heldout: task=COART-HELD-REF seed=1 held_out=1.0 pass=True step=200
+  COART-HELD-RAND s0: held-out 0.375 FAIL
+  [logged] heldout: task=COART-HELD-RAND seed=0 held_out=0.375 pass=False step=None
+  COART-HELD-RAND s1: held-out 0.375 FAIL
+  [logged] heldout: task=COART-HELD-RAND seed=1 held_out=0.375 pass=False step=None
+  COART-HELD-FLOOR s0: held-out 0.75 FAIL
+  [logged] heldout: task=COART-HELD-FLOOR seed=0 held_out=0.75 pass=False step=None
+  COART-HELD-FLOOR s1: held-out 0.75 FAIL
+  [logged] heldout: task=COART-HELD-FLOOR seed=1 held_out=0.75 pass=False step=None
+
+=== VERDICTS (pre-registered seq 257) ===
+  P1 (the coarticulation wall): CONFIRMED (0/2)
+  P2 (the reference opens the third rung): CONFIRMED (REF 2/2)
+  P3 (controls: rand fails, floor passes): FALSIFIED (rand 0/2, floor 0/2)
+  [logged] verdicts: P1_coart_wall=True P2_reference_opens=True P3_controls=False cells={'NOREF': (0, 2), 'REF': (2, 2), 'RAND': (0, 2), 'FLOOR': (0, 2)}
+
+DONE in 122.1 min — 9 records
