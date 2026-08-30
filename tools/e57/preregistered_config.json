@@ -1,0 +1,25 @@
+{
+  "atol": 0.00005,
+  "batch_size": 64,
+  "betas": [0.9, 0.98],
+  "component_steps": {
+    "Z2x2x2": 3600,
+    "Z4xZ2": 5400
+  },
+  "device": "cpu",
+  "exact_truth_temperatures": [1.0, 0.5, 0.25, 0.1, 0.05, 0.01],
+  "lattice": "phi1",
+  "learning_rate": 0.001,
+  "pairs": [
+    ["Z4xZ2", "Z2x2x2"],
+    ["Z2x2x2", "Z4xZ2"]
+  ],
+  "permutation_old_to_new": [1, 2, 3, 4, 5, 6, 7, 0],
+  "rtol": 0.00001,
+  "seed": 0,
+  "temperatures": [64.0, 16.0, 4.0, 1.0, 0.5, 0.25, 0.1, 0.05, 0.01],
+  "threads": 8,
+  "train_fraction": 0.8,
+  "weight_decay": 0.5,
+  "width": 64
+}

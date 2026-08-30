@@ -1,0 +1,14 @@
+{
+  "assay_cell_count": 18,
+  "component_count": 2,
+  "failure_buckets": {
+    "break": [],
+    "core": [],
+    "gauge": [],
+    "integrity": []
+  },
+  "failures": [],
+  "scope": "two selected, deterministically retrained E36-protocol seed-0 instruments; one previously observed derangement",
+  "status": "PROVISIONAL_UNTIL_CHAIN_AND_MANIFEST_VERIFY",
+  "verdict": "PASS_DICTIONARY_BREAK_REPAIR"
+}

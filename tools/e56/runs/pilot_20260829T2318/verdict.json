@@ -1,0 +1,87 @@
+{
+  "hard_by_family": {
+    "Z2x2x2(Z2x2x2)": {
+      "both_seeds_memorized": true,
+      "both_seeds_no_memorization": false,
+      "generalized_by_seed": [
+        true,
+        true
+      ],
+      "memorized_by_seed": [
+        true,
+        true
+      ]
+    },
+    "Z2x2x2(Z4xZ2)": {
+      "both_seeds_memorized": true,
+      "both_seeds_no_memorization": false,
+      "generalized_by_seed": [
+        true,
+        true
+      ],
+      "memorized_by_seed": [
+        true,
+        true
+      ]
+    },
+    "Z4xZ2(Z2x2x2)": {
+      "both_seeds_memorized": true,
+      "both_seeds_no_memorization": false,
+      "generalized_by_seed": [
+        true,
+        true
+      ],
+      "memorized_by_seed": [
+        true,
+        true
+      ]
+    },
+    "Z4xZ2(Z4xZ2)": {
+      "both_seeds_memorized": true,
+      "both_seeds_no_memorization": false,
+      "generalized_by_seed": [
+        true,
+        true
+      ],
+      "memorized_by_seed": [
+        true,
+        true
+      ]
+    }
+  },
+  "hard_families_both_seeds_memorized": 4,
+  "hard_families_both_seeds_no_memorization": 0,
+  "missing_fork_cells": [],
+  "missing_hard_cells": [],
+  "missing_sentinel_cells": [],
+  "scope": "two paired seeds; legacy random point split; not structural OOD",
+  "score": "PREDICTION_MISS_HARD_FAMILIES_MEMORIZE",
+  "sentinel": {
+    "Z2x2x2(Z2x2x2)::seed=0": "NO_MEMORIZATION_WITHIN_BUDGET",
+    "Z2x2x2(Z2x2x2)::seed=1": "NO_MEMORIZATION_WITHIN_BUDGET",
+    "Z2x2x2(Z4xZ2)::seed=0": "NO_MEMORIZATION_WITHIN_BUDGET",
+    "Z2x2x2(Z4xZ2)::seed=1": "NO_MEMORIZATION_WITHIN_BUDGET",
+    "Z4xZ2(Z2x2x2)::seed=0": "NO_MEMORIZATION_WITHIN_BUDGET",
+    "Z4xZ2(Z2x2x2)::seed=1": "NO_MEMORIZATION_WITHIN_BUDGET",
+    "Z4xZ2(Z4xZ2)::seed=0": "NO_MEMORIZATION_WITHIN_BUDGET",
+    "Z4xZ2(Z4xZ2)::seed=1": "NO_MEMORIZATION_WITHIN_BUDGET"
+  },
+  "shuffled_control": {
+    "generalized_by_seed": [
+      false,
+      false
+    ],
+    "invalidates_assay": false
+  },
+  "structured_control": {
+    "floor_pass": true,
+    "generalized_by_seed": [
+      true,
+      true
+    ],
+    "memorized_by_seed": [
+      true,
+      true
+    ]
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "base_commit": "7345a8b391d81de9ed5a8a9179979835bff2c04e",
+  "experiment": "E57 categorical dictionary break/repair confirmatory replay",
+  "prior_result_disclosure": "The cyclic derangement break and inverse repair were already observed in an exploratory no-write probe. This registration governs confirmatory replay and artifact assertions only.",
+  "registered_at": "2026-08-30T00:17:51.4989825-07:00",
+  "sha256": {
+    "tools/e20/hyperbyte_test.py": "95471ebb3db19108d5d75525209c3c93d5da044228946b8ae0c81dfec041a6f2",
+    "tools/e36/h4_fusion.py": "ed6b882a7fb320a3ce8ce6530ad41df452b40f7ea229db4ab909edf280e8254a",
+    "tools/e57/PREREG.md": "6235db282c012f36e07f97eea92952e714098e5c782c636280b71bbaebc9cdc8",
+    "tools/e57/preregistered_config.json": "51e26cab5333be2c971849ff77b064b1b9471a65802e49f1e0d709768aefad55",
+    "tools/e6/math_structures.py": "1b4811259b1d177933ac0f667bba29919d8680e57c2ea437259e964afd5b0753"
+  }
+}

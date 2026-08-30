@@ -1,0 +1,10 @@
+{
+  "elapsed_seconds": 39.575,
+  "manifest_sha256": "450e81c98cd216dd844e3f31eec6407df9735bfb35f12522af641b9236490b19",
+  "result_chain": {
+    "head": "ce40a2b932db50c23323b8baa22fabd5941b8519bab8b047723c489f961f9f86",
+    "records": 29
+  },
+  "status": "FINAL",
+  "verdict": "PASS_DICTIONARY_BREAK_REPAIR"
+}

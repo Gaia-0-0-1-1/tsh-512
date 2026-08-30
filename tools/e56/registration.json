@@ -1,0 +1,14 @@
+{
+  "base_commit": "7345a8b391d81de9ed5a8a9179979835bff2c04e",
+  "experiment": "E56 memorize-fork composition-wall pilot",
+  "registered_at": "2026-08-29T23:16:00.9206523-07:00",
+  "scope": "pre-execution registration; two paired seeds; legacy random-point split; CUDA-only while E55 remains active",
+  "sha256": {
+    "tools/e20/hyperbyte_test.py": "95471ebb3db19108d5d75525209c3c93d5da044228946b8ae0c81dfec041a6f2",
+    "tools/e56/PREREG.md": "6fb130deabddcb061e75f189a9b2770c32f489705a4dd289eafb70920deb2b1d",
+    "tools/e56/preregistered_config.json": "41d4ce49ea1e0e292e09fcd9f6f6c640a2584fbefe1e6acc7324ac0a9e48c2ef",
+    "tools/e56/test_wall_falsifier.py": "793c1fcb781f85da8fabce05376814cd0ed4e33bf2002858a7f1828b8a5810a0",
+    "tools/e56/wall_falsifier.py": "807d18f32103139e788cf0ef1c136265118ef071c937dd25950b3f48115385b8",
+    "tools/e6/math_structures.py": "1b4811259b1d177933ac0f667bba29919d8680e57c2ea437259e964afd5b0753"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "attempt_number": 1,
+  "interruption_policy": "terminal INCOMPLETE; no retry or alternate run directory",
+  "registered_at": "2026-08-30T01:08:18.2736729-07:00",
+  "registration_sha256": "b34b3ce7666b194484a2d183e08adc55c380fe292ae1f44e9c1de826192860e0",
+  "run_dir": "C:\\Users\\Owen\\tsh-512\\tools\\e58\\runs\\pilot_20260830T0110",
+  "timeline_subject": "e58/repaired-router-attempt-1"
+}

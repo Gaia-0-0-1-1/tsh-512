@@ -1,0 +1,55 @@
+{
+  "arms": [
+    "FP",
+    "PHI1",
+    "HETERO_FIXED",
+    "LEGACY_DEAD",
+    "LIVE_WD05",
+    "LIVE_WD0"
+  ],
+  "betas": [0.9, 0.98],
+  "capability_margin_steps": 800,
+  "core_weight_decay": 0.5,
+  "cudnn_benchmark": false,
+  "device": "cuda:0",
+  "eval_every": 200,
+  "float32_matmul_precision": "highest",
+  "gumbel_seed_offset": 580000,
+  "gumbel_tau": 1.0,
+  "heterogeneous_assignment": {
+    "k": "phi1",
+    "o": "ternary",
+    "q": "ternary",
+    "unembed": "ternary",
+    "v": "phi2",
+    "w_in": "phi1",
+    "w_out": "phi2"
+  },
+  "learning_rate": 0.001,
+  "min_grok_delay_steps": 1000,
+  "nominal_parameters": 50709,
+  "router_weight_decay": {
+    "LEGACY_DEAD": 0.5,
+    "LIVE_WD0": 0.0,
+    "LIVE_WD05": 0.5
+  },
+  "seeds": [5700, 5701, 5702, 5703],
+  "shadow_parameters": 21,
+  "shuffle_control": {
+    "arms": ["FP", "LIVE_WD0"],
+    "permutation_seed": 585858,
+    "task": "Z2x2x2"
+  },
+  "sustain_evaluations": 5,
+  "tasks": {
+    "Z2x2x2": 12000,
+    "Z8": 20000
+  },
+  "test_threshold": 0.95,
+  "tf32": false,
+  "threads": 1,
+  "train_fraction": 0.8,
+  "train_threshold": 0.995,
+  "width": 64,
+  "z8_censor_step": 20800
+}

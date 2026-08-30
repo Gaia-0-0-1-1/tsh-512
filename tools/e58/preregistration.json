@@ -1,0 +1,21 @@
+{
+  "base_commit": "7345a8b391d81de9ed5a8a9179979835bff2c04e",
+  "experiment": "E58 repaired hyperbyte router prospective CUDA assay",
+  "prior_result_disclosure": "The E20 detach defect is known and timeline-anchored. No E58 training, gradient-gate execution, accuracy probe, or router-performance result was observed before preregistration.",
+  "registered_at": "2026-08-30T00:35:12.1099488-07:00",
+  "seed_search_disclosure": "A repository-wide text search excluding large generated artifacts found no prior use of seeds 5700, 5701, 5702, or 5703 before selection.",
+  "sha256": {
+    "tools/e20/hyperbyte_test.py": "95471ebb3db19108d5d75525209c3c93d5da044228946b8ae0c81dfec041a6f2",
+    "tools/e20/results.jsonl": "4a8abceaa130fa8b890dfbb8a2ae9b2903a6bccbf7a2787e9ddc02070fb8c97e",
+    "tools/e58/E20_ROUTER_AUDIT.md": "ee409a0fb7ae819741b31a47e67d0e4e7f9cd867676424bc1e067fe180392d01",
+    "tools/e58/PREREG.md": "232e14f9d647f0bb7ab53a5364551157a5f3c821a6cca2cfeb0d254c42cf4142",
+    "tools/e58/preregistered_config.json": "18d517fa3f1456780e985616917038d702ced67721d523aebbcf5fba5a4078eb",
+    "tools/e6/math_structures.py": "1b4811259b1d177933ac0f667bba29919d8680e57c2ea437259e964afd5b0753"
+  },
+  "supersession_timeline_anchor": {
+    "hash": "57cc40de00962ba129c9db56f08442449b520102b9479529adaa638390369425",
+    "payload_sha256": "ee409a0fb7ae819741b31a47e67d0e4e7f9cd867676424bc1e067fe180392d01",
+    "seq": 265,
+    "subject": "e20/router-verdict-supersession"
+  }
+}

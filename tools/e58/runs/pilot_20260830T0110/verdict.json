@@ -1,0 +1,6 @@
+{
+  "cell_count": 0,
+  "error": "RuntimeError('GPU idle/identity preflight failed')",
+  "status": "INTERRUPTED",
+  "verdict": "INCOMPLETE"
+}

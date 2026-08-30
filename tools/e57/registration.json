@@ -1,0 +1,23 @@
+{
+  "base_commit": "7345a8b391d81de9ed5a8a9179979835bff2c04e",
+  "execution_timeline_subject": "e57/interface-dictionary-execution-registration",
+  "preregistration_sha256": "f676a76466287aae95a0ceb9abaa47aabfe0ec23916dbdcea00b73238e7dc055",
+  "preregistration_timeline_anchor": {
+    "hash": "b83785f658645acd3c4118840b3db3befb7872998b2516a5db5a95055c0e1a14",
+    "payload_sha256": "f676a76466287aae95a0ceb9abaa47aabfe0ec23916dbdcea00b73238e7dc055",
+    "seq": 264,
+    "subject": "e57/interface-dictionary-prereg"
+  },
+  "registered_at": "2026-08-30T00:41:13.2167346-07:00",
+  "review_gate": "Independent pre-execution audit GO: 12 tests pass; exact source/timeline, domain, tensor, checkpoint/state, result-chain, artifact, and provisional/final reducers checked.",
+  "sha256": {
+    "tools/e20/hyperbyte_test.py": "95471ebb3db19108d5d75525209c3c93d5da044228946b8ae0c81dfec041a6f2",
+    "tools/e36/h4_fusion.py": "ed6b882a7fb320a3ce8ce6530ad41df452b40f7ea229db4ab909edf280e8254a",
+    "tools/e57/PREREG.md": "6235db282c012f36e07f97eea92952e714098e5c782c636280b71bbaebc9cdc8",
+    "tools/e57/interface_dictionary.py": "baaf18abdab364064413ea4b5b2424628bdca906745aed4d1d7e24e4ffa50d15",
+    "tools/e57/preregistered_config.json": "51e26cab5333be2c971849ff77b064b1b9471a65802e49f1e0d709768aefad55",
+    "tools/e57/preregistration.json": "f676a76466287aae95a0ceb9abaa47aabfe0ec23916dbdcea00b73238e7dc055",
+    "tools/e57/test_interface_dictionary.py": "4c0e0821ba12946ab1c8372b94a2af6c7ebadcac925c3d282bef81c65b48586b",
+    "tools/e6/math_structures.py": "1b4811259b1d177933ac0f667bba29919d8680e57c2ea437259e964afd5b0753"
+  }
+}

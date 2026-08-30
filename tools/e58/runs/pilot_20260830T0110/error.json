@@ -1,0 +1,7 @@
+{
+  "completed_cells": 0,
+  "elapsed_seconds": 6.785,
+  "error": "RuntimeError('GPU idle/identity preflight failed')",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\Owen\\tsh-512\\tools\\e58\\router_repair.py\", line 2104, in main\n    preflight = configure_and_preflight_cuda(config)\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Owen\\tsh-512\\tools\\e58\\router_repair.py\", line 1392, in configure_and_preflight_cuda\n    raise RuntimeError(\"GPU idle/identity preflight failed\")\nRuntimeError: GPU idle/identity preflight failed\n",
+  "verdict": "INCOMPLETE"
+}

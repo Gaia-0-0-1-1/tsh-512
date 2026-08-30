@@ -1,0 +1,9 @@
+{"kind":"dataset","phones":36,"rimes":259,"test":619,"total":3095,"train":2476}
+{"arm":"G2P-RAW","kind":"g2p","mean_position":0.5069,"per_position":[0.4346,0.4927,0.5218,0.5784],"seed":0,"word_accuracy":0.0}
+{"arm":"G2P-RAW","kind":"g2p","mean_position":0.5089,"per_position":[0.441,0.4927,0.525,0.5767],"seed":1,"word_accuracy":0.0}
+{"arm":"G2P-REF","kind":"g2p","mean_position":0.706,"per_position":[0.517,0.5832,0.8433,0.8805],"seed":0,"word_accuracy":0.0}
+{"arm":"G2P-REF","kind":"g2p","mean_position":0.7056,"per_position":[0.517,0.5832,0.8433,0.8788],"seed":1,"word_accuracy":0.0}
+{"arm":"G2P-RAND","kind":"g2p","mean_position":0.046,"per_position":[0.0452,0.042,0.0501,0.0468],"seed":0,"word_accuracy":0.0}
+{"arm":"G2P-RAND","kind":"g2p","mean_position":0.0473,"per_position":[0.0501,0.042,0.0501,0.0468],"seed":1,"word_accuracy":0.0}
+{"arm":"G2P-FREQ","kind":"g2p","per_position":0.8199,"word_accuracy":0.454}
+{"P1_pd_wall":true,"P2_reference_helps":true,"P3_controls":false,"freq":0.8199,"kind":"verdicts","rand":0.0466,"raw":0.5079,"ref":0.7058}

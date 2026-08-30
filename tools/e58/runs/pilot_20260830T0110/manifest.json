@@ -1,0 +1,89 @@
+{
+  "files": [
+    {
+      "bytes": 629,
+      "path": "error.json",
+      "sha256": "b6a5f9bb5d8a01ce093a7dff5a1171970ea939770cf7ed77111c89bebb79dc70"
+    },
+    {
+      "bytes": 300,
+      "path": "gpu_lock_events.jsonl",
+      "sha256": "33515906c6f53286d158d359435b4adea7c5b0950fc5acc909bd97e763c1736c"
+    },
+    {
+      "bytes": 101,
+      "path": "result_chain.json",
+      "sha256": "99e2cfd78a5c52d6af7309047c40f7b8b69d58ea1477988a3ddb3c738eaa6de4"
+    },
+    {
+      "bytes": 783,
+      "path": "results.jsonl",
+      "sha256": "0f275d869e006eeb9194bb7ab1035527caa4bc3db9cbb2dcb51bae1cacbcba9e"
+    },
+    {
+      "bytes": 395,
+      "path": "source/attempt.json",
+      "sha256": "7d4e0edd11ed58cb9417967b19b12b4d60d16d99763cfedc278cb3169e86c7b2"
+    },
+    {
+      "bytes": 10283,
+      "path": "source/e20_results.jsonl",
+      "sha256": "4a8abceaa130fa8b890dfbb8a2ae9b2903a6bccbf7a2787e9ddc02070fb8c97e"
+    },
+    {
+      "bytes": 2481,
+      "path": "source/E20_ROUTER_AUDIT.md",
+      "sha256": "ee409a0fb7ae819741b31a47e67d0e4e7f9cd867676424bc1e067fe180392d01"
+    },
+    {
+      "bytes": 7837,
+      "path": "source/hyperbyte_test.py",
+      "sha256": "95471ebb3db19108d5d75525209c3c93d5da044228946b8ae0c81dfec041a6f2"
+    },
+    {
+      "bytes": 9814,
+      "path": "source/math_structures.py",
+      "sha256": "1b4811259b1d177933ac0f667bba29919d8680e57c2ea437259e964afd5b0753"
+    },
+    {
+      "bytes": 7381,
+      "path": "source/PREREG.md",
+      "sha256": "232e14f9d647f0bb7ab53a5364551157a5f3c821a6cca2cfeb0d254c42cf4142"
+    },
+    {
+      "bytes": 1142,
+      "path": "source/preregistered_config.json",
+      "sha256": "18d517fa3f1456780e985616917038d702ced67721d523aebbcf5fba5a4078eb"
+    },
+    {
+      "bytes": 1481,
+      "path": "source/preregistration.json",
+      "sha256": "9e7f6a72c3235056fd7d605fc1e84cb0acd21adbb14132c55d784a4c94d45388"
+    },
+    {
+      "bytes": 6389,
+      "path": "source/registration.json",
+      "sha256": "b34b3ce7666b194484a2d183e08adc55c380fe292ae1f44e9c1de826192860e0"
+    },
+    {
+      "bytes": 92653,
+      "path": "source/router_repair.py",
+      "sha256": "827235079ada93b969395ff110d020a63e7160974e4ecc13b47ed130be758b35"
+    },
+    {
+      "bytes": 14983,
+      "path": "source/test_router_repair.py",
+      "sha256": "43c1eab1ab521d9ae1a4df3746b9b9d0368d5a560c11a9a11bb90735040b9b87"
+    },
+    {
+      "bytes": 41,
+      "path": "summary.json",
+      "sha256": "0e1c6d9e3858f971a2061d54149b80062b9a8e05d65f9c3fb8b06cc3a7ab9e64"
+    },
+    {
+      "bytes": 147,
+      "path": "verdict.json",
+      "sha256": "2e6026681e6f79bfeda5feec67ebd701d9d0c993b345f980961774acbb1fd78b"
+    }
+  ]
+}

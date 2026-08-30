@@ -1,0 +1,29 @@
+phone inventory: 36
+E55: ENGLISH G2P — the reference law's biggest bridge
+pre-registered seq 261
+
+aligned words: 3095
+train: 2476, test: 619
+  [logged] dataset: total=3095 train=2476 test=619 phones=36 rimes=259
+  G2P-RAW s0: per-position [0.4346, 0.4927, 0.5218, 0.5784] mean 0.5069, word 0.0
+  [logged] g2p: arm=G2P-RAW seed=0 per_position=[0.4346, 0.4927, 0.5218, 0.5784] mean_position=0.5069 word_accuracy=0.0
+  G2P-RAW s1: per-position [0.441, 0.4927, 0.525, 0.5767] mean 0.5089, word 0.0
+  [logged] g2p: arm=G2P-RAW seed=1 per_position=[0.441, 0.4927, 0.525, 0.5767] mean_position=0.5089 word_accuracy=0.0
+  G2P-REF s0: per-position [0.517, 0.5832, 0.8433, 0.8805] mean 0.706, word 0.0
+  [logged] g2p: arm=G2P-REF seed=0 per_position=[0.517, 0.5832, 0.8433, 0.8805] mean_position=0.706 word_accuracy=0.0
+  G2P-REF s1: per-position [0.517, 0.5832, 0.8433, 0.8788] mean 0.7056, word 0.0
+  [logged] g2p: arm=G2P-REF seed=1 per_position=[0.517, 0.5832, 0.8433, 0.8788] mean_position=0.7056 word_accuracy=0.0
+  G2P-RAND s0: per-position [0.0452, 0.042, 0.0501, 0.0468] mean 0.046, word 0.0
+  [logged] g2p: arm=G2P-RAND seed=0 per_position=[0.0452, 0.042, 0.0501, 0.0468] mean_position=0.046 word_accuracy=0.0
+  G2P-RAND s1: per-position [0.0501, 0.042, 0.0501, 0.0468] mean 0.0473, word 0.0
+  [logged] g2p: arm=G2P-RAND seed=1 per_position=[0.0501, 0.042, 0.0501, 0.0468] mean_position=0.0473 word_accuracy=0.0
+  G2P-FREQ: per-position 0.8199, word 0.454
+  [logged] g2p: arm=G2P-FREQ per_position=0.8199 word_accuracy=0.454
+
+=== VERDICTS (pre-registered seq 261) ===
+  P1 (the PD-wall: RAW < 0.75 per-position): CONFIRMED (0.5079)
+  P2 (reference helps >= 10pp): CONFIRMED (REF 0.7058 vs RAW 0.5079)
+  P3 (controls): FALSIFIED (RAND 0.0466, FREQ 0.8199)
+  [logged] verdicts: P1_pd_wall=True P2_reference_helps=True P3_controls=False raw=0.5079 ref=0.7058 rand=0.0466 freq=0.8199
+
+DONE in 430.4 min — 9 records

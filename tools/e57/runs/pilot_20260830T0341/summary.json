@@ -1,0 +1,640 @@
+{
+  "assay": [
+    {
+      "accuracy": {
+        "baseline": 0.138427734375,
+        "gauge": 0.138427734375,
+        "repair": 0.138427734375,
+        "wrong": 0.1396484375
+      },
+      "gauge_close": true,
+      "gauge_max_abs_logit_diff": 3.0517578125e-05,
+      "inner": "Z2x2x2",
+      "logit_fingerprints": {
+        "baseline": "c3e34260ca92b58ba1b61e116a0f5bbc865c4072f53a7fba242dd52731985884",
+        "gauge": "b9763c8b46dc527747bda31b934af415f4f1f8ffda9fe162198b51ea92afe80b",
+        "repair": "c3e34260ca92b58ba1b61e116a0f5bbc865c4072f53a7fba242dd52731985884",
+        "wrong": "1c98e6721d60ad6b5dd0d12d408eb66160cd135f50562a9c91f92bcdba787eff"
+      },
+      "mismatches": {
+        "baseline": 3529,
+        "gauge": 3529,
+        "repair": 3529,
+        "wrong": 3524
+      },
+      "outer": "Z4xZ2",
+      "pair": "Z4xZ2(Z2x2x2)",
+      "prediction_fingerprints": {
+        "baseline": "116da430677ce86d6384ad116aa806447e7221a7284410db533ffe98b497be4b",
+        "gauge": "116da430677ce86d6384ad116aa806447e7221a7284410db533ffe98b497be4b",
+        "repair": "116da430677ce86d6384ad116aa806447e7221a7284410db533ffe98b497be4b",
+        "wrong": "c490bf8f69fd2ac12c90df8c890362f6bb1db0fe809099a44b36a2b70d88fd78"
+      },
+      "repair_bit_identical": true,
+      "temperature": 64.0
+    },
+    {
+      "accuracy": {
+        "baseline": 0.259521484375,
+        "gauge": 0.259521484375,
+        "repair": 0.259521484375,
+        "wrong": 0.12646484375
+      },
+      "gauge_close": true,
+      "gauge_max_abs_logit_diff": 2.288818359375e-05,
+      "inner": "Z2x2x2",
+      "logit_fingerprints": {
+        "baseline": "cf68e8e69f77ea6d37a8d9249e39c99248f1bf639a2d5ebbeb188029359d900b",
+        "gauge": "d0e4d50bcaebe1b496f447a93de3672dcda96cd10ec27bafc07a93757ae5415b",
+        "repair": "cf68e8e69f77ea6d37a8d9249e39c99248f1bf639a2d5ebbeb188029359d900b",
+        "wrong": "6237dbbe100876b03e55dedba3b71ea45d1ae55b30d9f2a7edd0699d7f9a4068"
+      },
+      "mismatches": {
+        "baseline": 3033,
+        "gauge": 3033,
+        "repair": 3033,
+        "wrong": 3578
+      },
+      "outer": "Z4xZ2",
+      "pair": "Z4xZ2(Z2x2x2)",
+      "prediction_fingerprints": {
+        "baseline": "e2eb6a589a3e0d1def52af9fd295300da916ca4998b822b9554efaa90b9ac359",
+        "gauge": "e2eb6a589a3e0d1def52af9fd295300da916ca4998b822b9554efaa90b9ac359",
+        "repair": "e2eb6a589a3e0d1def52af9fd295300da916ca4998b822b9554efaa90b9ac359",
+        "wrong": "995bdb158f660ad18726e63c6c5d6ba2d74ba714c385fd976ce349bfdfa2faea"
+      },
+      "repair_bit_identical": true,
+      "temperature": 16.0
+    },
+    {
+      "accuracy": {
+        "baseline": 0.976806640625,
+        "gauge": 0.976806640625,
+        "repair": 0.976806640625,
+        "wrong": 0.238525390625
+      },
+      "gauge_close": true,
+      "gauge_max_abs_logit_diff": 3.0517578125e-05,
+      "inner": "Z2x2x2",
+      "logit_fingerprints": {
+        "baseline": "3ba2686662aed46a3358b6dad62e27c390a5fa2063a79a86708a7c05a8534de8",
+        "gauge": "518baadbcacbaf647ed0e0b659d9ad8019b5d6009259ca3597b8c9fc2106fede",
+        "repair": "3ba2686662aed46a3358b6dad62e27c390a5fa2063a79a86708a7c05a8534de8",
+        "wrong": "7130a2b20e73b2d46589fc9fb66fabf6fa8a3779a4624ddb820a0a57188ffcbb"
+      },
+      "mismatches": {
+        "baseline": 95,
+        "gauge": 95,
+        "repair": 95,
+        "wrong": 3119
+      },
+      "outer": "Z4xZ2",
+      "pair": "Z4xZ2(Z2x2x2)",
+      "prediction_fingerprints": {
+        "baseline": "a4312e044d90713dc7a9ee8cb24585f9b27c063c25a23b08b7c6031d9871af31",
+        "gauge": "a4312e044d90713dc7a9ee8cb24585f9b27c063c25a23b08b7c6031d9871af31",
+        "repair": "a4312e044d90713dc7a9ee8cb24585f9b27c063c25a23b08b7c6031d9871af31",
+        "wrong": "f8e296759ee4303a5d969ed1071e24dbfcbade0f11fc60d8d1b746c3363d8656"
+      },
+      "repair_bit_identical": true,
+      "temperature": 4.0
+    },
+    {
+      "accuracy": {
+        "baseline": 1.0,
+        "gauge": 1.0,
+        "repair": 1.0,
+        "wrong": 0.25
+      },
+      "gauge_close": true,
+      "gauge_max_abs_logit_diff": 2.288818359375e-05,
+      "inner": "Z2x2x2",
+      "logit_fingerprints": {
+        "baseline": "816b1e2f65b0fef076602884af9bde310aa2117d90b8de7f95978084b4edf03b",
+        "gauge": "4212d20ad946bc5fb0e32cedb199f85348e751aac0b21427a66ea2d8551ab6a6",
+        "repair": "816b1e2f65b0fef076602884af9bde310aa2117d90b8de7f95978084b4edf03b",
+        "wrong": "7077e793a93f3242b40f080a39a13dfad42231e8faad6fa22d566d108b03013b"
+      },
+      "mismatches": {
+        "baseline": 0,
+        "gauge": 0,
+        "repair": 0,
+        "wrong": 3072
+      },
+      "outer": "Z4xZ2",
+      "pair": "Z4xZ2(Z2x2x2)",
+      "prediction_fingerprints": {
+        "baseline": "0eeefef2c54f6a270f3b5eca23d271ce1ef581788664aa80376bfe4f1a07b35e",
+        "gauge": "0eeefef2c54f6a270f3b5eca23d271ce1ef581788664aa80376bfe4f1a07b35e",
+        "repair": "0eeefef2c54f6a270f3b5eca23d271ce1ef581788664aa80376bfe4f1a07b35e",
+        "wrong": "aeee77b6024c9fd361a0704f7337be542b0c8813afa4387c2c479b3344e1d89f"
+      },
+      "repair_bit_identical": true,
+      "temperature": 1.0
+    },
+    {
+      "accuracy": {
+        "baseline": 1.0,
+        "gauge": 1.0,
+        "repair": 1.0,
+        "wrong": 0.25
+      },
+      "gauge_close": true,
+      "gauge_max_abs_logit_diff": 1.52587890625e-05,
+      "inner": "Z2x2x2",
+      "logit_fingerprints": {
+        "baseline": "9667330b2bb537266ba2e0e50ca14a07fe454a12f7982cbcb66383d00982e0b2",
+        "gauge": "f69814c604e645d5c1712bad6d4ee027220d436c70365ba2ca2d9e5a3b14ad31",
+        "repair": "9667330b2bb537266ba2e0e50ca14a07fe454a12f7982cbcb66383d00982e0b2",
+        "wrong": "9338734c11c14e9cbc4cc6a651ab8e7f52c3b49923dfff7119d43087d5c1ad0e"
+      },
+      "mismatches": {
+        "baseline": 0,
+        "gauge": 0,
+        "repair": 0,
+        "wrong": 3072
+      },
+      "outer": "Z4xZ2",
+      "pair": "Z4xZ2(Z2x2x2)",
+      "prediction_fingerprints": {
+        "baseline": "0eeefef2c54f6a270f3b5eca23d271ce1ef581788664aa80376bfe4f1a07b35e",
+        "gauge": "0eeefef2c54f6a270f3b5eca23d271ce1ef581788664aa80376bfe4f1a07b35e",
+        "repair": "0eeefef2c54f6a270f3b5eca23d271ce1ef581788664aa80376bfe4f1a07b35e",
+        "wrong": "aeee77b6024c9fd361a0704f7337be542b0c8813afa4387c2c479b3344e1d89f"
+      },
+      "repair_bit_identical": true,
+      "temperature": 0.5
+    },
+    {
+      "accuracy": {
+        "baseline": 1.0,
+        "gauge": 1.0,
+        "repair": 1.0,
+        "wrong": 0.25
+      },
+      "gauge_close": true,
+      "gauge_max_abs_logit_diff": 1.1444091796875e-05,
+      "inner": "Z2x2x2",
+      "logit_fingerprints": {
+        "baseline": "4cd2a0ae5b06e2b9b62bd7e5547e1e84eb82dc5dbe0f9a0bb5e1f701c7c15d69",
+        "gauge": "689676f77d93f316fcd30f229b78628487a12d90e953380c5c0ca0b1a675c383",
+        "repair": "4cd2a0ae5b06e2b9b62bd7e5547e1e84eb82dc5dbe0f9a0bb5e1f701c7c15d69",
+        "wrong": "44a3079c4b723a4d730d453228c0f70356cc05934aa21cd4798ff3a3dae36c00"
+      },
+      "mismatches": {
+        "baseline": 0,
+        "gauge": 0,
+        "repair": 0,
+        "wrong": 3072
+      },
+      "outer": "Z4xZ2",
+      "pair": "Z4xZ2(Z2x2x2)",
+      "prediction_fingerprints": {
+        "baseline": "0eeefef2c54f6a270f3b5eca23d271ce1ef581788664aa80376bfe4f1a07b35e",
+        "gauge": "0eeefef2c54f6a270f3b5eca23d271ce1ef581788664aa80376bfe4f1a07b35e",
+        "repair": "0eeefef2c54f6a270f3b5eca23d271ce1ef581788664aa80376bfe4f1a07b35e",
+        "wrong": "aeee77b6024c9fd361a0704f7337be542b0c8813afa4387c2c479b3344e1d89f"
+      },
+      "repair_bit_identical": true,
+      "temperature": 0.25
+    },
+    {
+      "accuracy": {
+        "baseline": 1.0,
+        "gauge": 1.0,
+        "repair": 1.0,
+        "wrong": 0.25
+      },
+      "gauge_close": true,
+      "gauge_max_abs_logit_diff": 0.0,
+      "inner": "Z2x2x2",
+      "logit_fingerprints": {
+        "baseline": "b60a177773bd7a4e2c6cd524e8e015d25317f04cfae855f0ad5eceb5dd216f54",
+        "gauge": "b60a177773bd7a4e2c6cd524e8e015d25317f04cfae855f0ad5eceb5dd216f54",
+        "repair": "b60a177773bd7a4e2c6cd524e8e015d25317f04cfae855f0ad5eceb5dd216f54",
+        "wrong": "c79c1867579ff53391377ba38f383a6ac266fe329edd3bcd821c12a960986973"
+      },
+      "mismatches": {
+        "baseline": 0,
+        "gauge": 0,
+        "repair": 0,
+        "wrong": 3072
+      },
+      "outer": "Z4xZ2",
+      "pair": "Z4xZ2(Z2x2x2)",
+      "prediction_fingerprints": {
+        "baseline": "0eeefef2c54f6a270f3b5eca23d271ce1ef581788664aa80376bfe4f1a07b35e",
+        "gauge": "0eeefef2c54f6a270f3b5eca23d271ce1ef581788664aa80376bfe4f1a07b35e",
+        "repair": "0eeefef2c54f6a270f3b5eca23d271ce1ef581788664aa80376bfe4f1a07b35e",
+        "wrong": "aeee77b6024c9fd361a0704f7337be542b0c8813afa4387c2c479b3344e1d89f"
+      },
+      "repair_bit_identical": true,
+      "temperature": 0.1
+    },
+    {
+      "accuracy": {
+        "baseline": 1.0,
+        "gauge": 1.0,
+        "repair": 1.0,
+        "wrong": 0.25
+      },
+      "gauge_close": true,
+      "gauge_max_abs_logit_diff": 0.0,
+      "inner": "Z2x2x2",
+      "logit_fingerprints": {
+        "baseline": "d99b377f3dad0c15ec2e5f209ba69e58ca2e522be2a5617280cab23ea0b5d321",
+        "gauge": "d99b377f3dad0c15ec2e5f209ba69e58ca2e522be2a5617280cab23ea0b5d321",
+        "repair": "d99b377f3dad0c15ec2e5f209ba69e58ca2e522be2a5617280cab23ea0b5d321",
+        "wrong": "694ce50cb6365b20d06329c7e9354b1991f0ad93f70318fb6303a168f21ac5e2"
+      },
+      "mismatches": {
+        "baseline": 0,
+        "gauge": 0,
+        "repair": 0,
+        "wrong": 3072
+      },
+      "outer": "Z4xZ2",
+      "pair": "Z4xZ2(Z2x2x2)",
+      "prediction_fingerprints": {
+        "baseline": "0eeefef2c54f6a270f3b5eca23d271ce1ef581788664aa80376bfe4f1a07b35e",
+        "gauge": "0eeefef2c54f6a270f3b5eca23d271ce1ef581788664aa80376bfe4f1a07b35e",
+        "repair": "0eeefef2c54f6a270f3b5eca23d271ce1ef581788664aa80376bfe4f1a07b35e",
+        "wrong": "aeee77b6024c9fd361a0704f7337be542b0c8813afa4387c2c479b3344e1d89f"
+      },
+      "repair_bit_identical": true,
+      "temperature": 0.05
+    },
+    {
+      "accuracy": {
+        "baseline": 1.0,
+        "gauge": 1.0,
+        "repair": 1.0,
+        "wrong": 0.25
+      },
+      "gauge_close": true,
+      "gauge_max_abs_logit_diff": 0.0,
+      "inner": "Z2x2x2",
+      "logit_fingerprints": {
+        "baseline": "d99b377f3dad0c15ec2e5f209ba69e58ca2e522be2a5617280cab23ea0b5d321",
+        "gauge": "d99b377f3dad0c15ec2e5f209ba69e58ca2e522be2a5617280cab23ea0b5d321",
+        "repair": "d99b377f3dad0c15ec2e5f209ba69e58ca2e522be2a5617280cab23ea0b5d321",
+        "wrong": "694ce50cb6365b20d06329c7e9354b1991f0ad93f70318fb6303a168f21ac5e2"
+      },
+      "mismatches": {
+        "baseline": 0,
+        "gauge": 0,
+        "repair": 0,
+        "wrong": 3072
+      },
+      "outer": "Z4xZ2",
+      "pair": "Z4xZ2(Z2x2x2)",
+      "prediction_fingerprints": {
+        "baseline": "0eeefef2c54f6a270f3b5eca23d271ce1ef581788664aa80376bfe4f1a07b35e",
+        "gauge": "0eeefef2c54f6a270f3b5eca23d271ce1ef581788664aa80376bfe4f1a07b35e",
+        "repair": "0eeefef2c54f6a270f3b5eca23d271ce1ef581788664aa80376bfe4f1a07b35e",
+        "wrong": "aeee77b6024c9fd361a0704f7337be542b0c8813afa4387c2c479b3344e1d89f"
+      },
+      "repair_bit_identical": true,
+      "temperature": 0.01
+    },
+    {
+      "accuracy": {
+        "baseline": 0.125,
+        "gauge": 0.125,
+        "repair": 0.125,
+        "wrong": 0.125
+      },
+      "gauge_close": true,
+      "gauge_max_abs_logit_diff": 3.0517578125e-05,
+      "inner": "Z4xZ2",
+      "logit_fingerprints": {
+        "baseline": "a7441cb9fd6941e15a191670745e650e38b9c8e747954baf7996995746fe4fb3",
+        "gauge": "3db232ea1b52e0520d3496f87079480a172ff784c0028aef2cd308b3f947187f",
+        "repair": "a7441cb9fd6941e15a191670745e650e38b9c8e747954baf7996995746fe4fb3",
+        "wrong": "d854e3419c0a25f512c629bd4078b91f080a16e013d79107b0ec4437605ed082"
+      },
+      "mismatches": {
+        "baseline": 3584,
+        "gauge": 3584,
+        "repair": 3584,
+        "wrong": 3584
+      },
+      "outer": "Z2x2x2",
+      "pair": "Z2x2x2(Z4xZ2)",
+      "prediction_fingerprints": {
+        "baseline": "490fbb0cea761230d90ca8fdc237b09f6670a9fd8718f758813b99fdc837d74d",
+        "gauge": "490fbb0cea761230d90ca8fdc237b09f6670a9fd8718f758813b99fdc837d74d",
+        "repair": "490fbb0cea761230d90ca8fdc237b09f6670a9fd8718f758813b99fdc837d74d",
+        "wrong": "490fbb0cea761230d90ca8fdc237b09f6670a9fd8718f758813b99fdc837d74d"
+      },
+      "repair_bit_identical": true,
+      "temperature": 64.0
+    },
+    {
+      "accuracy": {
+        "baseline": 0.246337890625,
+        "gauge": 0.246337890625,
+        "repair": 0.246337890625,
+        "wrong": 0.152099609375
+      },
+      "gauge_close": true,
+      "gauge_max_abs_logit_diff": 3.814697265625e-05,
+      "inner": "Z4xZ2",
+      "logit_fingerprints": {
+        "baseline": "489447c0a72e526b9a7be4b96211da4502eca51c67e047d06cd72a26ded67a59",
+        "gauge": "bd1d6e5373124ca03b487139933af867517e9dc0f8934afe4bbb419529a5ac64",
+        "repair": "489447c0a72e526b9a7be4b96211da4502eca51c67e047d06cd72a26ded67a59",
+        "wrong": "6e7e6fbc8ef47391ebf5cb0ec75588c665954a804bb6bda974b65a6ee719ec34"
+      },
+      "mismatches": {
+        "baseline": 3087,
+        "gauge": 3087,
+        "repair": 3087,
+        "wrong": 3473
+      },
+      "outer": "Z2x2x2",
+      "pair": "Z2x2x2(Z4xZ2)",
+      "prediction_fingerprints": {
+        "baseline": "2cd95a5fe385dbecf6998656e0564849ff59858a4ce3f067af5c53cb1b053266",
+        "gauge": "2cd95a5fe385dbecf6998656e0564849ff59858a4ce3f067af5c53cb1b053266",
+        "repair": "2cd95a5fe385dbecf6998656e0564849ff59858a4ce3f067af5c53cb1b053266",
+        "wrong": "c93d76863a384968bf7a64e4126202ba976cdf77b6c7bc99116e3e0764fc2ad0"
+      },
+      "repair_bit_identical": true,
+      "temperature": 16.0
+    },
+    {
+      "accuracy": {
+        "baseline": 0.988037109375,
+        "gauge": 0.988037109375,
+        "repair": 0.988037109375,
+        "wrong": 0.36328125
+      },
+      "gauge_close": true,
+      "gauge_max_abs_logit_diff": 3.0517578125e-05,
+      "inner": "Z4xZ2",
+      "logit_fingerprints": {
+        "baseline": "a14d804656e7545da93dc75f444188f53191cb893b5e67e8b4669e8421ca49ee",
+        "gauge": "e40671e25316470ee9eb4030dcec5863b5f1fd60299efa82e2c66020f5f7a431",
+        "repair": "a14d804656e7545da93dc75f444188f53191cb893b5e67e8b4669e8421ca49ee",
+        "wrong": "a137049c9cac378883a5e27d4cba400c2b1b91f5ce019643a9bda2bdbd35d9ae"
+      },
+      "mismatches": {
+        "baseline": 49,
+        "gauge": 49,
+        "repair": 49,
+        "wrong": 2608
+      },
+      "outer": "Z2x2x2",
+      "pair": "Z2x2x2(Z4xZ2)",
+      "prediction_fingerprints": {
+        "baseline": "a19f33416f73cd0f56a509ebf9e49f56540e0fbc26292422b92f3f450a096621",
+        "gauge": "a19f33416f73cd0f56a509ebf9e49f56540e0fbc26292422b92f3f450a096621",
+        "repair": "a19f33416f73cd0f56a509ebf9e49f56540e0fbc26292422b92f3f450a096621",
+        "wrong": "994b92577610603a6a125c9a28b6d014f887b0e060c2c775d23e05191f7829f5"
+      },
+      "repair_bit_identical": true,
+      "temperature": 4.0
+    },
+    {
+      "accuracy": {
+        "baseline": 1.0,
+        "gauge": 1.0,
+        "repair": 1.0,
+        "wrong": 0.375
+      },
+      "gauge_close": true,
+      "gauge_max_abs_logit_diff": 3.0517578125e-05,
+      "inner": "Z4xZ2",
+      "logit_fingerprints": {
+        "baseline": "4408e8f9b6417f364aef4c5ae889c65913ed45e7fbf99720c1279b149485a05e",
+        "gauge": "254b419e8ddac8d5410be58f7da8f8336339476a3fa08e483937cfb026f2d2b1",
+        "repair": "4408e8f9b6417f364aef4c5ae889c65913ed45e7fbf99720c1279b149485a05e",
+        "wrong": "f5fbf857123d42a5f5c05059c41820757c8364fb2e1aa89b59f28c6765957900"
+      },
+      "mismatches": {
+        "baseline": 0,
+        "gauge": 0,
+        "repair": 0,
+        "wrong": 2560
+      },
+      "outer": "Z2x2x2",
+      "pair": "Z2x2x2(Z4xZ2)",
+      "prediction_fingerprints": {
+        "baseline": "4707d7c0d20ccb4e331256c1839a815e93fce98ba0a16765e64ae683253a28a0",
+        "gauge": "4707d7c0d20ccb4e331256c1839a815e93fce98ba0a16765e64ae683253a28a0",
+        "repair": "4707d7c0d20ccb4e331256c1839a815e93fce98ba0a16765e64ae683253a28a0",
+        "wrong": "0e0a1954d32c53c8a685c6067d29627c6bd7f9e27c0d794ba87b6973209e8440"
+      },
+      "repair_bit_identical": true,
+      "temperature": 1.0
+    },
+    {
+      "accuracy": {
+        "baseline": 1.0,
+        "gauge": 1.0,
+        "repair": 1.0,
+        "wrong": 0.375
+      },
+      "gauge_close": true,
+      "gauge_max_abs_logit_diff": 1.52587890625e-05,
+      "inner": "Z4xZ2",
+      "logit_fingerprints": {
+        "baseline": "5b1bec1388e30ed9587fdedce7204ac992ea03f44b4cf5cfde1d7cd62a54e754",
+        "gauge": "51cd95d0ae68d57eb991c9b50002e8e6550fe35f6363077458ca4f2e00576997",
+        "repair": "5b1bec1388e30ed9587fdedce7204ac992ea03f44b4cf5cfde1d7cd62a54e754",
+        "wrong": "7924e985630fad0d706194ff110cd7acea4cb4d12030212795cce2e3309c32b3"
+      },
+      "mismatches": {
+        "baseline": 0,
+        "gauge": 0,
+        "repair": 0,
+        "wrong": 2560
+      },
+      "outer": "Z2x2x2",
+      "pair": "Z2x2x2(Z4xZ2)",
+      "prediction_fingerprints": {
+        "baseline": "4707d7c0d20ccb4e331256c1839a815e93fce98ba0a16765e64ae683253a28a0",
+        "gauge": "4707d7c0d20ccb4e331256c1839a815e93fce98ba0a16765e64ae683253a28a0",
+        "repair": "4707d7c0d20ccb4e331256c1839a815e93fce98ba0a16765e64ae683253a28a0",
+        "wrong": "0e0a1954d32c53c8a685c6067d29627c6bd7f9e27c0d794ba87b6973209e8440"
+      },
+      "repair_bit_identical": true,
+      "temperature": 0.5
+    },
+    {
+      "accuracy": {
+        "baseline": 1.0,
+        "gauge": 1.0,
+        "repair": 1.0,
+        "wrong": 0.375
+      },
+      "gauge_close": true,
+      "gauge_max_abs_logit_diff": 0.0,
+      "inner": "Z4xZ2",
+      "logit_fingerprints": {
+        "baseline": "a060bea47c0e4e67aa32b42618d057ddebe97e5f73f1544f59d86de6b3c52e81",
+        "gauge": "a060bea47c0e4e67aa32b42618d057ddebe97e5f73f1544f59d86de6b3c52e81",
+        "repair": "a060bea47c0e4e67aa32b42618d057ddebe97e5f73f1544f59d86de6b3c52e81",
+        "wrong": "367615f1648f15b24e43a9da92866da6bdc3260a4b589aa9a87d7ca39e01761a"
+      },
+      "mismatches": {
+        "baseline": 0,
+        "gauge": 0,
+        "repair": 0,
+        "wrong": 2560
+      },
+      "outer": "Z2x2x2",
+      "pair": "Z2x2x2(Z4xZ2)",
+      "prediction_fingerprints": {
+        "baseline": "4707d7c0d20ccb4e331256c1839a815e93fce98ba0a16765e64ae683253a28a0",
+        "gauge": "4707d7c0d20ccb4e331256c1839a815e93fce98ba0a16765e64ae683253a28a0",
+        "repair": "4707d7c0d20ccb4e331256c1839a815e93fce98ba0a16765e64ae683253a28a0",
+        "wrong": "0e0a1954d32c53c8a685c6067d29627c6bd7f9e27c0d794ba87b6973209e8440"
+      },
+      "repair_bit_identical": true,
+      "temperature": 0.25
+    },
+    {
+      "accuracy": {
+        "baseline": 1.0,
+        "gauge": 1.0,
+        "repair": 1.0,
+        "wrong": 0.375
+      },
+      "gauge_close": true,
+      "gauge_max_abs_logit_diff": 0.0,
+      "inner": "Z4xZ2",
+      "logit_fingerprints": {
+        "baseline": "e05069ac84ceaf6382f832bddef6f183b5aa1488e6f801ff217f04d697289971",
+        "gauge": "e05069ac84ceaf6382f832bddef6f183b5aa1488e6f801ff217f04d697289971",
+        "repair": "e05069ac84ceaf6382f832bddef6f183b5aa1488e6f801ff217f04d697289971",
+        "wrong": "363b973093819af41ad00027748fbba18df2f844ca1918bc925f4452358715d6"
+      },
+      "mismatches": {
+        "baseline": 0,
+        "gauge": 0,
+        "repair": 0,
+        "wrong": 2560
+      },
+      "outer": "Z2x2x2",
+      "pair": "Z2x2x2(Z4xZ2)",
+      "prediction_fingerprints": {
+        "baseline": "4707d7c0d20ccb4e331256c1839a815e93fce98ba0a16765e64ae683253a28a0",
+        "gauge": "4707d7c0d20ccb4e331256c1839a815e93fce98ba0a16765e64ae683253a28a0",
+        "repair": "4707d7c0d20ccb4e331256c1839a815e93fce98ba0a16765e64ae683253a28a0",
+        "wrong": "0e0a1954d32c53c8a685c6067d29627c6bd7f9e27c0d794ba87b6973209e8440"
+      },
+      "repair_bit_identical": true,
+      "temperature": 0.1
+    },
+    {
+      "accuracy": {
+        "baseline": 1.0,
+        "gauge": 1.0,
+        "repair": 1.0,
+        "wrong": 0.375
+      },
+      "gauge_close": true,
+      "gauge_max_abs_logit_diff": 0.0,
+      "inner": "Z4xZ2",
+      "logit_fingerprints": {
+        "baseline": "cce089bf256c34f1444b49d71275d5825783b2917f1d449c469a333fb5cd5f80",
+        "gauge": "cce089bf256c34f1444b49d71275d5825783b2917f1d449c469a333fb5cd5f80",
+        "repair": "cce089bf256c34f1444b49d71275d5825783b2917f1d449c469a333fb5cd5f80",
+        "wrong": "ffabe42d35ad47f9338fae90d0aea3e161a8ddc3c5a59c29c458b84346324b66"
+      },
+      "mismatches": {
+        "baseline": 0,
+        "gauge": 0,
+        "repair": 0,
+        "wrong": 2560
+      },
+      "outer": "Z2x2x2",
+      "pair": "Z2x2x2(Z4xZ2)",
+      "prediction_fingerprints": {
+        "baseline": "4707d7c0d20ccb4e331256c1839a815e93fce98ba0a16765e64ae683253a28a0",
+        "gauge": "4707d7c0d20ccb4e331256c1839a815e93fce98ba0a16765e64ae683253a28a0",
+        "repair": "4707d7c0d20ccb4e331256c1839a815e93fce98ba0a16765e64ae683253a28a0",
+        "wrong": "0e0a1954d32c53c8a685c6067d29627c6bd7f9e27c0d794ba87b6973209e8440"
+      },
+      "repair_bit_identical": true,
+      "temperature": 0.05
+    },
+    {
+      "accuracy": {
+        "baseline": 1.0,
+        "gauge": 1.0,
+        "repair": 1.0,
+        "wrong": 0.375
+      },
+      "gauge_close": true,
+      "gauge_max_abs_logit_diff": 0.0,
+      "inner": "Z4xZ2",
+      "logit_fingerprints": {
+        "baseline": "cce089bf256c34f1444b49d71275d5825783b2917f1d449c469a333fb5cd5f80",
+        "gauge": "cce089bf256c34f1444b49d71275d5825783b2917f1d449c469a333fb5cd5f80",
+        "repair": "cce089bf256c34f1444b49d71275d5825783b2917f1d449c469a333fb5cd5f80",
+        "wrong": "ffabe42d35ad47f9338fae90d0aea3e161a8ddc3c5a59c29c458b84346324b66"
+      },
+      "mismatches": {
+        "baseline": 0,
+        "gauge": 0,
+        "repair": 0,
+        "wrong": 2560
+      },
+      "outer": "Z2x2x2",
+      "pair": "Z2x2x2(Z4xZ2)",
+      "prediction_fingerprints": {
+        "baseline": "4707d7c0d20ccb4e331256c1839a815e93fce98ba0a16765e64ae683253a28a0",
+        "gauge": "4707d7c0d20ccb4e331256c1839a815e93fce98ba0a16765e64ae683253a28a0",
+        "repair": "4707d7c0d20ccb4e331256c1839a815e93fce98ba0a16765e64ae683253a28a0",
+        "wrong": "0e0a1954d32c53c8a685c6067d29627c6bd7f9e27c0d794ba87b6973209e8440"
+      },
+      "repair_bit_identical": true,
+      "temperature": 0.01
+    }
+  ],
+  "components": [
+    {
+      "admitted": true,
+      "checkpoint": "Z2x2x2.pt",
+      "checkpoint_sha256": "0983e579b35849e96e1d32904219026a0eb217f60c28386767551791798ec5b2",
+      "full_correct": 64,
+      "full_total": 64,
+      "prediction_fingerprint": "c189f3910aeefa28fa6a6cad7f37ba56e042dc07dccb4d378afd3e1dcd621f40",
+      "seconds": 15.321,
+      "seed": 0,
+      "state_fingerprint": "1f4bc4e7666ef7ebd0055836a939bbb8fb80382e320563baeba910a336e06991",
+      "steps": 3600,
+      "task": "Z2x2x2",
+      "terminal_batch_loss": 2.3374369106932136e-08,
+      "test_acc": 1.0,
+      "train_acc": 1.0
+    },
+    {
+      "admitted": true,
+      "checkpoint": "Z4xZ2.pt",
+      "checkpoint_sha256": "0e36401e526745e8160105aee0aff560f251e42aa4be4845ec9f3eb74bdec0a3",
+      "full_correct": 64,
+      "full_total": 64,
+      "prediction_fingerprint": "c2fe026e5276c67b37f55d10ca5fac04649917084b3fddb5be9732d3684b43b7",
+      "seconds": 22.687,
+      "seed": 0,
+      "state_fingerprint": "48866a72887d44287527d5270f20ffaa65e879285b5486bbbc66d4dc6b687410",
+      "steps": 5400,
+      "task": "Z4xZ2",
+      "terminal_batch_loss": 3.436030908687826e-07,
+      "test_acc": 1.0,
+      "train_acc": 1.0
+    }
+  ],
+  "state_after": {
+    "Z2x2x2": "1f4bc4e7666ef7ebd0055836a939bbb8fb80382e320563baeba910a336e06991",
+    "Z4xZ2": "48866a72887d44287527d5270f20ffaa65e879285b5486bbbc66d4dc6b687410"
+  },
+  "state_before": {
+    "Z2x2x2": "1f4bc4e7666ef7ebd0055836a939bbb8fb80382e320563baeba910a336e06991",
+    "Z4xZ2": "48866a72887d44287527d5270f20ffaa65e879285b5486bbbc66d4dc6b687410"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "batch_size": 64,
+  "betas": [0.9, 0.98],
+  "branch_weight_decays": [0.0, 0.5, 1.0],
+  "device": "cuda",
+  "eval_every": 200,
+  "grok_threshold": 0.95,
+  "learning_rate": 0.001,
+  "memorize_threshold": 0.995,
+  "phase_a_steps": 20000,
+  "phase_a_weight_decay": 0.0,
+  "post_gate_steps": 20000,
+  "seeds": [0, 1],
+  "seed_pairing": "same split, initialization, and batch seed across tasks within each seed; seeds 0 and 1 are independent streams",
+  "sentinel_steps": 20000,
+  "sentinel_tasks": [
+    "Z4xZ2(Z4xZ2)",
+    "Z2x2x2(Z2x2x2)",
+    "Z4xZ2(Z2x2x2)",
+    "Z2x2x2(Z4xZ2)"
+  ],
+  "sentinel_weight_decay": 1.0,
+  "sustain_evaluations": 5,
+  "tasks": [
+    "Z4xZ2(Z4xZ2)",
+    "Z2x2x2(Z2x2x2)",
+    "Z4xZ2(Z2x2x2)",
+    "Z2x2x2(Z4xZ2)",
+    "T8(T8)",
+    "SHUFFLED_Z4xZ2(Z4xZ2)"
+  ],
+  "train_fraction": 0.8,
+  "width": 64
+}
