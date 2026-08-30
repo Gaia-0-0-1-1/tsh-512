@@ -1,0 +1,3 @@
+{"config":"E55 aligned cell; mod-8 letters; 2 seeds; final-attempt reducers","graphemic_tails":266,"kind":"dataset","oracle_rimes":259,"phones":36,"test":619,"total":3095,"train":2476}
+{"arm":"G2P-NONE","kind":"g2p","mean_position":0.4717,"per_position":[0.4184,0.441,0.4895,0.538],"seed":0,"word_strict":0.0824}
+{"arm":"G2P-NONE","kind":"g2p","mean_position":0.473,"per_position":[0.391,0.4733,0.4895,0.538],"seed":1,"word_strict":0.0872}
