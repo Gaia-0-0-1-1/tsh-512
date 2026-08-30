@@ -1,0 +1,38 @@
+E53: COARTICULATION — the reference law's third rung
+pre-registered seq 252
+
+--- stimulus sanity ---
+  target f=1 in ctx (3,4): [4, 5, 3, 5, 4, 2, 3, 2]
+  target f=1 in ctx (6,7): [4, 2, 4, 5, 4, 2, 4, 5]
+  target f=2 in ctx (3,4): [4, 6, 2, 3, 3, 4, 5, 1]
+  COART-2-NOREF: 12 exemplars, classes [(0, 6), (1, 6)]
+  COART-2-REF: 12 exemplars, classes [(0, 6), (1, 6)]
+  COART-2-FLOOR: 2 exemplars, classes [(0, 1), (1, 1)]
+  COART-2-RAND: 12 exemplars, classes [(0, 6), (1, 6)]
+  [logged] stimulus: f1_ctx34=[4, 5, 3, 5, 4, 2, 3, 2] f1_ctx67=[4, 2, 4, 5, 4, 2, 4, 5] f2_ctx34=[4, 6, 2, 3, 3, 4, 5, 1]
+
+--- the ladder (2 seeds each, exact gate) ---
+  COART-2-NOREF s0: grok=200
+  [logged] ladder: task=COART-2-NOREF seed=0 grok_step=200 exact=True best_acc=None
+  COART-2-NOREF s1: grok=200
+  [logged] ladder: task=COART-2-NOREF seed=1 grok_step=200 exact=True best_acc=None
+  COART-2-REF s0: grok=200
+  [logged] ladder: task=COART-2-REF seed=0 grok_step=200 exact=True best_acc=None
+  COART-2-REF s1: grok=200
+  [logged] ladder: task=COART-2-REF seed=1 grok_step=200 exact=True best_acc=None
+  COART-2-FLOOR s0: grok=200
+  [logged] ladder: task=COART-2-FLOOR seed=0 grok_step=200 exact=True best_acc=None
+  COART-2-FLOOR s1: grok=200
+  [logged] ladder: task=COART-2-FLOOR seed=1 grok_step=200 exact=True best_acc=None
+  COART-2-RAND s0: grok=200
+  [logged] ladder: task=COART-2-RAND seed=0 grok_step=200 exact=True best_acc=None
+  COART-2-RAND s1: grok=200
+  [logged] ladder: task=COART-2-RAND seed=1 grok_step=200 exact=True best_acc=None
+
+=== VERDICTS (pre-registered seq 252) ===
+  P1 (the coarticulation wall): FALSIFIED (2/2)
+  P2 (the reference opens the third rung): FALSIFIED (REF 2/2 vs NOREF 2/2)
+  P3 (the controls): FALSIFIED (floor 2/2, rand 2/2)
+  [logged] verdicts: P1_coart_wall=False P2_reference_opens=False P3_controls=False cells={'NOREF': (2, 2), 'REF': (2, 2), 'FLOOR': (2, 2), 'RAND': (2, 2)}
+
+DONE in 0.2 min — 10 records

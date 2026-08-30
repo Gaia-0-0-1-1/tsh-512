@@ -1,0 +1,36 @@
+E54b: THE DISCRIMINATION LADDER — which f2 separations resolve?
+pre-registered seq 256
+
+--- pre-flight: circular-shift aliasing ---
+  shift-aliased pairs: none
+  [logged] preflight_aliasing: aliasing={}
+
+--- the ladder (2 seeds each, exact gate) ---
+  DISCRIM-8 s0: grok=200
+  [logged] ladder: task=DISCRIM-8 seed=0 grok_step=200 exact=True best_acc=None confusion=None
+  DISCRIM-8 s1: grok=200
+  [logged] ladder: task=DISCRIM-8 seed=1 grok_step=200 exact=True best_acc=None confusion=None
+  DISCRIM-8-SHUF s0: grok=200
+  [logged] ladder: task=DISCRIM-8-SHUF seed=0 grok_step=200 exact=True best_acc=None confusion=None
+  DISCRIM-8-SHUF s1: grok=200
+  [logged] ladder: task=DISCRIM-8-SHUF seed=1 grok_step=200 exact=True best_acc=None confusion=None
+  ADJ-1500-1625 s0: grok=never (best 0.8333 conf {'0->0': 3, '1->0': 1, '1->1': 2})
+  [logged] ladder: task=ADJ-1500-1625 seed=0 grok_step=None exact=False best_acc=0.8333 confusion={'0->0': 3, '1->0': 1, '1->1': 2}
+  ADJ-1500-1625 s1: grok=never (best 0.8333 conf {'0->0': 2, '1->1': 3, '0->1': 1})
+  [logged] ladder: task=ADJ-1500-1625 seed=1 grok_step=None exact=False best_acc=0.8333 confusion={'0->0': 2, '1->1': 3, '0->1': 1}
+  ADJ-1250-1375 s0: grok=never (best 0.8333 conf {'0->0': 3, '1->0': 1, '1->1': 2})
+  [logged] ladder: task=ADJ-1250-1375 seed=0 grok_step=None exact=False best_acc=0.8333 confusion={'0->0': 3, '1->0': 1, '1->1': 2}
+  ADJ-1250-1375 s1: grok=never (best 0.8333 conf {'0->0': 3, '1->0': 1, '1->1': 2})
+  [logged] ladder: task=ADJ-1250-1375 seed=1 grok_step=None exact=False best_acc=0.8333 confusion={'0->0': 3, '1->0': 1, '1->1': 2}
+  ADJ-1875-2000 s0: grok=200
+  [logged] ladder: task=ADJ-1875-2000 seed=0 grok_step=200 exact=True best_acc=None confusion=None
+  ADJ-1875-2000 s1: grok=200
+  [logged] ladder: task=ADJ-1875-2000 seed=1 grok_step=200 exact=True best_acc=None confusion=None
+
+=== VERDICTS (pre-registered seq 256) ===
+  P1 (distinctness floor, DISCRIM-8 groks): CONFIRMED (2/2)
+  P2 (shuffle control fails): FALSIFIED (2/2)
+  P3 (adjacent-pair ordering): {'1.5v1.625': (0, 2), '1.25v1.375': (0, 2), '1.875v2.0': (2, 2)} — assessed in verdict
+  [logged] verdicts: P1_floor=True P2_shuffle=False cells={'DISCRIM8': (2, 2), 'SHUF': (2, 2), '1.5v1.625': (0, 2), '1.25v1.375': (0, 2), '1.875v2.0': (2, 2)}
+
+DONE in 88.7 min — 12 records

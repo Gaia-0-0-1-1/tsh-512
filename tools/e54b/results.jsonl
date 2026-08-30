@@ -1,0 +1,12 @@
+{"aliasing":{},"kind":"preflight_aliasing"}
+{"best_acc":null,"confusion":null,"exact":true,"grok_step":200,"kind":"ladder","seed":0,"task":"DISCRIM-8"}
+{"best_acc":null,"confusion":null,"exact":true,"grok_step":200,"kind":"ladder","seed":1,"task":"DISCRIM-8"}
+{"best_acc":null,"confusion":null,"exact":true,"grok_step":200,"kind":"ladder","seed":0,"task":"DISCRIM-8-SHUF"}
+{"best_acc":null,"confusion":null,"exact":true,"grok_step":200,"kind":"ladder","seed":1,"task":"DISCRIM-8-SHUF"}
+{"best_acc":0.8333,"confusion":{"0->0":3,"1->0":1,"1->1":2},"exact":false,"grok_step":null,"kind":"ladder","seed":0,"task":"ADJ-1500-1625"}
+{"best_acc":0.8333,"confusion":{"0->0":2,"0->1":1,"1->1":3},"exact":false,"grok_step":null,"kind":"ladder","seed":1,"task":"ADJ-1500-1625"}
+{"best_acc":0.8333,"confusion":{"0->0":3,"1->0":1,"1->1":2},"exact":false,"grok_step":null,"kind":"ladder","seed":0,"task":"ADJ-1250-1375"}
+{"best_acc":0.8333,"confusion":{"0->0":3,"1->0":1,"1->1":2},"exact":false,"grok_step":null,"kind":"ladder","seed":1,"task":"ADJ-1250-1375"}
+{"best_acc":null,"confusion":null,"exact":true,"grok_step":200,"kind":"ladder","seed":0,"task":"ADJ-1875-2000"}
+{"best_acc":null,"confusion":null,"exact":true,"grok_step":200,"kind":"ladder","seed":1,"task":"ADJ-1875-2000"}
+{"P1_floor":true,"P2_shuffle":false,"cells":{"1.25v1.375":[0,2],"1.5v1.625":[0,2],"1.875v2.0":[2,2],"DISCRIM8":[2,2],"SHUF":[2,2]},"kind":"verdicts"}

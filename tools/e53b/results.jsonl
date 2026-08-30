@@ -1,0 +1,4 @@
+{"held_out":0.375,"kind":"heldout","pass":false,"seed":0,"step":null,"task":"COART-HELD-NOREF"}
+{"held_out":0.5,"kind":"heldout","pass":false,"seed":1,"step":null,"task":"COART-HELD-NOREF"}
+{"held_out":1.0,"kind":"heldout","pass":true,"seed":0,"step":200,"task":"COART-HELD-REF"}
+{"held_out":1.0,"kind":"heldout","pass":true,"seed":1,"step":200,"task":"COART-HELD-REF"}

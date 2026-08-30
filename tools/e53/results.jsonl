@@ -1,0 +1,10 @@
+{"f1_ctx34":[4,5,3,5,4,2,3,2],"f1_ctx67":[4,2,4,5,4,2,4,5],"f2_ctx34":[4,6,2,3,3,4,5,1],"kind":"stimulus"}
+{"best_acc":null,"exact":true,"grok_step":200,"kind":"ladder","seed":0,"task":"COART-2-NOREF"}
+{"best_acc":null,"exact":true,"grok_step":200,"kind":"ladder","seed":1,"task":"COART-2-NOREF"}
+{"best_acc":null,"exact":true,"grok_step":200,"kind":"ladder","seed":0,"task":"COART-2-REF"}
+{"best_acc":null,"exact":true,"grok_step":200,"kind":"ladder","seed":1,"task":"COART-2-REF"}
+{"best_acc":null,"exact":true,"grok_step":200,"kind":"ladder","seed":0,"task":"COART-2-FLOOR"}
+{"best_acc":null,"exact":true,"grok_step":200,"kind":"ladder","seed":1,"task":"COART-2-FLOOR"}
+{"best_acc":null,"exact":true,"grok_step":200,"kind":"ladder","seed":0,"task":"COART-2-RAND"}
+{"best_acc":null,"exact":true,"grok_step":200,"kind":"ladder","seed":1,"task":"COART-2-RAND"}
+{"P1_coart_wall":false,"P2_reference_opens":false,"P3_controls":false,"cells":{"FLOOR":[2,2],"NOREF":[2,2],"RAND":[2,2],"REF":[2,2]},"kind":"verdicts"}
