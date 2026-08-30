@@ -329,6 +329,69 @@ The vocabulary economy: HIT free / COMPOSED free / FUSE
 free-after-phonemes / grok paid-once-per-phoneme, compounding
 across every future target that reuses it.
 
+## 7b. The wave medium: gauge structure as the operating manual
+[seq 241–259]
+
+A second experimental program extends the substrate from symbolic
+tables to waveforms — 8- and 16-sample signals, 8-level
+quantization, the same d64 transformer. The findings form one arc
+with a single law at its center.
+
+**The gauge principle, rediscovered [E48, seq 242].** Absolute
+phase — a wave's offset against the implicit coordinate reference —
+is UNLEARNABLE at every measured width (0/2 at k=4 and k=8, plateau
+0.63–0.75), while relative phase (two-component interference)
+groks in 200 steps. A small transformer independently rediscovers
+that global phase is unobservable and only relative phase is
+readable — the structural fact underneath Ohm's law of acoustics
+(the ear's phase-blindness). The mechanism measured: interference
+COLLAPSES (φ=π gives near-DC), and collapse-degree is a monotone
+feature — the freest regime on the timeline.
+
+**References open walls [E49, seq 245; E52, seq 251; E53b, seq
+259].** Pairing each stimulus with an explicit reference — a
+zero-phase wave for phase, a fixed anchor pair for beat
+invariance, a canonical context for coarticulation — converts
+every walled task into an instant 200-step grok. Three
+confirmations across three different gauge structures:
+
+- phase: 0/2 walled → 2/2 at full 3-bit width [E49]
+- transposition-invariance: 0.9375 plateau → 2/2 [E52]
+- coarticulation (the acoustic stack's phoneme rung): held-out
+  accuracy 0.375 without reference → **1.0 at 200 steps** with the
+  canonical-context reference, generalizing across contexts never
+  seen in training [E53b]
+
+**Distinctness is free; invariance is the wall [E50, seq 247;
+E51, seq 249].** Joint tone classification (frequency × phase, 4
+bits) groks instantly where 4-bit tables wall — the wave domain
+has no entropy wall at measured widths. But the physically
+precomputed beat (|f₁−f₂|, sitting in the envelope) walls while
+the derived sum groks: the wall is not in the waves but in the
+PROJECTION to invariants — reading an observable that stays fixed
+across the configurations that produce it.
+
+**Periodicity is the learnable signature [E54b, seq 258].** A
+1/8-step frequency separation within a periodicity class walls at
+0.833; the same separation across periodicity classes (period-16
+vs period-8 interference) groks in 200 steps. The network reads
+symmetry, not frequency distance — the mechanism the resonance
+hypothesis needed, and the reason maximally-aperiodic ratios (φ)
+are the hardest to discriminate.
+
+**The completed construction manual.** The acoustic stack — wave
+axes → tones → phonemes → words — is now measured end-to-end: axes
+and tones are direct circuits; phonemes are the first composition
+problem, walled without references and open with them. The design
+principle, three-for-three: **every level presents its
+reference.**
+
+Two protocol laws surfaced on the way and are now standing
+discipline: a random-label control that GROKS invalidates the cell
+(the task measures memorization, not structure — caught twice,
+E53/E54b), and pre-flight collision checks on discrete grids
+caught one design failure before any training ran (E54, seq 255).
+
 ## 8. Related work
 
 **Grokking.** Power et al. (2022) named the delayed-generalization
