@@ -108,7 +108,7 @@ def random_anchor_list(train_words, n):
 def train_position(x1, x2, y, tr, te, seed=0, max_steps=20000):
     best_train, best_state = 0.0, None
     final_te = 0.0
-    k = int(y.max().item()) + 1
+    k = len(PHONE_SET)   # fixed output width: states always loadable
     for attempt in range(6):
         torch.manual_seed(seed + attempt)
         model = TinyTransformer(LEVELS, k, d=64, lattice="phi1")
