@@ -1,0 +1,9 @@
+{"best_acc":null,"exact":true,"grok_step":200,"kind":"ladder","seed":0,"task":"REF-BEAT-4"}
+{"best_acc":null,"exact":true,"grok_step":200,"kind":"ladder","seed":1,"task":"REF-BEAT-4"}
+{"best_acc":null,"exact":true,"grok_step":200,"kind":"ladder","seed":0,"task":"CLASS-ANCHOR-4"}
+{"best_acc":null,"exact":true,"grok_step":200,"kind":"ladder","seed":1,"task":"CLASS-ANCHOR-4"}
+{"best_acc":0.9375,"exact":false,"grok_step":null,"kind":"ladder","seed":0,"task":"BEAT-4"}
+{"best_acc":0.9375,"exact":false,"grok_step":null,"kind":"ladder","seed":1,"task":"BEAT-4"}
+{"best_acc":null,"exact":true,"grok_step":200,"kind":"ladder","seed":0,"task":"SUM-4"}
+{"best_acc":null,"exact":true,"grok_step":200,"kind":"ladder","seed":1,"task":"SUM-4"}
+{"P1_reference_opens":true,"P2_controls":true,"P3_floor":true,"cells":{"BEAT":[0,2],"CLASS-ANCHOR":[2,2],"REF-BEAT":[2,2],"SUM":[2,2]},"kind":"verdicts"}

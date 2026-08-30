@@ -1,0 +1,34 @@
+E52: THE REFERENCE-TRANSPOSITION FIX — does the E49 pattern repeat one level up?
+pre-registered seq 250
+
+--- stimulus sanity ---
+  REF-BEAT-4: 16 exemplars, classes [(0, 4), (1, 4), (2, 4), (3, 4)]
+  CLASS-ANCHOR-4: 16 exemplars, classes [(0, 4), (1, 4), (2, 4), (3, 4)]
+  BEAT-4: 16 exemplars, classes [(0, 4), (1, 4), (2, 4), (3, 4)]
+  SUM-4: 14 exemplars, classes [(0, 3), (1, 4), (2, 3), (3, 4)]
+
+--- the ladder (2 seeds each, exact gate) ---
+  REF-BEAT-4 s0: grok=200
+  [logged] ladder: task=REF-BEAT-4 seed=0 grok_step=200 exact=True best_acc=None
+  REF-BEAT-4 s1: grok=200
+  [logged] ladder: task=REF-BEAT-4 seed=1 grok_step=200 exact=True best_acc=None
+  CLASS-ANCHOR-4 s0: grok=200
+  [logged] ladder: task=CLASS-ANCHOR-4 seed=0 grok_step=200 exact=True best_acc=None
+  CLASS-ANCHOR-4 s1: grok=200
+  [logged] ladder: task=CLASS-ANCHOR-4 seed=1 grok_step=200 exact=True best_acc=None
+  BEAT-4 s0: grok=never (best 0.9375)
+  [logged] ladder: task=BEAT-4 seed=0 grok_step=None exact=False best_acc=0.9375
+  BEAT-4 s1: grok=never (best 0.9375)
+  [logged] ladder: task=BEAT-4 seed=1 grok_step=None exact=False best_acc=0.9375
+  SUM-4 s0: grok=200
+  [logged] ladder: task=SUM-4 seed=0 grok_step=200 exact=True best_acc=None
+  SUM-4 s1: grok=200
+  [logged] ladder: task=SUM-4 seed=1 grok_step=200 exact=True best_acc=None
+
+=== VERDICTS (pre-registered seq 250) ===
+  P1 (reference opens the invariance gate): CONFIRMED (REF-BEAT 2/2, BEAT 0/2)
+  P2 (controls replicate): CONFIRMED (BEAT 0/2, SUM 2/2)
+  P3 (the class-anchor floor groks): CONFIRMED (2/2)
+  [logged] verdicts: P1_reference_opens=True P2_controls=True P3_floor=True cells={'REF-BEAT': (2, 2), 'CLASS-ANCHOR': (2, 2), 'BEAT': (0, 2), 'SUM': (2, 2)}
+
+DONE in 28.2 min — 9 records
