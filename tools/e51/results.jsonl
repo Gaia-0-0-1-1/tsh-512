@@ -1,0 +1,9 @@
+{"beat_2_3":[4,6,2,3,4,4,5,1],"kind":"stimulus","octave_1_2":[4,6,5,3,3,4,2,1]}
+{"best_acc":0.9375,"exact":false,"grok_step":null,"kind":"ladder","seed":0,"task":"BEAT-4"}
+{"best_acc":0.9375,"exact":false,"grok_step":null,"kind":"ladder","seed":1,"task":"BEAT-4"}
+{"best_acc":null,"exact":true,"grok_step":200,"kind":"ladder","seed":0,"task":"SUM-4"}
+{"best_acc":null,"exact":true,"grok_step":200,"kind":"ladder","seed":1,"task":"SUM-4"}
+{"kind":"ladder","task":"HARMONIC-4","seed":0,"grok_step":null,"exact":false,"best_acc":0.5789}
+{"kind":"ladder","task":"HARMONIC-4","seed":1,"grok_step":null,"exact":false,"best_acc":0.5789}
+{"kind":"ladder","task":"PHI-4","seed":0,"grok_step":null,"exact":false,"best_acc":0.6667}
+{"kind":"ladder","task":"PHI-4","seed":1,"grok_step":null,"exact":false,"best_acc":0.6667}
