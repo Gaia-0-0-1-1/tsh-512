@@ -85,3 +85,17 @@ a one-pass script (this file's tables were re-extracted and checked
 against the raw records at assembly time; the Z4/Z5/Z6 entropy
 column corrected once — an extraction-script bug, the raw values
 are log2(n) = 2.00/2.32/2.58 bits).
+
+
+## Figure 5 — The reference law: three walls, three openings (E48–E53b)
+
+| gauge structure | task | without reference | with reference | seq |
+|---|---|---|---|---|
+| phase | classify φ vs fixed axis | 0/2 (plateau 0.63–0.75) | **2/2, 200 steps, full width** | 245 |
+| transposition | classify \|f₁−f₂\| across pairs | 0/2 (plateau 0.9375) | **2/2, 200 steps** | 251 |
+| context (coarticulation) | classify target through held-out contexts | 0/2 (held-out 0.375) | **2/2, held-out 1.0, 200 steps** | 259 |
+
+Every walled wave-domain task opened instantly by an explicit
+reference. Three different gauge structures, one law: what the
+substrate cannot do implicitly (project to invariants), it does
+instantly when handed the reference frame.
