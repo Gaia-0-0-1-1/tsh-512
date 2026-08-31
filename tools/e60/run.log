@@ -1,0 +1,36 @@
+E59: LABEL-INDEPENDENT G2P REFERENCES — the clean instrument
+pre-registered seq 274
+
+  [logged] dataset: total=3095 train=2476 test=619 phones=36 graphemic_tails=266 oracle_rimes=259 config=E55 aligned cell; mod-8 letters; 2 seeds; final-attempt reducers
+  G2P-NONE s0: pos [0.4184, 0.441, 0.4895, 0.538] mean 0.4717, word 0.0824
+  [logged] g2p: arm=G2P-NONE seed=0 per_position=[0.4184, 0.441, 0.4895, 0.538] mean_position=0.4717 word_strict=0.0824
+  G2P-NONE s1: pos [0.391, 0.4733, 0.4895, 0.538] mean 0.473, word 0.0872
+  [logged] g2p: arm=G2P-NONE seed=1 per_position=[0.391, 0.4733, 0.4895, 0.538] mean_position=0.473 word_strict=0.0872
+  G2P-ONSET-ANCHOR s0: pos [0.496, 0.538, 0.5735, 0.6397] mean 0.5618, word 0.1389
+  [logged] g2p: arm=G2P-ONSET-ANCHOR seed=0 per_position=[0.496, 0.538, 0.5735, 0.6397] mean_position=0.5618 word_strict=0.1389
+  G2P-ONSET-ANCHOR s1: pos [0.496, 0.538, 0.5735, 0.6397] mean 0.5618, word 0.1389
+  [logged] g2p: arm=G2P-ONSET-ANCHOR seed=1 per_position=[0.496, 0.538, 0.5735, 0.6397] mean_position=0.5618 word_strict=0.1389
+  G2P-TWO-ANCHOR s0: pos [0.496, 0.5283, 0.7787, 0.8061] mean 0.6523, word 0.1971
+  [logged] g2p: arm=G2P-TWO-ANCHOR seed=0 per_position=[0.496, 0.5283, 0.7787, 0.8061] mean_position=0.6523 word_strict=0.1971
+  G2P-TWO-ANCHOR s1: pos [0.496, 0.5283, 0.7787, 0.8061] mean 0.6523, word 0.1971
+  [logged] g2p: arm=G2P-TWO-ANCHOR seed=1 per_position=[0.496, 0.5283, 0.7787, 0.8061] mean_position=0.6523 word_strict=0.1971
+  G2P-RIME-REPL s0: pos [0.4766, 0.5428, 0.8207, 0.8578] mean 0.6745, word 0.2165
+  [logged] g2p: arm=G2P-RIME-REPL seed=0 per_position=[0.4766, 0.5428, 0.8207, 0.8578] mean_position=0.6745 word_strict=0.2165
+  G2P-RIME-REPL s1: pos [0.4895, 0.5428, 0.8207, 0.8578] mean 0.6777, word 0.2262
+  [logged] g2p: arm=G2P-RIME-REPL seed=1 per_position=[0.4895, 0.5428, 0.8207, 0.8578] mean_position=0.6777 word_strict=0.2262
+  G2P-RANDOM-REPL s0: pos [0.4847, 0.5267, 0.5299, 0.6333] mean 0.5436, word 0.084
+  [logged] g2p: arm=G2P-RANDOM-REPL seed=0 per_position=[0.4847, 0.5267, 0.5299, 0.6333] mean_position=0.5436 word_strict=0.084
+  G2P-RANDOM-REPL s1: pos [0.4847, 0.5299, 0.5622, 0.6333] mean 0.5525, word 0.1066
+  [logged] g2p: arm=G2P-RANDOM-REPL seed=1 per_position=[0.4847, 0.5299, 0.5622, 0.6333] mean_position=0.5525 word_strict=0.1066
+  FREQ-MOD8: pos 0.4907, word 0.0679
+  [logged] g2p: arm=FREQ-MOD8 per_position=0.4907 mean_position=0.4907 word_strict=0.0679
+Traceback (most recent call last):
+  File "C:\Users\Owen\tsh-512\tools\e60\two_anchor.py", line 318, in <module>
+    main()
+  File "C:\Users\Owen\tsh-512\tools\e60\two_anchor.py", line 288, in main
+    rand_m, oracle_m = meanpos("G2P-RANDOM-ANCHOR"), \
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Owen\tsh-512\tools\e60\two_anchor.py", line 284, in meanpos
+    return round(sum(r["mean_position"] for r in rs) / len(rs), 4)
+                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~
+ZeroDivisionError: division by zero
