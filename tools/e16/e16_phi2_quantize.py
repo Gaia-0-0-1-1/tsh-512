@@ -138,9 +138,13 @@ def main():
 
     schedule = [1, 4, 8, 15, 20, 30, n_layers]
     for lattice in ("phi2", "ternary"):
+        # the fp snapshot lives in VRAM (100GB unified): restore
+        # per k instead of disk reloads — the GPU-resident path
         model = AutoModelForCausalLM.from_pretrained(
             MODEL, torch_dtype=torch.bfloat16).to(device)
         model.eval()
+        fp_state = {k2: v.clone() for k2, v in
+                    model.state_dict().items()}
         for k in schedule:
             if k > n_layers:
                 continue
@@ -148,12 +152,10 @@ def main():
             p = ppl(model, calib, device)
             log("ppl", lattice=lattice, k=k, n_tensors=n_t,
                 ppl=round(p, 4))
-            # reload fresh for the next k
-            del model
-            model = AutoModelForCausalLM.from_pretrained(
-                MODEL, torch_dtype=torch.bfloat16).to(device)
-            model.eval()
-        del model
+            # restore the fp weights in place for the next k
+            with torch.no_grad():
+                model.load_state_dict(fp_state)
+        del model, fp_state
         torch.cuda.empty_cache()
 
     log("done", minutes=round((time.time() - t0) / 60, 1))
