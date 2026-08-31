@@ -1,0 +1,30 @@
+E59: LABEL-INDEPENDENT G2P REFERENCES — the clean instrument
+pre-registered seq 274
+
+  [logged] dataset: total=3095 train=2476 test=619 phones=36 graphemic_tails=266 oracle_rimes=259 config=E55 aligned cell; mod-8 letters; 2 seeds; final-attempt reducers
+  G2P-NONE s0: pos [0.4184, 0.441, 0.4895, 0.538] mean 0.4717, word 0.0824
+  [logged] g2p: arm=G2P-NONE seed=0 per_position=[0.4184, 0.441, 0.4895, 0.538] mean_position=0.4717 word_strict=0.0824
+  G2P-NONE s1: pos [0.391, 0.4733, 0.4895, 0.538] mean 0.473, word 0.0872
+  [logged] g2p: arm=G2P-NONE seed=1 per_position=[0.391, 0.4733, 0.4895, 0.538] mean_position=0.473 word_strict=0.0872
+  G2P-GRAPHEMIC s0: pos [0.4766, 0.5428, 0.8207, 0.8578] mean 0.6745, word 0.2165
+  [logged] g2p: arm=G2P-GRAPHEMIC seed=0 per_position=[0.4766, 0.5428, 0.8207, 0.8578] mean_position=0.6745 word_strict=0.2165
+  G2P-GRAPHEMIC s1: pos [0.4895, 0.5428, 0.8207, 0.8578] mean 0.6777, word 0.2262
+  [logged] g2p: arm=G2P-GRAPHEMIC seed=1 per_position=[0.4895, 0.5428, 0.8207, 0.8578] mean_position=0.6777 word_strict=0.2262
+  G2P-RANDOM-ANCHOR s0: pos [0.4847, 0.5267, 0.5299, 0.6333] mean 0.5436, word 0.084
+  [logged] g2p: arm=G2P-RANDOM-ANCHOR seed=0 per_position=[0.4847, 0.5267, 0.5299, 0.6333] mean_position=0.5436 word_strict=0.084
+  G2P-RANDOM-ANCHOR s1: pos [0.4847, 0.5299, 0.5622, 0.6333] mean 0.5525, word 0.1066
+  [logged] g2p: arm=G2P-RANDOM-ANCHOR seed=1 per_position=[0.4847, 0.5299, 0.5622, 0.6333] mean_position=0.5525 word_strict=0.1066
+  G2P-ORACLE-RIME s0: pos [0.4766, 0.5638, 0.8304, 0.8691] mean 0.685, word 0.2262
+  [logged] g2p: arm=G2P-ORACLE-RIME seed=0 per_position=[0.4766, 0.5638, 0.8304, 0.8691] mean_position=0.685 word_strict=0.2262
+  G2P-ORACLE-RIME s1: pos [0.4766, 0.5638, 0.8304, 0.8546] mean 0.6814, word 0.2246
+  [logged] g2p: arm=G2P-ORACLE-RIME seed=1 per_position=[0.4766, 0.5638, 0.8304, 0.8546] mean_position=0.6814 word_strict=0.2246
+  FREQ-MOD8: pos 0.4907, word 0.0679
+  [logged] g2p: arm=FREQ-MOD8 per_position=0.4907 mean_position=0.4907 word_strict=0.0679
+
+=== VERDICTS (pre-registered seq 274) ===
+  P1 (NONE ~= FREQ-MOD8): CONFIRMED (0.4723 vs 0.4907)
+  P2 (GRAPHEMIC beats RANDOM by >=8pp): CONFIRMED (0.6761 vs 0.548)
+  P3 (ceiling ordering): FALSIFIED (oracle 0.6832 >= graph 0.6761 > rand 0.548 ~= none 0.4723)
+  [logged] verdicts: P1_floor=True P2_graphemic_beats_random=True P3_ordering=False none=0.4723 graph=0.6761 rand=0.548 oracle=0.6832 freq=0.4907
+
+DONE in 573.7 min — 11 records
