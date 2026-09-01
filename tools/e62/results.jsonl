@@ -2,3 +2,5 @@
 {"arm":"FUSION-ADMIT","held_out":0.5,"kind":"arm","pass":false,"seed":1,"step":null,"train_exact":true}
 {"arm":"SIGMA-1","held_out":0.375,"kind":"arm","pass":false,"seed":0,"step":null,"train_exact":false}
 {"arm":"SIGMA-1","held_out":0.375,"kind":"arm","pass":false,"seed":1,"step":null,"train_exact":false}
+{"arm":"WORD-3-DIRECT","held_out":0.25,"kind":"arm","pass":false,"seed":0,"step":null,"train_exact":false}
+{"arm":"WORD-3-DIRECT","held_out":0.2188,"kind":"arm","pass":false,"seed":1,"step":null,"train_exact":false}

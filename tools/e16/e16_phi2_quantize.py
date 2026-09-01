@@ -64,7 +64,8 @@ def quantize_layers(model, lattice, k, front=True):
     """Snap the first k (or last k) transformer layers' ALL weight
     matrices to the lattice. Returns the count of touched tensors."""
     levels = LATTICES[lattice]
-    layers = model.model.layers
+    lm = getattr(model, "language_model", None) or model.model
+    layers = lm.layers
     order = range(k) if front else range(len(layers) - k,
                                          len(layers))
     n = 0
@@ -129,7 +130,8 @@ def main():
     model = AutoModelForCausalLM.from_pretrained(
         MODEL, torch_dtype=torch.bfloat16).to(device)
     model.eval()
-    n_layers = model.config.num_hidden_layers
+    cfg = getattr(model.config, "text_config", None) or model.config
+    n_layers = cfg.num_hidden_layers
     log("loaded", n_layers=n_layers)
 
     # baseline
